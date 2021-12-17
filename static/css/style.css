@@ -2,3 +2,68 @@
 body{
     font-family: Poppins, sans-serif;
 }
+
+/* nav bar */
+.nav-wrapper{
+    background-color:#F29F05 ;
+}
+
+.nav-wrapper a{
+    color:#f0e5de;
+}
+
+
+/* footer */
+
+.footer-container{
+    padding: 3rem 0 1rem 0;
+    background-color: #f0e5de;
+}
+
+.footer-content{
+    padding: 2rem 2rem;
+}
+
+.logo-footer{
+    padding: 2rem 0;
+}
+
+.footer-image{
+    width:10rem;
+}
+
+.social-link a i {
+    margin-left: 20px;
+    color:#F29F05;
+    font-size: 15px ;
+    padding-bottom: 1rem;   
+}
+
+.social-link a :hover {
+    color:#F29F05;
+    padding: 1rem;   
+    box-shadow:0 0.2rem 1.2rem 0 rgba(230, 58, 15, 0.6);
+}
+
+.recipe-links li{
+    padding-bottom:0.8rem;
+    padding-top: 0.7rem;
+}
+.recipe-links .list-item a{
+    color: #F29F05;
+    font-size: 15px;
+}
+
+.recipe-links .list-item a:hover{
+    cursor:pointer;
+    box-shadow:0 0.2rem 1.2rem 0 rgba(230, 58, 15, 0.6);
+    color: #F29F05;
+    padding: 10px;
+    border-radius:3px;
+}
+
+.footer-text{
+    font-size: 14px;
+    color: #F29F05;
+    text-transform: uppercase;
+}
