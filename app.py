@@ -20,7 +20,7 @@ mongo = PyMongo(app)
 @app.route("/home")
 def home():
     allrecipes = mongo.db.recipes.find()
-    return render_template("home.html", allrecipes=allrecipes)
+    return render_template("index.html", allrecipes=allrecipes)
 
 
 if __name__ == "__main__":
