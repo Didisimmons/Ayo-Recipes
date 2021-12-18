@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+    <h3>Welcome to our website </h3>
+    {% for all in allrecipes %}
+        {{ all.recipe_image }}<br>
+        {{ all.recipe_name }}<br>
+        {{ all.recipe_time }}<br>
+        {{ all.category_name }}<br>
+        {{ all.recipe_description }}<br>
+        {{ all.created_by }}<br>
+    {% endfor %}
+{%endblock%}

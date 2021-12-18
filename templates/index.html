@@ -1,12 +1,34 @@
 {% extends "base.html" %}
 {% block content %}
-    <h3>Welcome to our website </h3>
-    {% for all in allrecipes %}
-        {{ all.recipe_image }}<br>
-        {{ all.recipe_name }}<br>
-        {{ all.recipe_time }}<br>
-        {{ all.category_name }}<br>
-        {{ all.recipe_description }}<br>
-        {{ all.created_by }}<br>
-    {% endfor %}
+
+<section>
+    <div class="container-fluid">
+        <div class="carousel carousel-slider" id="demo-carousel-content" data-indicators="true">
+            <div class="carousel-fixed-item center"> 
+                <h2 class="white-text hero-image-text ">MERRY CHRISTMAS FROM AYO RECIPES</h2>
+                <p class="white-text header-text">Enjoy some fine cuisine dishes at the comfort of your homes </p>      
+            </div>
+            <a class="carousel-item" href="#one!"><img src="{{url_for('static',filename='images/header-image1.jpg')}}"></a>
+           
+                <a class="carousel-item" href="#two!"><img src="{{url_for('static',filename='images/header-image2.jpg')}}"> </a>
+                <a class="carousel-item" href="#two!"><img src="{{url_for('static',filename='images/header-image3.jpg')}}"></a>
+            </div>
+      </div>
+</section>
+
+<section class= "container">
+    <div class="row search-container">
+        <form action="" method="post">
+            <div class="row valign-wrapper">
+                <div class="input-field col offset-s4 s4">
+                    <input type="text" name="query" id="query" minlength="3" required>
+                    <label for="query">Search Recipes</label>
+                    <a href="{{url_for('home')}}" class="text-shadow">
+                        <i class="fas fa-search prefix icon-color text-darken-4"></i>
+                    </a>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
 {%endblock%}

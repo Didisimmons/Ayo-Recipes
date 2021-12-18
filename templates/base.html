@@ -17,119 +17,123 @@
 
 </head>
 <body>
+  <div class="body-content container-fluid">
     <header>
-         <!-- Nav bar -->
-         <nav class="nav-extended">
-            <div class="nav-wrapper lighten-4">
-                <a href="" class="brand-logo">Ayo Recipes</a>
-                <a href="" data-target="mobile-demo" class="sidenav-trigger left"><i class="fas fa-bars"></i></a>
-                <ul class="right hide-on-med-and-down menu-items">
-                    <li><a href="">HOME</a></li>
-                        <li><a href="">RECIPES</a></li>
-                        <li><a href="">FESTIVE SEASON</a></li>
-                        <li><a href="">TIPS & TRICKS</a></li>
-                        <li><a href="">KITCHENWARES</a></li>
-                        <li><a href="">PROFILE </a></li>
-                        <li><a href="">EXPERT ADVICE</a></li>
-                        <li><a href="">LOGIN</a></li>
-                        <li><a href="">REGISTER</a></li>
-                </ul>
-            </div>
-          </nav>
-        
-          <!-- mobile side navbar-->
-          <ul class="sidenav slide-out" id="mobile-demo">
-            <li><div class="user-view">
-                <div class="background">
-                  <img src="{{url_for('static',filename='images/')}}">
-                </div>
-                <a href="#user"><img class="circle" src="images/yuna.jpg"></a>
-                <a href="#name"><span class=" name">Craig Hank Doe</span></a>
-                <a href="#email"><span class=" email">jdandturk@gmail.com</span></a>
-                <h4>Ayo Recipes</h4>
-              </div>
-            </li>
-            <li><a href=""><i class="material-icons">cloud</i>HOME</a></li>
-                <li><a href="">RECIPES</a></li>
-                <li><a href="">FESTIVE SEASON</a></li>
-                <li><a href="">TIPS & TRICKS</a></li>
-                <li><a href="">KITCHENWARES</a></li>
-                <li><a href="">PROFILE</a></li>
-                <li><a href="">EXPERT ADVICE</a></li>
-                <li><a href="">LOGIN</a></li>
-                <li><a href="">REGISTER</a></li>
-            </ul>
+      <!-- Nav bar -->
+      <nav class="nav-extended">
+         <div class="nav-wrapper lighten-4">
+             <a href="" class="brand-logo">Ayo Recipes</a>
+             <a href="" data-target="mobile-demo" class="sidenav-trigger left"><i class="fas fa-bars"></i></a>
+             <ul class="right hide-on-med-and-down menu-items">
+                 <li><a href="{{url_for('home')}}">HOME</a></li>
+                     <li><a href="">RECIPES</a></li>
+                     <li><a href="">FESTIVE SEASON</a></li>
+                     <li><a href="">TIPS & TRICKS</a></li>
+              <!--       <li><a href="">KITCHENWARES</a></li>
+                     <li><a href="">PROFILE </a></li>
+                     <li><a href="">EXPERT ADVICE</a></li>
+                     <li><a href="">LOGIN</a></li>
+                     <li><a href="">REGISTER</a></li> -->
+             </ul>
+         </div>
+       </nav>
+     
+       <!-- mobile side navbar-->
+       <ul class="sidenav slide-out" id="mobile-demo">
+         <li><div class="user-view">
+             <div class="background">
+               <img src="{{url_for('static',filename='images/')}}">
+             </div>
+             <a href="#user"><img class="circle" src="images/yuna.jpg"></a>
+             <a href="#name"><span class=" name">Craig Hank Doe</span></a>
+             <a href="#email"><span class=" email">jdandturk@gmail.com</span></a>
+             <h4>Ayo Recipes</h4>
+           </div>
+         </li>
+         <li><a href=""><i class="material-icons">cloud</i>HOME</a></li>
+             <li><a href="">RECIPES</a></li>
+             <li><a href="">FESTIVE SEASON</a></li>
+             <li><a href="">TIPS & TRICKS</a></li>
+             <li><a href="">KITCHENWARES</a></li>
+             <li><a href="">PROFILE</a></li>
+             <li><a href="">EXPERT ADVICE</a></li>
+             <li><a href="">LOGIN</a></li>
+             <li><a href="">REGISTER</a></li>
+         </ul>
 
-    </header>
+ </header>
 
-    <main>            
-    {% block content %}
+ <main>            
+ {% block content %}
 
-    {% endblock %}
-    </main>
+ {% endblock %}
+ </main>
 
-    <footer>
-      <div class="footer-container">
-        <div class="row footer-content">
-          <div class="col s6 m4">
-            <ul class="recipe-links">
-                <li class="list-item ">
-                    <a href="#about-id" target="_blank">Best Ingredients </a>
-                </li>
-                <li class="list-item ">
-                    <a href="index.html" target="_blank">Best Kitchen Designs</a>
-                </li>
-                <li class="list-item ">
-                  <a href="index.html" target="_blank">Meal Planners</a>
-              </li>
-            </ul>
-          </div> 
-          <div class="col m4 center-align hide-on-small-only">
-            <div class="logo-footer">
-                <a href="{{ url_for('home') }}">
-                    <img src="{{ url_for('static', filename='images/startpagehero.png') }}" alt="Logo for Ayo recipes" class="footer-image circle responsive-img">
-                </a>
-              </div>
-          </div>
-          <div class="col s6 m4 social-media right-align">
-            <ul>
-                <li class="list-item social-link">
-                    <a href="https://www.facebook.com/" target="_blank" aria-label="Find us on Facebook" rel="noopener">
-                        <i class="fab fa-facebook-f" aria-hidden="true"></i> 
-                        <span class="sr-only">Facebook</span>
-                      </a>
-                </li>
-                <li class="list-item social-link">
-                    <a href="https://www.instagram.com/" target="_blank" aria-label="Find us on Instagram" rel="noopener" >
-                      <i class="fab fa-instagram" aria-hidden="true"></i>
-                      <span class="sr-only">Instagram</span>
-                    </a>
-                </li>
-                <li class="list-item social-link">
-                    <a href="https://twitter.com/" target="_blank" aria-label="Find us on Twitter" rel="noopener">
-                        <i class="fab fa-twitter" aria-hidden="true"></i>
-                        <span class="sr-only">Twitter</span>
-                    </a>
-                </li>
-                <li class="list-item social-link">
-                  <a href="blogger.com/blog/posts/6351921919711137785?bpli=1&pli=1" target="_blank" aria-label="Find us on Twitter" rel="noopener">
-                    <i class="fab fa-blogger" aria-hidden="true"></i>
-                      <span class="sr-only">Blogspot</span>
-                  </a>
-              </li>
-            </ul>                
-          </div>
-        </div>
-        <div class="row">
-          <div class="col s12">
-              <p class="footer-text center-align">Copyright &copy;Ayo Recipes <span id="copyright"></span> </p>
-          </div>
-        </div>
+ <footer>
+   <div class="footer-container">
+     <div class="row footer-content">
+       <div class="col s6 m4">
+         <ul class="recipe-links">
+             <li class="list-item ">
+                 <a href="#about-id" target="_blank">Best Ingredients </a>
+             </li>
+             <li class="list-item ">
+                 <a href="index.html" target="_blank">Best Kitchen Designs</a>
+             </li>
+             <li class="list-item ">
+               <a href="index.html" target="_blank">Meal Planners</a>
+           </li>
+         </ul>
+       </div> 
+       <div class="col m4 center-align hide-on-small-only">
+         <div class="logo-footer">
+             <a href="{{ url_for('home') }}">
+                 <img src="{{ url_for('static', filename='images/startpagehero.png') }}" alt="Logo for Ayo recipes" class="footer-image circle responsive-img">
+             </a>
+           </div>
+       </div>
+       <div class="col s6 m4 social-media right-align">
+         <ul>
+             <li class="list-item social-link">
+                 <a href="https://www.facebook.com/" target="_blank" aria-label="Find us on Facebook" rel="noopener">
+                     <i class="fab fa-facebook-f" aria-hidden="true"></i> 
+                     <span class="sr-only">Facebook</span>
+                   </a>
+             </li>
+             <li class="list-item social-link">
+                 <a href="https://www.instagram.com/" target="_blank" aria-label="Find us on Instagram" rel="noopener" >
+                   <i class="fab fa-instagram" aria-hidden="true"></i>
+                   <span class="sr-only">Instagram</span>
+                 </a>
+             </li>
+             <li class="list-item social-link">
+                 <a href="https://twitter.com/" target="_blank" aria-label="Find us on Twitter" rel="noopener">
+                     <i class="fab fa-twitter" aria-hidden="true"></i>
+                     <span class="sr-only">Twitter</span>
+                 </a>
+             </li>
+             <li class="list-item social-link">
+               <a href="blogger.com/blog/posts/6351921919711137785?bpli=1&pli=1" target="_blank" aria-label="Find us on Twitter" rel="noopener">
+                 <i class="fab fa-blogger" aria-hidden="true"></i>
+                   <span class="sr-only">Blogspot</span>
+               </a>
+           </li>
+         </ul>                
+       </div>
+     </div>
+     <div class="row">
+       <div class="col s12">
+           <p class="footer-text center-align">Copyright &copy;Ayo Recipes <span id="copyright"></span> </p>
+       </div>
+     </div>
 
-        </div>
-        
-    </footer>
-    
+    </div>
+     
+ </footer>
+ 
+
+  </div>
+  
 
     
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
