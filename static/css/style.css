@@ -56,21 +56,60 @@ input[type=text]:not(.browser-default):focus:not([readonly]){
     color:#F28705 ;
 }
 
+
+.input-field.col > label{
+    color:#F28705;
+}
+
+/* register */
+
+.register-header{
+    padding:4rem 0 ;
+    font-family: dancing script,sans-serif;
+    letter-spacing:3px;
+}
+
+textarea.materialize-textarea {
+    border-bottom: 1px solid #F24405; 
+    color:#F28705;
+}
+
 input[type=text]:not(.browser-default){
     color:#F28705;
     border-bottom: 1px solid #F24405;
 }
 
-.input-field.col label{
-    left:0px;
-}
-
-.input-field.col > label{
+input[type=password]:not(.browser-default){
     color:#F28705;
+    border-bottom: 1px solid #F24405;
+}
+
+.general-btn{
+    background-color: #F24405;
+    border-radius: 13px;
+    color:#730202;
+    padding: 15px;
 
 }
 
+.btn-custom{
+    font-size:1.2rem ;
+}
 
+.general-btn:hover{
+    cursor:pointer;
+    box-shadow:0 0 1rem 0 #F28705;
+    color:white; 
+    padding: 15px; 
+}
+
+.register-details .row .col{
+    min-height: 43px;
+}
+
+button{
+    border-color: #F29F05;
+}
 /* footer */
 
 .footer-container{
@@ -147,6 +186,11 @@ input[type=text]:not(.browser-default){
         font-size: 0.85rem;
     
     }
+
+    .input-field.col label{
+        left:0px;
+    }
+
 }
 
 @media screen and (min-width: 978px) {

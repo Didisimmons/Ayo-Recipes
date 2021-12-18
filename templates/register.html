@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <div class="container">
+      <h3 class="center-align register-header">Register with us today ! </h3>
+        <form class="row register-form">
+            <div class="col s12 m8 offset-m2">
+              <div class="card-panel">
+              <!-- Full Name -->
+                <div class="row">
+                  <div class="input-field col s12">
+                    <i class="fas fa-users prefix icon-color"></i>
+                    <input id="full-name"  name="full-name" minlength="7"
+                        maxlength="30" type="text" pattern="^[a-zA-Z]" class="validate" required>
+                    <label for="full-name">Full Name</label>
+                  </div>
+                </div>
+              <!-- username -->
+                <div class="row">
+                  <div class="input-field col s12">
+                    <i class="fas fa-user-plus prefix icon-color "></i>
+                    <input id="username"  name="username" minlength="5"
+                        maxlength="15" type="text" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+                    <label for="username">Username</label>
+                  </div>
+                </div>
+              <!-- password -->
+                <div class="row">
+                  <div class="input-field col s12">
+                      <i class="fas fa-user-lock prefix icon-color"></i>
+                      <input id="password" name="password" minlength="5"
+                          maxlength="15" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" class="validate" required>
+                      <label for="password"> One number and one uppercase and lowercase letter.</label>
+                  </div>
+                </div>
+              <!-- About me -->
+                <div class="row">
+                  <div class="input-field col s12">
+                      <i class="fas fa-pen prefix icon-color"></i>
+                      <textarea id="aboutme" name="aboutme" class="materialize-textarea"></textarea>
+                      <label for="aboutme">Tell us a bit about yourself?</label>
+                  </div>
+                </div>
+              <!-- button  -->
+              <div class="register-details">
+                <div class="row ">
+                  <button type="submit" class="col s6 offset-s3 btn-custom general-btn">
+                      REGISTER <i class="fas fa-sign-in-alt  prefix icon-color "></i>
+                  </button>
+                </div>
+              </div>  
+            </div>
+          </div>
+        </form>
+    </div>
+
+
+{% endblock %}
