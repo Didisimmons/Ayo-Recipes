@@ -3,6 +3,14 @@ body{
     font-family: Poppins, sans-serif;
 }
 
+/* flash message */
+.flashes h4{
+    padding:1rem 0 ;
+    font-family: poppins,sans-serif;
+    letter-spacing:2px;
+    line-height: 2;
+    color: #730202;
+}
 /* nav bar */
 .nav-wrapper{
     background-color:#F29F05 ;
@@ -64,9 +72,10 @@ input[type=text]:not(.browser-default):focus:not([readonly]){
 /* register */
 
 .register-header{
-    padding:4rem 0 ;
+    padding:3rem 0 ;
     font-family: dancing script,sans-serif;
     letter-spacing:3px;
+    color: #730202;
 }
 
 textarea.materialize-textarea {
@@ -110,6 +119,19 @@ input[type=password]:not(.browser-default){
 button{
     border-color: #F29F05;
 }
+
+.registered{
+    padding:1rem 0 ;
+    font-family: poppins,sans-serif;
+    letter-spacing:3px;
+    color: #730202;
+}
+
+.registered a{
+    color:#f44336;
+}
+
+
 /* footer */
 
 .footer-container{

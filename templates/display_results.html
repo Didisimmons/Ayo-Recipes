@@ -10,3 +10,5 @@
         {{ all.created_by }}<br>
     {% endfor %}
 {%endblock%}
+
+redirect(url_for("profile"), username=session["user"]))

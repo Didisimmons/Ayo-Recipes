@@ -1,17 +1,27 @@
 {% extends "base.html" %}
 {% block content %}
 
+<h3>Welcome to our website </h3>
+    {% for all in allrecipes %}
+        {{ all.recipe_image }}<br>
+        {{ all.recipe_name }}<br>
+        {{ all.recipe_time }}<br>
+        {{ all.category_name }}<br>
+        {{ all.recipe_description }}<br>
+        {{ all.created_by }}<br>
+    {% endfor %}
+
     <div class="container">
       <h3 class="center-align register-header">Register with us today ! </h3>
         <form class="row register-form">
-            <div class="col s12 m8 offset-m2">
+            <div class="col s12 m8 offset-m2" method="POST" action="{{url_for('register')}}">
               <div class="card-panel">
               <!-- Full Name -->
                 <div class="row">
                   <div class="input-field col s12">
                     <i class="fas fa-users prefix icon-color"></i>
                     <input id="full-name"  name="full-name" minlength="7"
-                        maxlength="30" type="text" pattern="^[a-zA-Z]" class="validate" required>
+                        maxlength="30" type="text" pattern="[A-Z a-z]+" class="validate" required>
                     <label for="full-name">Full Name</label>
                   </div>
                 </div>
@@ -30,7 +40,16 @@
                       <i class="fas fa-user-lock prefix icon-color"></i>
                       <input id="password" name="password" minlength="5"
                           maxlength="15" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" class="validate" required>
-                      <label for="password"> One number and one uppercase and lowercase letter.</label>
+                      <label for="password">least one number and one uppercase and lowercase letter.</label>
+                  </div>
+                </div>
+                <!-- password -->
+                <div class="row">
+                  <div class="input-field col s12">
+                      <i class="fas fa-user-lock prefix icon-color"></i>
+                      <input id="confirm-password" name="confirm-password" minlength="5"
+                          maxlength="15" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" class="validate" required>
+                      <label for="confirm-password"> Confirm password</label>
                   </div>
                 </div>
               <!-- About me -->
@@ -45,13 +64,21 @@
               <div class="register-details">
                 <div class="row ">
                   <button type="submit" class="col s6 offset-s3 btn-custom general-btn">
-                      REGISTER <i class="fas fa-sign-in-alt  prefix icon-color "></i>
+                     SIGN UP <i class="fas fa-sign-in-alt  prefix icon-color "></i>
                   </button>
                 </div>
               </div>  
             </div>
           </div>
         </form>
+        <div class="row">
+          <div class="col s12 m6 offset-m3 center-align">
+              <p class="registered">ALREADY A MEMBER?
+                  <span><a href="">LOGIN</a></span>
+              </p>
+          </div>
+          </div>
+        </div>
     </div>
 
 

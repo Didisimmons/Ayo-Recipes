@@ -62,77 +62,87 @@
              <li><a href="{{url_for('register')}}">REGISTER</a></li>
          </ul>
 
- </header>
+    </header>
 
- <main>            
- {% block content %}
+  <section>
+     <!-- Flash messages -->
+     {% with messages = get_flashed_messages() %}
+         {% if messages %}
+             {% for message in messages %}
+                 <div class="row flashes">
+                     <h4 class="center-align">{{message}}</h4>
+                 </div>
+             {% endfor %}
+         {% endif %}
+     {% endwith %}
+  </section>
 
- {% endblock %}
- </main>
 
- <footer>
-   <div class="footer-container">
-     <div class="row footer-content">
-       <div class="col s6 m4">
-         <ul class="recipe-links">
-             <li class="list-item ">
-                 <a href="#about-id" target="_blank">Best Ingredients </a>
-             </li>
-             <li class="list-item ">
-                 <a href="index.html" target="_blank">Best Kitchen Designs</a>
-             </li>
-             <li class="list-item ">
-               <a href="index.html" target="_blank">Meal Planners</a>
-           </li>
-         </ul>
-       </div> 
-       <div class="col m4 center-align hide-on-small-only">
-         <div class="logo-footer">
-             <a href="{{ url_for('home') }}">
-                 <img src="{{ url_for('static', filename='images/startpagehero.png') }}" alt="Logo for Ayo recipes" class="footer-image circle responsive-img">
-             </a>
-           </div>
-       </div>
-       <div class="col s6 m4 social-media right-align">
-         <ul>
-             <li class="list-item social-link">
-                 <a href="https://www.facebook.com/" target="_blank" aria-label="Find us on Facebook" rel="noopener">
-                     <i class="fab fa-facebook-f" aria-hidden="true"></i> 
-                     <span class="sr-only">Facebook</span>
-                   </a>
-             </li>
-             <li class="list-item social-link">
-                 <a href="https://www.instagram.com/" target="_blank" aria-label="Find us on Instagram" rel="noopener" >
-                   <i class="fab fa-instagram" aria-hidden="true"></i>
-                   <span class="sr-only">Instagram</span>
-                 </a>
-             </li>
-             <li class="list-item social-link">
-                 <a href="https://twitter.com/" target="_blank" aria-label="Find us on Twitter" rel="noopener">
-                     <i class="fab fa-twitter" aria-hidden="true"></i>
-                     <span class="sr-only">Twitter</span>
-                 </a>
-             </li>
-             <li class="list-item social-link">
-               <a href="blogger.com/blog/posts/6351921919711137785?bpli=1&pli=1" target="_blank" aria-label="Find us on Twitter" rel="noopener">
-                 <i class="fab fa-blogger" aria-hidden="true"></i>
-                   <span class="sr-only">Blogspot</span>
-               </a>
-           </li>
-         </ul>                
-       </div>
-     </div>
-     <div class="row">
-       <div class="col s12">
-           <p class="footer-text center-align">Copyright &copy;Ayo Recipes <span id="copyright"></span> </p>
-       </div>
-     </div>
+    <main>            
+    {% block content %}
 
-    </div>
-     
- </footer>
- 
+    {% endblock %}
+    </main>
 
+    <footer>
+      <div class="footer-container">
+        <div class="row footer-content">
+          <div class="col s6 m4">
+            <ul class="recipe-links">
+                <li class="list-item ">
+                    <a href="#about-id" target="_blank">Best Ingredients </a>
+                </li>
+                <li class="list-item ">
+                    <a href="index.html" target="_blank">Best Kitchen Designs</a>
+                </li>
+                <li class="list-item ">
+                  <a href="index.html" target="_blank">Meal Planners</a>
+              </li>
+            </ul>
+          </div> 
+          <div class="col m4 center-align hide-on-small-only">
+            <div class="logo-footer">
+                <a href="{{ url_for('home') }}">
+                    <img src="{{ url_for('static', filename='images/startpagehero.png') }}" alt="Logo for Ayo recipes" class="footer-image circle responsive-img">
+                </a>
+              </div>
+          </div>
+          <div class="col s6 m4 social-media right-align">
+            <ul>
+                <li class="list-item social-link">
+                    <a href="https://www.facebook.com/" target="_blank" aria-label="Find us on Facebook" rel="noopener">
+                        <i class="fab fa-facebook-f" aria-hidden="true"></i> 
+                        <span class="sr-only">Facebook</span>
+                      </a>
+                </li>
+                <li class="list-item social-link">
+                    <a href="https://www.instagram.com/" target="_blank" aria-label="Find us on Instagram" rel="noopener" >
+                      <i class="fab fa-instagram" aria-hidden="true"></i>
+                      <span class="sr-only">Instagram</span>
+                    </a>
+                </li>
+                <li class="list-item social-link">
+                    <a href="https://twitter.com/" target="_blank" aria-label="Find us on Twitter" rel="noopener">
+                        <i class="fab fa-twitter" aria-hidden="true"></i>
+                        <span class="sr-only">Twitter</span>
+                    </a>
+                </li>
+                <li class="list-item social-link">
+                  <a href="blogger.com/blog/posts/6351921919711137785?bpli=1&pli=1" target="_blank" aria-label="Find us on Twitter" rel="noopener">
+                    <i class="fab fa-blogger" aria-hidden="true"></i>
+                      <span class="sr-only">Blogspot</span>
+                  </a>
+              </li>
+            </ul>                
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12">
+              <p class="footer-text center-align">Copyright &copy;Ayo Recipes <span id="copyright"></span> </p>
+          </div>
+        </div>
+      </div>  
+    </footer>
   </div>
   
 
