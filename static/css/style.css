@@ -5,7 +5,8 @@ body{
 
 /* flash message */
 .flashes h4{
-    padding:1rem 0 ;
+    padding:1.5rem 0 ;
+    font-size: 1.5rem;
     font-family: poppins,sans-serif;
     letter-spacing:2px;
     line-height: 2;
@@ -72,7 +73,7 @@ input[type=text]:not(.browser-default):focus:not([readonly]){
 /* register */
 
 .register-header{
-    padding:3rem 0 ;
+    padding:2rem 0 ;
     font-family: dancing script,sans-serif;
     letter-spacing:3px;
     color: #730202;
@@ -205,7 +206,7 @@ button{
     }
 
     .input-field.col > label{
-        font-size: 0.85rem;
+        font-size: 0.7rem;
     
     }
 
@@ -227,6 +228,10 @@ button{
     .flashes h4{
         padding:1rem 0 ;
         line-height: 1.5;
+    }
+
+    .registered{
+        font-size: 12px;
     }
 
 }
