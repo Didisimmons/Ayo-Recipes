@@ -132,6 +132,16 @@ button{
     color:#f44336;
 }
 
+/* profile */
+.profile-header{
+    color:#730202;
+    letter-spacing: 3px;
+    
+}
+
+.profile-header h3{
+    padding:2rem 0;
+}
 
 /* footer */
 
@@ -215,7 +225,11 @@ button{
     }
 
     .register-header{
-        padding:2rem 0 ;   
+        padding:2rem 0 ; 
+    }
+
+    .profile-header h3{
+        font-size:1.5rem;
     }
 
 }

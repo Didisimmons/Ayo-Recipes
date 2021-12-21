@@ -29,9 +29,9 @@
                      <li><a href="">RECIPES</a></li>
                      <li><a href="">FESTIVE SEASON</a></li>
                      <li><a href="">TIPS & TRICKS</a></li>
-              <!--       <li><a href="">KITCHENWARES</a></li>
-                     <li><a href="">PROFILE </a></li>
+              <!--   <li><a href="">KITCHENWARES</a></li>
                      <li><a href="">EXPERT ADVICE</a></li> -->
+                     <li><a href="{{url_for('profile', username=session['user'])}}">PROFILE </a></li>
                      <li><a href="{{url_for('login')}}">LOGIN</a></li>  
                      <li><a href="{{url_for('register')}}">REGISTER</a></li>
              </ul>
@@ -56,7 +56,7 @@
              <li><a href="">FESTIVE SEASON</a></li>
              <li><a href="">TIPS & TRICKS</a></li>
              <li><a href="">KITCHENWARES</a></li>
-             <li><a href="">PROFILE</a></li>
+             <li><a href="{{url_for('profile', username=session['user'])}}">PROFILE</a></li>
              <li><a href="">EXPERT ADVICE</a></li>
              <li><a href="{{url_for('login')}}">LOGIN</a></li>
              <li><a href="{{url_for('register')}}">REGISTER</a></li>
