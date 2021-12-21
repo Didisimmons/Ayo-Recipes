@@ -33,9 +33,10 @@ def register():
             {"username": request.form.get("username").lower()})
 
         if confirm_user:
-            flash("Username is taken , choose another username"
-                + "Try adding numbers and special characters")
+            flash("Sorry but the username choosen is taken,"
+                + "try another")
             return redirect(url_for("register"))
+            
         confirm_password1 = request.form.get("password")
         confirm_password2 = request.form.get("confirm-password")
         if confirm_password1 != confirm_password2:
@@ -47,7 +48,7 @@ def register():
             "username": request.form.get("username").lower(),
             "password": generate_password_hash(request.form.get("password")),
             "about": request.form.get("aboutme"),
-            "admin": false
+            "admin": "bool"
         }
         mongo.db.users.insert_one(register_user)
 
