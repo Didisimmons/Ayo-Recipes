@@ -80,8 +80,8 @@ def login():
                             "profile", username=session["user"]))
             else:
                 # invalid password match
-                flash("Sorry the details provided do not"
-                    + "match our system, try again!")
+                flash("Sorry the details provided do not" 
+                    + "match our system try again!")
                 return redirect(url_for("login"))
 
         else:
@@ -93,10 +93,10 @@ def login():
 
 @app.route("/profile/<username>")
 def profile(username):
-    
+    #retrieve user and recipes from the dabase  
     if "user" in session:
         if session["user"] == username:
-            user= mongo.db.users.find_one(
+            user = mongo.db.users.find_one(
                 {"username": session["user"]})
             recipes_user = mongo.db.recipes.find(
                 {"created_by": session["user"]})
@@ -105,12 +105,18 @@ def profile(username):
         else:
             flash("You're not authorized to view this account")
             return redirect(url_for("login",
-                username=session["user"]))
+                    username=session["user"]))
     else:
-        flash("Please try Login")
+        flash("Please try Login again")
         return redirect(url_for("login"))
-    return render_template("profile.html", username=username)
 
+
+@app.route("/logout")
+def logout():
+    # remove user from session cookie
+    flash("You've been logged out !")
+    session.pop("user")
+    return redirect(url_for("login"))
 
 
 if __name__ == "__main__":

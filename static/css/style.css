@@ -12,9 +12,11 @@ body{
     line-height: 2;
     color: #730202;
 }
+
 /* nav bar */
 .nav-wrapper{
     background-color:#F29F05 ;
+    padding: 0 1rem;
 }
 
 .nav-wrapper a{
@@ -47,7 +49,55 @@ body{
     font-family: dancing script,sans-serif;
 }
 
-/* search bar */
+.dropdown-content li>a{
+    color:#730202;
+}
+/* for image logo 
+.ayo-logo{
+    width:6rem;
+    height:100px;
+    margin-right:0.8rem;
+}
+
+*/
+
+/* mobile nav bar */
+
+.mobile-logo{
+    margin:auto;
+}
+
+.brand-logo{
+    padding:2rem 0;
+    background-color:#F29F05 ;
+    border-radius:22px;
+}
+
+.brand-logo a{
+    color:#f0e5de;
+}
+
+.sidenav{
+    background-color:#D9B9A7;
+}
+
+nav i{
+    font-size:16px;
+    margin-left:5px;
+}
+
+.sidenav li>a{
+    color:#730202;    
+}
+
+.sidenav li>a:hover{
+    color:#F28705;
+    background-color: white;   
+    box-shadow:0 0.1rem 1.2rem 0 rgba(230, 58, 15, 0.6); 
+    cursor:pointer;
+}
+
+/* search bar on home page */
 .search-button{
     justify-content: center;
 }
@@ -61,7 +111,7 @@ body{
 }
 
 input[type=text]:not(.browser-default):focus:not([readonly]){
-    border-bottom: 1px solid #F24405;
+    border-bottom: 1px solid #F28705;
     color:#F28705 ;
 }
 
@@ -80,18 +130,18 @@ input[type=text]:not(.browser-default):focus:not([readonly]){
 }
 
 textarea.materialize-textarea {
-    border-bottom: 1px solid #F24405; 
+    border-bottom: 1px solid #F28705; 
     color:#F28705;
 }
 
 input[type=text]:not(.browser-default){
     color:#F28705;
-    border-bottom: 1px solid #F24405;
+    border-bottom: 1px solid #F28705;
 }
 
 input[type=password]:not(.browser-default){
     color:#F28705;
-    border-bottom: 1px solid #F24405;
+    border-bottom: 1px solid #F28705;
 }
 
 .general-btn{
@@ -99,7 +149,6 @@ input[type=password]:not(.browser-default){
     border-radius: 13px;
     color:#730202;
     padding: 15px;
-
 }
 
 .btn-custom{
@@ -135,8 +184,7 @@ button{
 /* profile */
 .profile-header{
     color:#730202;
-    letter-spacing: 3px;
-    
+    letter-spacing: 3px  
 }
 
 .profile-content{
@@ -147,15 +195,48 @@ button{
     padding:2rem 0;
 }
 
-.personal-details i {
-    margin-right:11px;
+.personal-details p, .personal-details i{
+    display: inline-block;
 }
 
-.personal-details p, .personal-details i {
-    display:inline-block;
-    vertical-align:middle;
-    font-size:1.5rem;
+.profile-update{
+    padding: 12px;
 }
+
+.profile-update:hover{
+    cursor:pointer;
+    box-shadow:0 0 1rem 0 #F28705;
+    color:#730202; 
+}
+
+.personal-details .input-field{
+    display:inline-block;
+}
+
+input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea{
+    border-bottom: 1px solid #F28705;
+}
+
+  /* valid color */
+.input-field input[type=text].valid {
+    border-bottom: 1px solid #F29F05;
+
+}
+  /* invalid color */
+.input-field input[type=text].invalid {
+    border-bottom: 1px solid #F28705;
+}
+  /* icon prefix focus color */
+  .input-field .prefix.active {
+    color: #730202;
+  }
+
+.input-field>label {
+    left:0;
+    color:#F28705;
+}
+
+
 
 /* footer */
 
@@ -267,6 +348,7 @@ button{
     .personal-details p, .personal-details i {
         font-size:1rem;
     }
+
 
 }
 

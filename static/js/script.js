@@ -5,4 +5,5 @@ $(document).ready(function(){
   setInterval(function() {
     $('#demo-carousel-content').carousel('next');
   }, 2000);
+   $(".dropdown-trigger").dropdown();
   });

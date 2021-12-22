@@ -13,3 +13,9 @@
 </div>
 
 {% endblock %}
+
+
+
+@app.route("/logout")
+def profile(username):
+    return render_template("profile.html", username=username)

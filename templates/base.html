@@ -21,47 +21,64 @@
     <header>
       <!-- Nav bar -->
       <nav class="nav-extended">
-         <div class="nav-wrapper lighten-4">
-             <a href="" class="brand-logo">Ayo Recipes</a>
-             <a href="" data-target="mobile-demo" class="sidenav-trigger left"><i class="fas fa-bars"></i></a>
-             <ul class="right hide-on-med-and-down menu-items">
-                 <li><a href="{{url_for('home')}}">HOME</a></li>
-                     <li><a href="">RECIPES</a></li>
-                     <li><a href="">FESTIVE SEASON</a></li>
-                     <li><a href="">TIPS & TRICKS</a></li>
-              <!--   <li><a href="">KITCHENWARES</a></li>
-                     <li><a href="">EXPERT ADVICE</a></li> -->
-                     <li><a href="{{url_for('profile', username=session['user'])}}">PROFILE </a></li>
-                     <li><a href="{{url_for('login')}}">LOGIN</a></li>  
-                     <li><a href="{{url_for('register')}}">REGISTER</a></li>
-             </ul>
-         </div>
-       </nav>
-       
-     
-       <!-- mobile side navbar-->
-       <ul class="sidenav slide-out" id="mobile-demo">
-         <li><div class="user-view">
-             <div class="background">
-               <img src="{{url_for('static',filename='images/')}}">
+        
+          <div class="nav-wrapper lighten-4">
+            <a href="{{url_for('home')}}" class="brand-logo">Ayo </a>
+            
+               <a href="{{url_for('home')}}" data-target="mobile-demo" class="sidenav-trigger left"><i class="fas fa-bars"></i></a>
+               <ul class="right hide-on-med-and-down menu-items">
+                  <li><a href="">RECIPES</a></li>
+                    {% if session.user %}
+                    <li><a class="dropdown-trigger" href="{{ url_for('profile', username=session['user']) }}" data-target="dropdown1">PROFILE<i class="fas fa-caret-down"></i></a></li>
+                      <li><a href="">TIPS & TRICKS</a></li>
+                      <li><a href="">KITCHENWARES</a></li>
+                      <li><a href="{{url_for('logout')}}">LOGOUT</a></li>
+                    {% else %}
+                      <li><a href="{{url_for('login')}}">LOGIN</a></li>  
+                      <li><a href="{{url_for('register')}}">REGISTER</a></li>
+                    {% endif %}
+                </ul>
              </div>
-             <a href="#user"><img class="circle" src="images/yuna.jpg"></a>
-             <a href="#name"><span class=" name">Craig Hank Doe</span></a>
-             <a href="#email"><span class=" email">jdandturk@gmail.com</span></a>
-             <h4>Ayo Recipes</h4>
-           </div>
-         </li>
-         <li><a href=""><i class="material-icons">cloud</i>HOME</a></li>
-             <li><a href="">RECIPES</a></li>
-             <li><a href="">FESTIVE SEASON</a></li>
-             <li><a href="">TIPS & TRICKS</a></li>
-             <li><a href="">KITCHENWARES</a></li>
-             <li><a href="{{url_for('profile', username=session['user'] )}}">PROFILE</a></li>
-             <li><a href="">EXPERT ADVICE</a></li>
-             <li><a href="{{url_for('login')}}">LOGIN</a></li>
-             <li><a href="{{url_for('register')}}">REGISTER</a></li>
-         </ul>
+         
+      </nav>
 
+      <!-- Dropdown Structure -->
+<ul id="dropdown1" class="dropdown-content menu-items">
+  <li><a href="#!">CREATE RECIPE</a></li>
+  <li><a href="#!">EDIT RECIPE</a></li>
+  <li><a href="#!">DELETE ACCOUNT</a></li>
+</ul>
+    
+
+       
+       <!-- mobile side navbar-->
+       <ul class="sidenav slide-out center-align" id="mobile-demo">
+         <li>
+            <div class="user-view">
+              <div class="div brand-logo">
+                <a href="{{url_for('home')}}"><img class="circle mobile-logo" src="{{ url_for('static', filename='images/startpagehero.png') }}"></a>
+                <h4>Ayo Recipes</h4>
+              </div>
+            </div>
+         </li>
+          <li><a href="">RECIPES</a></li>
+          {% if session.user %}
+            <li><a class="dropdown-trigger" href="{{ url_for('profile', username=session['user']) }}" data-target="dropdown2">PROFILE<i class="fas fa-caret-down"></i></a></li>
+            <li><a href="">TIPS & TRICKS</a></li>
+            <li><a href="">KITCHENWARES</a></li>
+            <li><a href="{{url_for('logout')}}">LOGOUT</a></li>
+          {% else %}
+          <li><a href="{{url_for('login')}}">LOGIN</a></li>  
+          <li><a href="{{url_for('register')}}">REGISTER</a></li>
+          {% endif %}
+        </ul>
+
+              <!-- Dropdown Structure for mobile  -->
+        <ul id="dropdown2" class="dropdown-content">
+          <li><a href="#!">CREATE RECIPE</a></li>
+          <li><a href="#!">EDIT RECIPE</a></li>
+          <li><a href="#!">DELETE ACCOUNT</a></li>
+        </ul>
     </header>
 
   <section>
