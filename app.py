@@ -91,13 +91,26 @@ def login():
     return render_template("login.html")
 
 
-@app.route("/profile/<username>", methods=["GET", "POST"])
+@app.route("/profile/<username>")
 def profile(username):
-    username = mongo.db.users.find_one(
-        {"username": session["user"]})["username"]
-    recipes_user = mongo.db.recipes.find(
-        {"created_by": session["user"]})
+    
+    if "user" in session:
+        if session["user"] == username:
+            user= mongo.db.users.find_one(
+                {"username": session["user"]})
+            recipes_user = mongo.db.recipes.find(
+                {"created_by": session["user"]})
+            return render_template(
+                "profile.html", user=user, recipes_user=recipes_user)
+        else:
+            flash("You're not authorized to view this account")
+            return redirect(url_for("login",
+                username=session["user"]))
+    else:
+        flash("Please try Login")
+        return redirect(url_for("login"))
     return render_template("profile.html", username=username)
+
 
 
 if __name__ == "__main__":

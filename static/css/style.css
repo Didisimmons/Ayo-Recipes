@@ -139,8 +139,22 @@ button{
     
 }
 
+.profile-content{
+    padding:1rem 0
+}
+
 .profile-header h3{
     padding:2rem 0;
+}
+
+.personal-details i {
+    margin-right:11px;
+}
+
+.personal-details p, .personal-details i {
+    display:inline-block;
+    vertical-align:middle;
+    font-size:1.5rem;
 }
 
 /* footer */
@@ -232,6 +246,8 @@ button{
         font-size:1.5rem;
     }
 
+
+
 }
 
 @media only screen and (max-width:768px){
@@ -246,6 +262,10 @@ button{
 
     .registered{
         font-size: 12px;
+    }
+
+    .personal-details p, .personal-details i {
+        font-size:1rem;
     }
 
 }
