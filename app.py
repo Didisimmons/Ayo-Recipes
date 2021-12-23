@@ -34,7 +34,7 @@ def register():
 
         if confirm_user:
             flash("Sorry but the username choosen is taken," +
-                "try another")
+                  "try another")
             return redirect(url_for("register"))
 
         confirm_password1 = request.form.get("password")
@@ -69,7 +69,6 @@ def login():
     if request.method == "POST":
         confirm_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
-    
         if confirm_user:
             if check_password_hash(
                     confirm_user["password"], request.form.get("password")):
@@ -80,8 +79,8 @@ def login():
                             "profile", username=session["user"]))
             else:
                 # invalid password match
-                flash("Sorry the details provided do not" 
-                    + "match our system try again!")
+                flash("Sorry the details provided do not" +
+                      "match our system try again!")
                 return redirect(url_for("login"))
 
         else:
@@ -93,7 +92,7 @@ def login():
 
 @app.route("/profile/<username>")
 def profile(username):
-    #retrieve user and recipes from the dabase  
+    # retrieve user and recipes from the dabase
     if "user" in session:
         if session["user"] == username:
             user = mongo.db.users.find_one(
@@ -105,7 +104,7 @@ def profile(username):
         else:
             flash("You're not authorized to view this account")
             return redirect(url_for("login",
-                    username=session["user"]))
+                            username=session["user"]))
     else:
         flash("Please try Login again")
         return redirect(url_for("login"))
@@ -117,6 +116,7 @@ def logout():
     flash("You've been logged out !")
     session.pop("user")
     return redirect(url_for("login"))
+
 
 
 if __name__ == "__main__":

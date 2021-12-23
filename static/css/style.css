@@ -97,6 +97,12 @@ nav i{
     cursor:pointer;
 }
 
+.sidenav li>a>i {
+    margin-left:5px; 
+    color:#730202;
+}
+
+
 /* search bar on home page */
 .search-button{
     justify-content: center;
@@ -107,7 +113,7 @@ nav i{
 }
 
 .search-container{
-    padding: 2rem 0;
+    padding: 2rem 0 0 0;
 }
 
 input[type=text]:not(.browser-default):focus:not([readonly]){
