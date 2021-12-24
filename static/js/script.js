@@ -6,4 +6,5 @@ $(document).ready(function(){
     $('#demo-carousel-content').carousel('next');
   }, 2000);
    $(".dropdown-trigger").dropdown();
+   $('.tooltipped').tooltip();
   });
