@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-
+  <section class="register-container">
     <div class="container">
       <h3 class="center-align register-header">Create an account with us! </h3>
         <form class="row register-form" method="POST" action="{{url_for('register')}}">
@@ -71,6 +71,9 @@
           </div>
         </div>
     </div>
+
+  </section>
+    
 
 
 {% endblock %}

@@ -127,6 +127,11 @@ input[type=text]:not(.browser-default):focus:not([readonly]){
     color: #730202;
 }
 
+.register-container{
+    width:100%;
+    background: url(/static/images/background2.png) no-repeat center center / cover fixed; 
+}
+
 textarea.materialize-textarea {
     border-bottom: 1px solid #F28705; 
     color:#F28705;
@@ -234,8 +239,44 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
     color:#F28705;
 }
 
+/* home page */
+.festive-container{
+    color: #730202;
+}
 
+.festive-container h3{
+    font-size:2rem;
+}
 
+.festive-container p{
+    text-align: center;
+    line-height: 2rem;
+}
+
+.card .card-content {
+    padding: 1rem 0.8rem;
+    text-align: center;
+}
+
+.variety-header{
+    color: #730202;
+    font-size:2rem
+}
+
+.categories{
+    padding: 2rem;
+    text-align: center;
+    color: #F28705;
+}
+
+.categories-image img{
+    width:100%
+}
+
+.categories-image{
+    display:flex;
+    justify-content: center;
+}
 /* footer */
 
 .footer-container{
@@ -345,6 +386,10 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 
     .personal-details p, .personal-details i {
         font-size:1rem;
+    }
+
+    .variety-header{
+        font-size:1.6rem
     }
 
 

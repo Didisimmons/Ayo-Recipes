@@ -19,8 +19,10 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/home")
 def home():
-    allrecipes = mongo.db.recipes.find()
-    return render_template("index.html", allrecipes=allrecipes)
+    category_recipes = mongo.db.categories.find().sort("category_name", -1).limit(8)
+    allrecipes = list(mongo.db.recipes.find())
+    return render_template("index.html", allrecipes=allrecipes,
+                            category_recipes=category_recipes)
 
 
 @app.route("/register", methods=["GET", "POST"])

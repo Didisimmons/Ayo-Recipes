@@ -33,43 +33,54 @@
 </section>
 
 <section>
-    <div class="festive-container">
+    <div class="festive-container container">
         <h3 class="center-align">Explore our festive favorites </h3>
         <p>Check out some of our recommended festive recipes from our community this winter! 
             We got you covered this season with some nice, easy , tasty and aesthetically pleasing meals.
-            Don't forget to tag us on our social media handles </p>
+            Don't forget to tag us on our social media handles. </p>
         
         <div class="row">
-            <div class="col s4 m4">
+            <div class="col s12 m4 l3">
                 {% for all in allrecipes %}
                 <div class="card">
-                <div class="card-image">
-                    <img src="{{url_for('static',filename='images/header-image2.jpg')}}">
-                    <span class="card-title">{{ all.recipe_name }}</span>
-                    <a class="btn-floating halfway-fab waves-effect waves-light red" href=""><i class="fas fa-plus-square"></i></a>
-                </div>
-                <div class="card-content">
-                    <p><strong>By:</strong>{{ all.recipe_time }}</p>
-                    <p><strong>By:</strong>{{ all.created_by }}</p>
+                    <div class="card-image">
+                        <img src="{{url_for('static',filename='images/header-image2.jpg')}}">
+                        <a class="btn-floating halfway-fab waves-effect waves-light red" href=""><i class="fas fa-plus-square"></i></a>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>{{ all.recipe_name }}</strong></p>
+                        <p><strong>By:</strong>{{ all.username }}</p>
+                    </div>
                 </div>
                 {% endfor %}
-                </div>
+            </div>
+         </div>
+    </div>
+
+    <div class="variety-container">
+        <div class="row">
+            <div class="col s12 center-align">
+                <h3 class="variety-header">Browse our Categories</h3>
             </div>
         </div>
-
-    </div>
+        
+        <div class="row categories container">
+            {% for category in category_recipes  %}
+            <div class="col s7 categories-image">
+                <img src="{{url_for('static',filename='images/header-image2.jpg')}}" alt="photo of ">
+            </div>
+            <div class="col s5 different-category">
+                <h5>{{category.category_name}}</h5>
+                <p>Delicious Treats</p>
+            </div>
+            {% endfor %}
+        </div>
+     </div>
+</section>
 
 </section>
 <section>
-    <h3>Welcome to our website </h3>
-      {% for all in allrecipes %}
-          {{ all.recipe_image }}<br>
-          {{ all.recipe_name }}<br>
-          {{ all.recipe_time }}<br>
-          {{ all.category_name }}<br>
-          {{ all.recipe_description }}<br>
-          {{ all.created_by }}<br>
-      {% endfor %}
+
 
       
   </section>
