@@ -70,15 +70,18 @@
             </div>
         </div>
         
-        <div class="row categories container">
+        <div class="row container">
             {% for category in category_recipes  %}
-            <div class="col s7 categories-image">
-                <img src="{{url_for('static',filename='images/header-image2.jpg')}}" alt="photo of ">
+            <div class="col s12 categories">
+                <div class="col s7 categories-image">
+                    <img src="{{url_for('static',filename='images/header-image2.jpg')}}" alt="photo of {{ category.category_name }}">
+                </div>
+                <div class="col s5 different-category">
+                    <h5>{{category.category_name}}</h5>
+                    <p>Delicious Treats</p>
+                </div>
             </div>
-            <div class="col s5 different-category">
-                <h5>{{category.category_name}}</h5>
-                <p>Delicious Treats</p>
-            </div>
+            
             {% endfor %}
         </div>
      </div>

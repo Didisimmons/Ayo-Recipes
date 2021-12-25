@@ -220,6 +220,19 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
     border-bottom: 1px solid #F28705;
 }
 
+
+/* add recipe */
+.recipe-header{
+    padding:2rem 0 ;
+    font-family: dancing script,sans-serif;
+    letter-spacing:3px;
+    color: #730202;
+}
+
+.recipe-container{
+    width:100%;
+    background: url(/static/images/background2.png) no-repeat center center / cover fixed; 
+}
   /* valid color */
 .input-field input[type=text].valid {
     border-bottom: 1px solid #F29F05;
@@ -263,8 +276,11 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
     font-size:2rem
 }
 
+.container .categories {
+    padding-bottom: 2rem;
+}
+
 .categories{
-    padding: 2rem;
     text-align: center;
     color: #F28705;
 }
@@ -272,11 +288,6 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 .categories-image img{
     width:100%;
     border-radius: 4rem;
-}
-
-.categories-image{
-    display:flex;
-    justify-content: center;
 }
 
 .different-category h5{

@@ -16,10 +16,25 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+def is_url_image(img_url):
+    """
+    check if image url provided by the user is valid
+    code from Stack Overflow,
+    https://stackoverflow.com/questions/10543940
+    /check-if-a-url-to-an-image-is-up-and-exists-in-python
+    """
+    image_formats = ("image/png", "image/jpeg", "image/jpg")
+    r = requests.head(img_url)
+    if r.headers.get("content-type", '') in image_formats:
+        return True
+    return False
+
+
 @app.route("/")
 @app.route("/home")
 def home():
-    category_recipes = mongo.db.categories.find().sort("category_name", -1).limit(8)
+    category_recipes = mongo.db.categories.find().sort(
+        "category_name", -1).limit(8)
     allrecipes = list(mongo.db.recipes.find())
     return render_template("index.html", allrecipes=allrecipes,
                             category_recipes=category_recipes)
@@ -50,7 +65,7 @@ def register():
             "username": request.form.get("username").lower(),
             "password": generate_password_hash(request.form.get("password")),
             "about": request.form.get("aboutme"),
-            "admin": "bool"
+            "admin": admin
         }
         mongo.db.users.insert_one(register_user)
 
@@ -94,7 +109,9 @@ def login():
 
 @app.route("/profile/<username>")
 def profile(username):
-    # retrieve user and recipes from the dabase
+    """
+    retrieve user and recipe information from the dabase
+    """
     if "user" in session:
         if session["user"] == username:
             user = mongo.db.users.find_one(
@@ -119,6 +136,11 @@ def logout():
     session.pop("user")
     return redirect(url_for("login"))
 
+
+@app.route("/add_recipe")
+def add_recipe():
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("addrecipe.html", categories=categories)
 
 
 if __name__ == "__main__":

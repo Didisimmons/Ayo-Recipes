@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% block content %}
+
+  <section class="recipe-container">
+    <div class="container">
+        <h3 class="center-align recipe-header"> Create a new recipe </h3>
+        <form class="row recipe-form" method="POST" action="{{url_for('add_recipe')}}">
+            <div class="col s12 m8 offset-m2">
+                <div class="card-panel">
+                <!-- recipe name -->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-utensils prefix icon-color"></i>
+                        <input id="recipe_name" name="recipe_name" minlength="5" maxlength="50"
+                            type="text" class="validate" required>
+                        <label for="recipe_name">Recipe Name</label>
+                    </div>
+                </div>
+
+                 <!-- recipe description -->
+                 <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-comment prefix icon-color"></i>
+                        <textarea id="recipe_description" name="recipe_description" minlength="5"
+                            maxlength="600" class="materialize-textarea validate" rows="4"required></textarea>
+                        <label for="recipe_description" >Brief description of recipe</label>
+                    </div>
+                </div>
+
+                <!-- recipe time  -->
+                <div class="row">
+                    <div class="input-field col s12 m3">
+                        <i class="fas fa-clock prefix icon-color"></i>
+                        <input type="text" id="recipe_time" name="recipe_time" required>
+                        <label for="recipe_time">minutes</label>
+                    </div>
+
+                    <!-- select recipe category  -->
+                    <div class="row">
+                        <div class="input-field col s12 m6">
+                            <i class="fas fa-tag prefix icon-color"></i>
+                            <select id="category_name" name="category_name" class="validate" required>
+                                <option value="" disabled selected>Choose Category</option>
+                                {% for category in categories %}
+                                    <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                                {% endfor %}
+                            </select>
+                            <label for="category_name">Pick a Category</label>
+                        </div>
+                    </div>   
+                </div>
+
+                 <!-- upload image url if present -->
+                <div class="row">
+                    <div class="col s12 input-field">
+                        <input type="url"  id="image_url" name="image_url" class="validate" minlength="6" maxlength="150"
+                            validate>
+                        <label for="image_url">
+                            <i class="fas fa-image"></i> Url of Recipe image(if any)
+                        </label>   
+                    </div>
+                </div>  
+
+                 <!-- button -->
+                <div class="row">
+                    <div class="col s12 center-align">
+                        <button type="submit" class="btn waves-effect waves-light amber darken-2">
+                            Submit <i class="fas fa-folder-plus prefix right"></i>
+                        </button>
+                        <a href="{{ url_for('profile', username=session['user']) }}" role="button" 
+                        class="btn waves-effect waves-light grey darken-2">
+                        Return Back
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+        </form>
+    </div>
+  </section>
+
+
+{% endblock %}
