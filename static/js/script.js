@@ -7,4 +7,5 @@ $(document).ready(function(){
   }, 2000);
    $(".dropdown-trigger").dropdown();
    $('.tooltipped').tooltip();
+   $('select').formSelect();
   });

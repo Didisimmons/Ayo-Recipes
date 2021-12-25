@@ -39,12 +39,12 @@
                     <div class="input-field col s12 m5">
                         <i class="fas fa-tag prefix icon-color"></i>
                         <select id="category_name" name="category_name" class="validate" required>
-                            <option value="" disabled selected>Choose Category</option>
+                            <option value="" disabled selected> Pick one</option>
                             {% for category in categories %}
                                 <option value="{{ category.category_name }}">{{ category.category_name }}</option>
                             {% endfor %}
                         </select>
-                        <label for="category_name">Pick a Category</label>
+                        <label for="category_name">Select a Category</label>
                     </div>
 
                     <!-- vegetarian toggle  -->
