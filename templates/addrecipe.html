@@ -27,6 +27,46 @@
                     </div>
                 </div>
 
+                <!-- ingredients input  -->
+                <div class="row">
+                    <div class="col s12 input-field" id="ingredient-list">
+                            <i class="fas fa-pepper-hot prefix icon-color"></i>
+                            <input type="text" id="ingredients" name="ingredients" class="validate input-ingredients" placeholder="insert ingredients" minlength="5" required>
+                            <label for="ingredients"></label>
+                            <div id="insert-ingredient"></div>   
+                    </div>
+                    <div>
+                        <div class="row controls">
+                            <button type="button" id="add-more-button" class="btn-custom general-btn">
+                                MORE <i class="fas fa-plus prefix icon-color"></i>
+                            </button>
+                            <button type="button" id="remove-button" class="btn-custom general-btn">
+                                DELETE ROW<i class="fas fa-minus prefix icon-color"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                    <!-- recipe instructions-->
+                <div class="row">
+                    <div class="input-field col s12" id="instruction-list">
+                        <i class="fas fa-clipboard-list prefix icon-color"></i>
+                        <textarea type="text" id="recipe_instructions" name="recipe_instructions" minlength="5" maxlength="500" class="materialize-textarea instructions validate" placeholder="provide directions for the recipe"required></textarea>
+                        <label for="recipe_instructions"></label>
+                        <div id="insert-directions"></div>   
+                    </div>
+                    <div>
+                        <div class="row controls">
+                            <button type="button" id="add-more-directions" class="btn-custom general-btn">
+                                MORE <i class="fas fa-plus prefix icon-color"></i>
+                            </button>
+                            <button type="button" id="delete-directions" class="btn-custom general-btn">
+                                DELETE ROW<i class="fas fa-minus prefix icon-color"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
                 <!-- recipe time  -->
                 <div class="row">
                     <div class="input-field col s12 m3">
@@ -59,26 +99,17 @@
                     </div>
                 </div> 
 
-                 <!-- ingredients input  -->
+
+                <!-- upload image url if present -->
                 <div class="row">
-                    <div class="col s12 input-field" id="ingredient-list">
-                            <i class="fas fa-pepper-hot prefix icon-color"></i>
-                            <input type="text" id="ingredients" name="ingredients" class="validate input-ingredients" placeholder="insert ingredients" minlength="5" required>
-                            <div id="insert-ingredient"></div>   
+                    <div class="col s12 input-field">
+                        <input type="url"  id="image_url" name="image_url" class="validate" minlength="6" maxlength="150"
+                            validate>
+                        <label for="image_url">
+                            <i class="fas fa-image"></i> Url of Recipe image(if any)
+                        </label>   
                     </div>
-                    <div>
-                        <div class="row controls">
-                            <button type="button" id="add-more-button" class="btn-custom general-btn">
-                                MORE <i class="fas fa-plus prefix icon-color"></i>
-                            </button>
-                            <button type="button" id="remove-button" class="btn-custom general-btn">
-                                DELETE ROW<i class="fas fa-minus prefix icon-color"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-               
-                
+                </div> 
 
                  <!-- button -->
                 <div class="row">
@@ -92,16 +123,11 @@
                         </a>
                     </div>
                 </div>
-
-                
-    
                 
             </div>
         </form>
     </div>
   </section>
-
-
 
 
 {% endblock %}
