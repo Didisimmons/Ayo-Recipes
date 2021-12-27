@@ -22,8 +22,8 @@
                     <div class="input-field col s12">
                         <i class="fas fa-comment prefix icon-color"></i>
                         <textarea id="recipe_description" name="recipe_description" minlength="5"
-                            maxlength="600" class="materialize-textarea validate" rows="4"required></textarea>
-                        <label for="recipe_description" >Brief description of recipe</label>
+                            maxlength="500" class="materialize-textarea validate" rows="4"required></textarea>
+                        <label for="recipe_description" >Brief description of recipe(500 characters max)</label>
                     </div>
                 </div>
 
@@ -41,7 +41,7 @@
                         <select id="category_name" name="category_name" class="validate" required>
                             <option value="" disabled selected> Pick one</option>
                             {% for category in categories %}
-                                <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                            <option value="{{ category.category_name }}">{{ category.category_name }}</option>
                             {% endfor %}
                         </select>
                         <label for="category_name">Select a Category</label>
@@ -59,17 +59,25 @@
                     </div>
                 </div> 
 
-                 <!-- upload image url if present -->
+                 <!-- ingredients input  -->
                 <div class="row">
-                    <div class="col s12 input-field">
-                        <input type="url"  id="image_url" name="image_url" class="validate" minlength="6" maxlength="150"
-                            validate>
-                        <label for="image_url">
-                            <i class="fas fa-image"></i> Url of Recipe image(if any)
-                        </label>   
+                    <div class="col s12 input-field" id="ingredient-list">
+                            <i class="fas fa-pepper-hot prefix icon-color"></i>
+                            <input type="text" id="ingredients" name="ingredients" class="validate input-ingredients" placeholder="insert ingredients" minlength="5" required>
+                            <div id="insert-ingredient"></div>   
                     </div>
-                </div> 
-                
+                    <div>
+                        <div class="row controls">
+                            <button type="button" id="add-more-button" class="btn-custom general-btn">
+                                MORE <i class="fas fa-plus prefix icon-color"></i>
+                            </button>
+                            <button type="button" id="remove-button" class="btn-custom general-btn">
+                                DELETE ROW<i class="fas fa-minus prefix icon-color"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+               
                 
 
                  <!-- button -->
@@ -84,11 +92,16 @@
                         </a>
                     </div>
                 </div>
+
+                
+    
                 
             </div>
         </form>
     </div>
   </section>
+
+
 
 
 {% endblock %}

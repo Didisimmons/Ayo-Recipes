@@ -22,6 +22,8 @@ def is_url_image(img_url):
     code from Stack Overflow,
     https://stackoverflow.com/questions/10543940
     /check-if-a-url-to-an-image-is-up-and-exists-in-python
+    https://stackoverflow.com/questions/37339644/content-type-
+    is-blank-in-the-headers-of-some-requests
     """
     image_formats = ("image/png", "image/jpeg", "image/jpg")
     r = requests.head(img_url)
@@ -82,7 +84,8 @@ def login():
     function allows user to log to their account,
     check if the user has been created already
     and if password exist, if not found display
-    an error """
+    an error 
+    """
     if request.method == "POST":
         confirm_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
