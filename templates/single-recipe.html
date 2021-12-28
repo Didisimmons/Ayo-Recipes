@@ -4,66 +4,109 @@
 <div class="row center-cols center-align">
     <div class="col m6">
       <div class="recipe-details center-align">
-        <h3>{{ recipe.recipe_name }}</h3>
-        {% if recipe.rate == "0" %}
-          <span class="review-content star-rating">{{ recipe.rate }} stars 
-            <i class="far fa-star"></i>
-            <i class="far fa-star"></i>
-            <i class="far fa-star"></i>
-            <i class="far fa-star"></i>
-            <i class="far fa-star"></i></span><br>
-        {% elif recipe.rate == "1" %}
-          <span class="review-content star-rating">{{ recipe.rate }} star 
-            <i class="fas fa-star"></i>
-            <i class="far fa-star"></i>
-            <i class="far fa-star"></i>
-            <i class="far fa-star"></i>
-            <i class="far fa-star"></i></span><br>     
-        {% elif recipe.rate == "2" %}
-          <span class="review-content star-rating">{{ recipe.rate }} stars 
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="far fa-star"></i>
-            <i class="far fa-star"></i>
-            <i class="far fa-star"></i></span><br>
-        {% elif recipe.rate == "3" %}
-          <span class="review-content star-rating">{{ recipe.rate }} stars 
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="far fa-star"></i>
-            <i class="far fa-star"></i></span><br>
-       {% elif recipe.rate == "4" %}
-          <span class="review-content star-rating">{{ recipe.rate }} stars 
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="far fa-star"></i></span><br>
-        {% elif recipe.rate == "5" %}
-            <span class="review-content star-rating">{{ recipe.rate }} stars
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i></span><br>
-        {% else %}
-              <span class="review content">No Rating added yet</span>
-        {% endif %}
+          <h3 class="single-header">{{ recipe.recipe_name }}</h3>
+          <p class="single-recipe-text"><strong>By:</strong>{{ recipe.created_by|capitalize}}</p>
+          <div class="review-rating">
+            {% if recipe.rate == "0" %}
+              <span class="ratings">
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </span>
+                <br>
+            {% elif recipe.rate == "1" %}
+              <span class="ratings">{{ recipe.rate }} stars
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </span>
+                <br>     
+            {% elif recipe.rate == "2" %}
+              <span class="ratings">{{ recipe.rate }} stars 
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </span>
+                <br>
+            {% elif recipe.rate == "3" %}
+              <span class="ratings">{{ recipe.rate }} stars 
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </span>
+                <br>
+            {% elif recipe.rate == "4" %}
+              <span class="ratings">{{ recipe.rate }} stars 
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </span>
+                <br>
+              {% elif recipe.rate == "5" %}
+                <span class="ratings">{{ recipe.rate }} stars
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </span>
+                <br>
+              {% else %}
+                  <span class="review content"> No ratings yet</span>
+              {% endif %}
+          </div>
+          <p class="single-recipe-text">{{ recipe.recipe_description}}</p>
+          <div class="prep-time center-align">
+              <div class="col m4 recipe-item">
+                  <span class="value">{{ recipe.ingredients|length}}</span>
+                  <span class="label">Ingredients</span>
+              </div>
+              <div class="col m4 recipe-item">
+                  <span class="value">{{ recipe.recipe_time}}</span>
+                  <span class="label">Minutes</span>
+              </div>
+              <div class="col m4 recipe-item">
+                <!-- Code assistance from a fellow student at code institute discussed in readME file -->
+                  {% for category in recipe.category_name %}
+                    <span class="value">{{ category }}</span>
+                    <span class="label">Category</span>
+                  {% endfor %}
+              </div>
+          </div>
+          <div class="vegetarian">
+            <div class="row">
+              <div class="col s12 vegetarian-text">
+                {% if recipe.is_vegetarian == "on" %}
+               <p class="single-recipe-text"><strong>VeganFriendly:</strong>Yes</p>
+            {% else %}
+               <p class="single-recipe-text"><strong>VeganFriendly:</strong>No</p>
+            {% endif %}
 
+              </div>
+            </div>
+            
 
-      </div>
+          </div>
+         
 
-      
+      </div>     
     </div>
-    </div>
+    
     <div class="col m6">
       <div class="recipe-image">
-
+        <img src="{{url_for('static',filename='images/food_image.png')}}" alt="{{ recipe.recipe_name}}">
       </div>
-     
     </div>
   </div>
-  
-  
+  <div class="divider s12"></div>
 {%endblock%}

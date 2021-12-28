@@ -302,8 +302,70 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
     color: #c59b08;
 }
 
+  /* single page */
+.single-header{
+    color: #730202;
+    padding-top: 3rem ;
+}
 
+.single-recipe-text{
+    color:#730202;
+    padding:1rem 0;
+}
 
+.single-recipe-text strong{
+    margin-right:3px;
+}
+
+.prep-time{
+    padding:1rem 0 1.5rem 0;
+}
+
+.review-rating{
+    color:#730202;
+    padding:1rem;
+    text-align:center;
+}
+
+.ratings i{
+    color:#ffc700;
+}
+
+.recipe-item{
+    color:#730202;
+    flex:1;
+    text-align: center;
+}
+
+.recipe-image{
+    padding:6rem 0;
+}
+
+.recipe-image img{
+    display: block;
+    width: auto;
+    height: auto;
+    max-height: 355px;
+    max-width: 313px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.vegetarian-text{
+    padding:2rem 0;
+}
+/* code borrowed from yummly at https://www.yummly.co.uk/recipe/Eggs-Benedict-2635676 */
+.recipe-item .value{
+    display: inline-block;
+    font-weight: bold;
+    color: #F28705;
+}
+
+.recipe-item .label{
+    position: relative;
+    top: -4px;
+    display: block;
+}
 
   /* valid color */
 .input-field input[type=text].valid {
