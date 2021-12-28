@@ -16,22 +16,6 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
-def is_url_image(img_url):
-    """
-    check if image url provided by the user is valid
-    code from Stack Overflow,
-    https://stackoverflow.com/questions/10543940
-    /check-if-a-url-to-an-image-is-up-and-exists-in-python
-    https://stackoverflow.com/questions/37339644/content-type-
-    is-blank-in-the-headers-of-some-requests
-    """
-    image_formats = ("image/png", "image/jpeg", "image/jpg")
-    r = requests.head(img_url)
-    if r.headers.get("content-type", '') in image_formats:
-        return True
-    return False
-
-
 @app.route("/")
 @app.route("/home")
 def home():
@@ -39,7 +23,7 @@ def home():
         "category_name", -1).limit(8)
     allrecipes = list(mongo.db.recipes.find())
     return render_template("index.html", allrecipes=allrecipes,
-                            category_recipes=category_recipes)
+                           category_recipes=category_recipes)
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -140,10 +124,38 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/add_recipe")
+@app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
-    categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template("addrecipe.html", categories=categories)
+    """
+    Check if the user is logged in and 
+    add recipe to the user profile
+    """
+    user = mongo.db.users.find_one(
+        {"username": session["user"]})
+    if "user" in session:
+        if request.method == "POST":
+            is_vegetarian = "on" if request.form.get("is_vegetarian") else "off"
+            recipe = {
+                "recipe_name":request.form.get("recipe_name"),
+                "category_name": request.form.get("category_name"),
+                "recipe_description":request.form.get("recipe_description"),
+                "ingredients": request.form.getlist("ingredients"),
+                "recipe_instructions":request.form.getlist("recipe_instructions"),
+                "recipe_time": request.form.get("recipe_time"),
+                "category_name": request.form.getlist("category_name"),
+                "is_vegetarian": is_vegetarian,
+                "image_url": request.form.get("image_url"),
+                "created_by": session["user"]
+            }
+            mongo.db.recipes.insert_one(recipe)
+            flash("Recipe sucessfully created")
+            return redirect(url_for("home"))
+        
+        categories = mongo.db.categories.find().sort("category_name", 1)
+        return render_template("addrecipe.html", categories=categories,user=user)
+    else:
+        flash("Please Login/Signup to create a recipe ")
+        return redirect(url_for("login"))
 
 
 if __name__ == "__main__":

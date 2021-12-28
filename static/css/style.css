@@ -151,7 +151,7 @@ input[type=password]:not(.browser-default){
     background-color: #F24405;
     border-radius: 13px;
     color:#730202;
-    padding: 15px;
+    padding: 9px;
 }
 
 .btn-custom{
@@ -183,6 +183,7 @@ button{
 .registered a{
     color:#f44336;
 }
+
 
 /* profile */
 .profile-header{
@@ -330,6 +331,12 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 .vegan{
     color:#F28705;
 }
+
+.center-recipe > .col {
+    float:none; /* disable the float */
+    display: inline-block; /* make blocks inline-block */
+    text-align: initial; /* restore text-align to default */
+  }
 
 /* footer */
 

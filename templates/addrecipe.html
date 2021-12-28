@@ -72,7 +72,7 @@
                     <div class="input-field col s12 m3">
                         <i class="fas fa-clock prefix icon-color"></i>
                         <input type="text" id="recipe_time" name="recipe_time" required>
-                        <label for="recipe_time">minutes</label>
+                        <label for="recipe_time">Prep Time</label>
                     </div>
 
                     <!-- select recipe category  -->
@@ -81,7 +81,7 @@
                         <select id="category_name" name="category_name" class="validate" required>
                             <option value="" disabled selected> Pick one</option>
                             {% for category in categories %}
-                            <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                                <option value="{{ category.category_name }}">{{ category.category_name }}</option>
                             {% endfor %}
                         </select>
                         <label for="category_name">Select a Category</label>
@@ -103,7 +103,7 @@
                 <!-- upload image url if present -->
                 <div class="row">
                     <div class="col s12 input-field">
-                        <input type="url"  id="image_url" name="image_url" class="validate" minlength="6" maxlength="150"
+                        <input type="text"  id="image_url" name="image_url" class="validate" minlength="6" maxlength="150"
                             validate>
                         <label for="image_url">
                             <i class="fas fa-image"></i> Url of Recipe image(if any)
