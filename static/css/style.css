@@ -260,6 +260,51 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 .input-field :placeholder-shown {
     color:#F28705;
 }
+
+/* stars */
+*{
+    margin: 0;
+    padding: 0;
+}
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #F28705;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+
+
+
+
   /* valid color */
 .input-field input[type=text].valid {
     border-bottom: 1px solid #F29F05;
@@ -333,9 +378,9 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 }
 
 .center-recipe > .col {
-    float:none; /* disable the float */
-    display: inline-block; /* make blocks inline-block */
-    text-align: initial; /* restore text-align to default */
+    float:none; 
+    display: inline-block;
+    text-align: initial; 
   }
 
 /* footer */

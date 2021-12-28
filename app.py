@@ -20,9 +20,9 @@ mongo = PyMongo(app)
 @app.route("/home")
 def home():
     category_recipes = mongo.db.categories.find().sort(
-        "category_name", -1).limit(8)
-    allrecipes = list(mongo.db.recipes.find())
-    return render_template("index.html", allrecipes=allrecipes,
+        "category_name", -1).limit(6)
+    recipes = list(mongo.db.recipes.find())
+    return render_template("index.html", recipes=recipes,
                            category_recipes=category_recipes)
 
 
@@ -65,10 +65,9 @@ def register():
 @app.route("/login", methods=["GET", "POST"])
 def login():
     """
-    function allows user to log to their account,
-    check if the user has been created already
-    and if password exist, if not found display
-    an error 
+    Function allows user to log to their account,
+    check if the user has been created already    
+    and if password exist if not found display an error.
     """
     if request.method == "POST":
         confirm_user = mongo.db.users.find_one(
@@ -127,35 +126,49 @@ def logout():
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
     """
-    Check if the user is logged in and 
-    add recipe to the user profile
+    Check if the user is logged in
+    and add recipe to
+    the user profile.
     """
     user = mongo.db.users.find_one(
         {"username": session["user"]})
     if "user" in session:
         if request.method == "POST":
-            is_vegetarian = "on" if request.form.get("is_vegetarian") else "off"
+            is_vegetarian = "on" if request.form.get(
+                                    "is_vegetarian") else "off"
             recipe = {
-                "recipe_name":request.form.get("recipe_name"),
-                "category_name": request.form.get("category_name"),
-                "recipe_description":request.form.get("recipe_description"),
+                "recipe_name": request.form.get("recipe_name"),
+                "recipe_description": request.form.get("recipe_description"),
                 "ingredients": request.form.getlist("ingredients"),
-                "recipe_instructions":request.form.getlist("recipe_instructions"),
+                "recipe_instructions": request.form.getlist(
+                                            "recipe_instructions"),
                 "recipe_time": request.form.get("recipe_time"),
                 "category_name": request.form.getlist("category_name"),
                 "is_vegetarian": is_vegetarian,
                 "image_url": request.form.get("image_url"),
+                "rate": request.form.get("rate"),
                 "created_by": session["user"]
             }
             mongo.db.recipes.insert_one(recipe)
             flash("Recipe sucessfully created")
             return redirect(url_for("home"))
-        
+
         categories = mongo.db.categories.find().sort("category_name", 1)
-        return render_template("addrecipe.html", categories=categories,user=user)
+        return render_template(
+            "addrecipe.html", categories=categories, user=user)
     else:
         flash("Please Login/Signup to create a recipe ")
         return redirect(url_for("login"))
+
+
+@app.route("/single_recipe/<recipe_id>")
+def single_recipe(recipe_id):
+    """
+    Display single recipe details.
+    """
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    return render_template("single-recipe.html", recipe=recipe)
+
 
 
 if __name__ == "__main__":

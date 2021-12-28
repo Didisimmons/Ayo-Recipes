@@ -40,25 +40,27 @@
             Don't forget to tag us on our social media handles. </p>
         
         <div class="row center-recipe center-align">
-            <div class="col m4">
-                {% for all in allrecipes %}
-                <div class="card">
-                    <div class="card-image">
-                        <img src="{{url_for('static',filename='images/header-image2.jpg')}}"> 
+            {% for recipe in recipes %}
+                <div class="col m3">
+                    <a href = "{{url_for('single_recipe', recipe_id=recipe._id)}}">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="{{url_for('static',filename='images/header-image2.jpg')}}">        
+                        </div>
+                        <div class="card-content">
+                            <a class="btn-floating halfway-fab waves-effect waves-light red" href=""><i class="fas fa-plus-square"></i></a>
+                            <p><strong>{{ recipe.recipe_name }}</strong></p>
+                            <p><strong>By:</strong>{{ recipe.created_by}}</p>
+                            {% if recipe.is_vegetarian == "on" %}
+                            <p class="vegan"> Vegan
+                            <i class="fas fa-seedling tooltipped icon-color"data-position="middle" data-tooltip="Vegan friendly"></i>
+                            </p>
+                            {% endif %}
+                        </div>
                     </div>
-                    <div class="card-content">
-                        <a class="btn-floating halfway-fab waves-effect waves-light red" href=""><i class="fas fa-plus-square"></i></a>
-                        <p><strong>{{ all.recipe_name }}</strong></p>
-                        <p><strong>By:</strong>{{ all.created_by}}</p>
-                        {% if all.is_vegetarian == "on" %}
-                        <p class="vegan"> Vegan
-                        <i class="fas fa-seedling tooltipped icon-color"data-position="middle" data-tooltip="Vegan friendly"></i>
-                        </p>
-                        {% endif %}
-                    </div>
+                    </a>   
                 </div>
-                {% endfor %}
-            </div>
+            {% endfor %}
          </div>
     </div>
 
@@ -70,7 +72,7 @@
         </div>
         
         <div class="row container">
-            {% for category in category_recipes  %}
+            {% for category in category_recipes %}
             <div class="col s12 categories">
                 <div class="col s7 categories-image">
                     <img src="{{url_for('static',filename='images/header-image2.jpg')}}" alt="photo of {{ category.category_name }}">
