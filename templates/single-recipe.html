@@ -4,7 +4,7 @@
 <div class="row center-cols center-align">
     <div class="col m6">
       <div class="recipe-details center-align">
-          <h3 class="single-header">{{ recipe.recipe_name }}</h3>
+          <h4 class="single-header">{{ recipe.recipe_name }}</h4>
           <p class="single-recipe-text"><strong>By:</strong>{{ recipe.created_by|capitalize}}</p>
           <div class="review-rating">
             {% if recipe.rate == "0" %}
@@ -76,7 +76,6 @@
                   <span class="label">Minutes</span>
               </div>
               <div class="col m4 recipe-item">
-                <!-- Code assistance from a fellow student at code institute discussed in readME file -->
                   {% for category in recipe.category_name %}
                     <span class="value">{{ category }}</span>
                     <span class="label">Category</span>
@@ -85,11 +84,11 @@
           </div>
           <div class="vegetarian">
             <div class="row">
-              <div class="col s12 vegetarian-text">
+              <div class="col s12">
                 {% if recipe.is_vegetarian == "on" %}
-               <p class="single-recipe-text"><strong>VeganFriendly:</strong>Yes</p>
+               <p class="vegetarian-text"><strong>VeganFriendly:</strong>Yes</p>
             {% else %}
-               <p class="single-recipe-text"><strong>VeganFriendly:</strong>No</p>
+               <p class="vegetarian-text"><strong>VeganFriendly:</strong>No</p>
             {% endif %}
 
               </div>
@@ -108,5 +107,43 @@
       </div>
     </div>
   </div>
+  <div class="row ">
+    <div class="col s12 center-align">
+      <a href="" class="waves-effect recipe-buttons amber darken-2">SAVE RECIPE</a>
+      <a href="" class="waves-effect recipe-buttons amber darken-2"> EDIT RECIPE</a>
+    </div> 
+  </div>
   <div class="divider s12"></div>
+  <div class="row">
+    <div class="preparation-container center-align">
+      <div class="col s12 m5">
+        <div class="direction-details">
+          <h5 class="preparation-details">Ingredients</h5>
+          {% for ingredient in recipe.ingredients %}
+            <div>
+                <label class="recipe-checkbox">
+                  <input type="checkbox"  />
+                  <span id="check">{{ ingredient }}</span>
+                </label>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="col s12 m6">
+        <div class="direction-details">
+          <h5 class="icon-color">Directions </h5>
+          {% for instructions in recipe.recipe_instructions %}
+            <div class="recipe-checkbox">
+                <label>
+                  <input type="checkbox"  />
+                  <span >{{ instructions}}</span>
+                </label>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+  </div>
+  
 {%endblock%}

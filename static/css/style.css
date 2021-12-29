@@ -346,13 +346,39 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
     width: auto;
     height: auto;
     max-height: 355px;
-    max-width: 313px;
+    max-width: 355px;
     margin: 0 auto;
     border-radius: 10px;
 }
 
 .vegetarian-text{
     padding:2rem 0;
+    color:#730202;
+}
+
+.direction-details{
+    padding-top: 2rem;
+    margin:0.8rem; 
+}
+
+.preparation-details{
+    color: #730202;
+    padding-bottom: 1rem;
+}
+
+#check{
+    margin-bottom: 1rem;
+    color: #730202;
+} 
+
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+    position: unset;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.divider {
+    background-color: #F28705;
 }
 /* code borrowed from yummly at https://www.yummly.co.uk/recipe/Eggs-Benedict-2635676 */
 .recipe-item .value{
@@ -367,6 +393,9 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
     display: block;
 }
 
+.recipe-checkbox label{
+    color:#730202;
+}
   /* valid color */
 .input-field input[type=text].valid {
     border-bottom: 1px solid #F29F05;
@@ -581,13 +610,15 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 
 }
 
-@media screenn and (min-width:875px){
+@media screen and (min-width:875px){
     .btn-floating.halfway-fab{
         right:-3px;
         bottom: 68px;
     }
     
 }
+
+
 @media screen and (min-width: 978px) {
     .hero-image-text{
     letter-spacing: 5px;
