@@ -12,7 +12,7 @@
                     <div class="input-field col s12">
                         <i class="fas fa-utensils prefix icon-color"></i>
                         <input id="recipe_name" name="recipe_name" minlength="5" maxlength="50"
-                            type="text" class="validate" required>
+                            type="text" class="validate" value="{{ recipe.recipe_name }}" required>
                         <label for="recipe_name">Recipe Name</label>
                     </div>
                 </div>
@@ -22,7 +22,9 @@
                     <div class="input-field col s12">
                         <i class="fas fa-comment prefix icon-color"></i>
                         <textarea id="recipe_description" name="recipe_description" minlength="5"
-                            maxlength="500" class="materialize-textarea validate" rows="4"required></textarea>
+                            maxlength="500" class="materialize-textarea validat" rows="4"required>
+                            {{- recipe.recipe_description -}}
+                        </textarea>
                         <label for="recipe_description" >Brief description of recipe(500 characters max)</label>
                     </div>
                 </div>
@@ -31,7 +33,7 @@
                 <div class="row">
                     <div class="col s12 input-field" id="ingredient-list">
                             <i class="fas fa-pepper-hot prefix icon-color"></i>
-                            <input type="text" id="ingredients" name="ingredients" class="validate input-ingredients" placeholder="insert ingredients" minlength="5" required>
+                            <input type="text" id="ingredients" name="ingredients" class="validate" placeholder="insert ingredients" minlength="5" required>
                             <label for="ingredients"></label>
                             <div id="insert-ingredient"></div>   
                     </div>
