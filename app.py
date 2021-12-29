@@ -147,7 +147,7 @@ def add_recipe():
             }
             mongo.db.recipes.insert_one(recipe)
             flash("Recipe sucessfully created")
-            return redirect(url_for("home"))
+            return redirect(url_for("profile"))
 
         categories = mongo.db.categories.find().sort("category_name", 1)
         return render_template(
@@ -165,6 +165,16 @@ def single_recipe(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     return render_template("single-recipe.html", recipe=recipe)
 
+
+@app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
+def edit_recipe(recipe_id):
+    """
+    If the user is logged in
+    allow user edit the recipe.
+    """
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("edit-recipe.html", recipe=recipe, categories=categories)
 
 
 if __name__ == "__main__":
