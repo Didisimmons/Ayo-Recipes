@@ -109,8 +109,14 @@
   </div>
   <div class="row ">
     <div class="col s12 center-align">
-      <a href="" class="waves-effect recipe-buttons amber darken-2">SAVE RECIPE</a>
-      <a href="" class="waves-effect recipe-buttons amber darken-2"> EDIT RECIPE</a>
+      <!--if user is logged in display button -->
+      {% if session.user|lower == recipe.created_by|lower %}
+        <a href="" class="waves-effect recipe-button amber darken-2">EDIT RECIPE</a>
+        <a href="" class="waves-effect recipe-button amber darken-2"> DELETE RECIPE</a>
+      {% else %}
+      <!--Inform user they need to log in to save recipe -->
+        <a href="" class="waves-effect recipe-button amber darken-2">SAVE RECIPE</a>
+      {% endif %}
     </div> 
   </div>
   <div class="divider s12"></div>

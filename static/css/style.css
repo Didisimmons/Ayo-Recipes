@@ -338,7 +338,7 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 }
 
 .recipe-image{
-    padding:6rem 0;
+    padding:6rem 0 0 0;
 }
 
 .recipe-image img{
@@ -375,6 +375,20 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
     position: unset;
     opacity: 0;
     pointer-events: none;
+}
+
+.recipe-button{
+    border-radius: 13px;
+    color:#730202;
+    padding: 9px;
+    margin-right: 10px;
+}
+
+.recipe-button:hover{
+    cursor:pointer;
+    box-shadow:0 0 1rem 0 #F28705;
+    color:white; 
+    padding: 15px; 
 }
 
 .divider {
