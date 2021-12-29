@@ -50,14 +50,13 @@ def register():
             "full_name": request.form.get("full-name").lower(),
             "username": request.form.get("username").lower(),
             "password": generate_password_hash(request.form.get("password")),
-            "about": request.form.get("aboutme"),
-            "admin": admin
+            "about": request.form.get("aboutme")
         }
         mongo.db.users.insert_one(register_user)
 
         session["user"] = request.form.get("username").lower()
         flash("Congratulations! Account created")
-        return redirect(url_for("profile"), username=session["user"])
+        return redirect(url_for("profile", username=session["user"]))
 
     return render_template("register.html")
 
@@ -107,12 +106,9 @@ def profile(username):
             return render_template(
                 "profile.html", user=user, recipes_user=recipes_user)
         else:
-            flash("You're not authorized to view this account")
-            return redirect(url_for("login",
-                            username=session["user"]))
-    else:
-        flash("Please try Login again")
-        return redirect(url_for("login"))
+            flash("Please try Login again")
+    
+    return redirect(url_for("login"))
 
 
 @app.route("/logout")
