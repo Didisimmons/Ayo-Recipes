@@ -170,11 +170,36 @@ def single_recipe(recipe_id):
 def edit_recipe(recipe_id):
     """
     If the user is logged in
-    allow user edit the recipe.
+    allow user edit the recipe
+    and return to recipe profile.
     """
+    if "user" in session:
+        if request.method == "POST":
+            is_vegetarian = "on" if request.form.get(
+                                    "is_vegetarian") else "off"
+            submit = {
+                "recipe_name": request.form.get("recipe_name"),
+                "recipe_description": request.form.get("recipe_description"),
+                "ingredients": request.form.getlist("ingredients"),
+                "recipe_instructions": request.form.getlist(
+                                            "recipe_instructions"),
+                "recipe_time": request.form.get("recipe_time"),
+                "category_name": request.form.getlist("category_name"),
+                "is_vegetarian": is_vegetarian,
+                "image_url": request.form.get("image_url"),
+                "rate": request.form.get("rate"),
+                "created_by": session["user"]
+            }
+            
+            mongo.db.recipes.update_one({"_id": ObjectId(recipe_id)}, {"$set": submit})
+            flash("Recipe sucessfully updated")
+            return redirect(url_for("single_recipe",recipe_id=recipe_id))
+    
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template("edit-recipe.html", recipe=recipe, categories=categories)
+    return render_template("edit-recipe.html",
+                            recipe=recipe, 
+                            categories=categories)
 
 
 if __name__ == "__main__":

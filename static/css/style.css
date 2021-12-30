@@ -635,10 +635,6 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
         right:-3px;
         bottom: 68px;
     }
-
-    .edit-button{
-        margin-bottom: 10px;
-    }
     
 }
 

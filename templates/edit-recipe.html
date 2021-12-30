@@ -82,7 +82,7 @@
                 <div class="row">
                     <div class="col s12 m3 input-field">
                         <i class="fas fa-clock prefix icon-color"></i>
-                        <input type="text" id="recipe_time" name="recipe_time" value="{{ recipe.recipe_time}}"required>
+                        <input type="text" id="recipe_time" name="recipe_time" value="{{ recipe.recipe_time }}"required>
                         <label for="recipe_time">minutes</label>
                     </div>
 
@@ -194,11 +194,9 @@
                 <div class="row">
                     <div class="col s12 center-align">
                         <!-- cancel -->
-                        <a href="{{ url_for('profile', username=session['user']) }}" role="button" 
-                        class="btn waves-effect waves-light amber darken-2 edit-button">
-                        EDIT RECIPE<i class="fas fa-edit right prefix right"></i> 
-                        </a>
-                        
+                        <button type="submit" class="btn waves-effect waves-light amber darken-2 edit-button">
+                            EDIT RECIPE <i class="fas fa-edit right prefix right"></i>
+                        </button>    
                         <a href="{{ url_for('profile', username=session['user']) }}" role="button" 
                         class="btn waves-effect waves-light grey darken-2">
                        CANCEL <i class="fas fa-times-circle prefix right"></i>

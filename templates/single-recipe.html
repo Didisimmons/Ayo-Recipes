@@ -115,7 +115,7 @@
         <a href="" class="waves-effect recipe-button amber darken-2"> DELETE RECIPE</a>
       {% else %}
       <!--Inform user they need to log in to save recipe -->
-        <a href="{{url_for('profile')}}" class="waves-effect recipe-button amber darken-2">SAVE RECIPE</a>
+        <a href="{{url_for('profile', username=session['user'])}}" class="waves-effect recipe-button amber darken-2">SAVE RECIPE</a>
       {% endif %}
     </div> 
   </div>

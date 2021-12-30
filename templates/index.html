@@ -79,7 +79,7 @@
                         <a href="">
                         <img src="{{url_for('static',filename='images/breakfast.jpeg')}}" alt="photo of {{ category.category_name }}">
                         </a>
-                    {% elif category.category_name == "Main-Course Recipe" %}
+                    {% elif category.category_name == "Main-Course Recipes" %}
                         <a href="">
                         <img src="{{url_for('static',filename='images/main-course.jpeg')}}" alt="photo of {{ category.category_name }}">
                         </a>
@@ -97,7 +97,6 @@
                 </div>
                 <div class="col s5 different-category">
                     <h5>{{category.category_name}}</h5>
-                    <p></p>
                 </div>
             </div>
             
