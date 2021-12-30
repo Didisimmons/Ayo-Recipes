@@ -233,7 +233,14 @@ def recipes():
     recipes = list(mongo.db.recipes.find().sort("recipe_name", 1))
     categories = mongo.db.categories.find().sort(
         "category_name", 1)
-    return render_template("recipes.html", recipes=recipes, categories=categories)
+    return render_template("recipes.html", recipes=recipes, 
+                categories=categories)
+
+
+@app.route("/manage_categories")
+def manage_categories():
+    categories = list(mongo.db.categories.find().sort("category_name", 1))
+    return render_template("manage-categories.html", categories=categories)
 
 
 if __name__ == "__main__":
