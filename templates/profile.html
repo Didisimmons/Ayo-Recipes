@@ -87,11 +87,11 @@
                     </a>
                 </div>
                 <div class="card-content recipe-list ">
-                    <h6>{{ recipe.recipe_name}}</h6>
+                    <p class="content-header">{{ recipe.recipe_name}}</p>
                       {% for category in recipe.category_name %}
-                        <p class="card-text">{{category}}</p>
+                        <p class="card-text"> <strong>Category:</strong>{{category}}</p>
                       {% endfor %}
-                    <p>{{recipe.recipe_time}}</p>
+                    <p>{{recipe.recipe_time}} mins</p>
                 </div>
             </div>
         </div>

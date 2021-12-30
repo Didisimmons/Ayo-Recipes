@@ -191,6 +191,11 @@ button{
     letter-spacing: 3px  
 }
 
+.card-panel{
+    width:100%;
+    background: url(/static/images/background2.png) no-repeat center center / cover fixed; 
+}
+
 .profile-content{
     padding:1rem 0
 }
@@ -219,6 +224,19 @@ button{
 
 input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea{
     border-bottom: 1px solid #F28705;
+}
+
+.card-text{
+    color:#F28705;
+    padding:0.8rem;
+}
+
+.card.small .card-content{
+    padding:0;
+}
+
+.content-header{
+    padding-top: 5px;
 }
 
 .recipe-list-container{
