@@ -204,9 +204,25 @@ def edit_recipe(recipe_id):
 
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
+    """
+    Allow user delete recipe created
+    """
     mongo.db.recipes.delete_one({"_id": ObjectId(recipe_id)})
     flash("Recipe sucessfully deleted")
     return redirect(url_for('profile', username=session["user"]))
+
+
+@app.route("/view_category/<category_id>")
+def view_category(category_id):
+    """
+    View each recipe category individually.
+    """
+    category_recipes = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
+    allrecipe = list(mongo.db.recipes.find(
+        {"category_name": category_recipes["category_name"]}))
+    return render_template("view-category.html",
+                            allrecipe=allrecipe, 
+                            category_recipes=category_recipes)
 
 
 if __name__ == "__main__":

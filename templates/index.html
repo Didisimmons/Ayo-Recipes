@@ -77,19 +77,19 @@
             <div class="col s12 categories">
                 <div class="col s7 categories-image">
                     {% if category.category_name == "Breakfast Recipe" %}
-                        <a href="">
+                        <a href="{{url_for('view_category',category_id=category._id)}}">
                         <img src="{{url_for('static',filename='images/breakfast.jpeg')}}" alt="photo of {{ category.category_name }}">
                         </a>
                     {% elif category.category_name == "Main-Course Recipes" %}
-                        <a href="">
+                        <a href="{{url_for('view_category',category_id=category._id)}}">
                         <img src="{{url_for('static',filename='images/main-course.jpeg')}}" alt="photo of {{ category.category_name }}">
                         </a>
                     {% elif category.category_name == "Soup Recipes" %}
-                        <a href="">
+                        <a href="{{url_for('view_category',category_id=category._id)}}">
                         <img src="{{url_for('static',filename='images/soup-recipe.jpeg')}}" alt="photo of {{ category.category_name }}">
                         </a>
                     {% elif category.category_name == "Snack Recipes" %}
-                        <a href="">
+                        <a href="{{url_for('view_category',category_id=category._id)}}">
                         <img src="{{url_for('static',filename='images/snackrecipe.jpeg')}}" alt="photo of {{ category.category_name }}">
                         </a>
                     {% else %}

@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container-fluid">
+
+    <section>
+      <div class="row profile">
+        <div class="col s12 m8 offset-m2">
+          <div class="profile-header card-panel">
+            <h3 class="center-align"> <strong>Category:</strong>{{ category_recipes.category_name }}</h3>
+          </div>
+        </div>    
+      </div>
+
+  <section>
+    <div class="container">
+      <div class="row recipe-list-container">
+        {% for recipe in allrecipe %}
+        <div class="col s12 m4">
+            <div class="card small ">
+                <div class="card-image ">
+                    <a href="{{url_for('single_recipe', recipe_id=recipe._id)}}">
+                        <img src="{{ recipe.image_url }}" class="responsive-image" alt="photo of {{ recipe.recipe_name }}">
+                    </a>
+                </div>
+                <div class="card-content recipe-list ">
+                    <p class="content-header">{{ recipe.recipe_name}}</p>
+                      {% for category in recipe.category_name %}
+                        <p class="card-text"> <strong>Category:</strong>{{category}}</p>
+                      {% endfor %}
+                    <p>{{recipe.recipe_time}} mins</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>   
+  </section>
+</div>   
+  
+
+
+{% endblock %}
