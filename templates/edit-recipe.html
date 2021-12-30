@@ -213,3 +213,21 @@
 
 
 {% endblock %}
+
+<div class="container">
+    <div class="row" >
+      {% for recipe in recipes_user %}
+      <div class="col s12 m4 card-body-container">
+          <div class="card small">
+            <a href="{{url_for('single_recipe', recipe_id=recipe._id)}}">
+              <img src="{{ recipe.image_url }}}" class="responsive-img" alt="photo of {{ recipe.recipe_name }}">
+            </a> 
+              <div class="card-body center-align">
+                <h5 class="card-title"> {{ recipe.recipe_name }}</h5>
+                <p class="card-text">{{recipe.recipe_description}}</p>
+              </div>
+          </div>
+        </div>
+      {% endfor %}  
+    </div>
+  </div>

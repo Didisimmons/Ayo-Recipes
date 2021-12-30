@@ -221,6 +221,9 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
     border-bottom: 1px solid #F28705;
 }
 
+.recipe-list-container{
+    padding-top: 1.5rem;
+}
 
 /* add recipe */
 .recipe-header{
@@ -259,6 +262,11 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 
 .input-field :placeholder-shown {
     color:#F28705;
+}
+
+.recipe-list{
+    color:#730202;
+    text-align: center;
 }
 
 /* stars */
@@ -370,6 +378,12 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
     margin-bottom: 1rem;
     color: #730202;
 } 
+
+.card .small.card-image{
+    max-height: 50%;
+    overflow: scroll;
+
+}
 
 [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
     position: unset;
