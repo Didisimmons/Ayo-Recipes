@@ -27,7 +27,7 @@
             
                <a href="{{url_for('home')}}" data-target="mobile-demo" class="sidenav-trigger left"><i class="fas fa-bars"></i></a>
                <ul class="right hide-on-med-and-down menu-items">
-                  <li><a href="">RECIPES</a></li>
+                  <li><a href="{{url_for('home')}}">RECIPES</a></li>
                     {% if session.user %}
                       <li><a href="{{ url_for('profile', username=session['user'])}}">PROFILE</a></li>  
                       <li><a href="">TIPS & TRICKS</a></li>
@@ -46,13 +46,13 @@
        <ul class="sidenav slide-out center-align" id="mobile-demo">
          <li>
             <div class="user-view">
-              <div class="div brand-logo">
-                <a href="{{url_for('home')}}"><img class="circle mobile-logo" src="{{ url_for('static', filename='images/startpagehero.png') }}"></a>
+              <div class="div brand-logo  photo">
+                <a href="{{url_for('home')}}"><img class="circle mobile-logo " src="{{ url_for('static', filename='images/brandlogo.png') }}"></a>
                 <h4>Ayo Recipes</h4>
               </div>
             </div>
          </li>
-          <li><a href="">RECIPES</a></li>
+          <li><a href="{{url_for('home')}}">RECIPES</a></li>
           {% if session.user %}
             <li><a href="{{ url_for('profile', username=session['user'])}}">PROFILE</a></li>  
             <li><a href="">TIPS & TRICKS</a></li>

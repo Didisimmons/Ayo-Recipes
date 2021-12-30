@@ -59,6 +59,11 @@ body{
     margin:auto;
 }
 
+.sidenav .user-view .circle {
+    height: 125px;
+    width: 125px;
+}
+
 .brand-logo{
     padding:2rem 0;
     background-color:#F29F05 ;
@@ -242,6 +247,7 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 .recipe-list-container{
     padding-top: 1.5rem;
 }
+
 
 /* add recipe */
 .recipe-header{
@@ -474,6 +480,10 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
     color: #730202;
 }
 
+.list-container {
+    padding-top: 1.5rem;
+}
+
 .festive-container h3{
     font-size:2rem;
 }
@@ -520,11 +530,6 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
     color:#F28705;
 }
 
-.center-recipe > .col {
-    float:none; 
-    display: inline-block;
-    text-align: initial; 
-}
 
 /* modal */
 .modal-text{
