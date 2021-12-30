@@ -217,12 +217,13 @@ def view_category(category_id):
     """
     View each recipe category individually.
     """
-    category_recipes = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
+    category = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
     allrecipe = list(mongo.db.recipes.find(
-        {"category_name": category_recipes["category_name"]}))
+        {"category_name": category["category_name"]}))
+    categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("view-category.html",
                             allrecipe=allrecipe, 
-                            category_recipes=category_recipes)
+                            category=category)
 
 
 if __name__ == "__main__":
