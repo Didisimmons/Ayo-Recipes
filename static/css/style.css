@@ -394,6 +394,7 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 .divider {
     background-color: #F28705;
 }
+
 /* code borrowed from yummly at https://www.yummly.co.uk/recipe/Eggs-Benedict-2635676 */
 .recipe-item .value{
     display: inline-block;
@@ -414,6 +415,7 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 ::placeholder{
     color:#F28705;
 }
+
   /* valid color */
 .input-field input[type=text].valid {
     border-bottom: 1px solid #F29F05;
@@ -632,6 +634,10 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
     .btn-floating.halfway-fab{
         right:-3px;
         bottom: 68px;
+    }
+
+    .edit-button{
+        margin-bottom: 10px;
     }
     
 }

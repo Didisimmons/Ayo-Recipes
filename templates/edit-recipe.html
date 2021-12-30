@@ -41,6 +41,7 @@
                             
                     </div>
                     <div>
+                        <!--button to add more fields or delete fields -->
                         <div class="row controls">
                             <button type="button" id="add-more-button" class="btn-custom general-btn">
                                 MORE <i class="fas fa-plus prefix icon-color"></i>
@@ -57,7 +58,11 @@
                 <div class="row">
                     <div class="input-field col s12" id="instruction-list">
                         <i class="fas fa-clipboard-list prefix icon-color"></i>
-                        <textarea type="text" id="recipe_instructions" name="recipe_instructions" minlength="5" maxlength="500" class="materialize-textarea validate instructions" placeholder="provide directions for the recipe" required></textarea>
+                        {% for instruction in recipe.recipe_instructions %}
+                        <textarea type="text" id="recipe_instructions" name="recipe_instructions" minlength="5" maxlength="500" class="materialize-textarea validate instructions" placeholder="provide directions for the recipe" required>
+                            {{-instruction-}}
+                        </textarea>
+                        {% endfor %}
                         <label for="recipe_instructions"></label>
                         <div id="insert-directions"></div>   
                     </div>
@@ -124,29 +129,79 @@
                     </div>
 
                     <div class="col s12 m5 input-field">
-                        <div class="rate">
-                            <input type="radio" id="star5" name="rate" value="5" />
-                            <label for="star5" title="text">5 stars</label>
-                            <input type="radio" id="star4" name="rate" value="4" />
-                            <label for="star4" title="text">4 stars</label>
-                            <input type="radio" id="star3" name="rate" value="3" />
-                            <label for="star3" title="text">3 stars</label>
-                            <input type="radio" id="star2" name="rate" value="2" />
-                            <label for="star2" title="text">2 stars</label>
-                            <input type="radio" id="star1" name="rate" value="1" />
-                            <label for="star1" title="text">1 star</label>
+                        <div class="review-rating">
+                            {% if recipe.rate == "0" %}
+                              <span class="ratings">
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                              </span>
+                                <br>
+                            {% elif recipe.rate == "1" %}
+                              <span class="ratings">{{ recipe.rate }}
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                              </span>
+                                <br>     
+                            {% elif recipe.rate == "2" %}
+                              <span class="ratings">{{ recipe.rate }} 
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                              </span>
+                                <br>
+                            {% elif recipe.rate == "3" %}
+                              <span class="ratings">{{ recipe.rate }}
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                              </span>
+                                <br>
+                            {% elif recipe.rate == "4" %}
+                              <span class="ratings">{{ recipe.rate }} 
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                              </span>
+                                <br>
+                              {% elif recipe.rate == "5" %}
+                                <span class="ratings">{{ recipe.rate }}
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i>
+                                </span>
+                                <br>
+                              {% else %}
+                                  <span class="single-recipe-text"> No ratings yet</span>
+                              {% endif %}
                           </div>
                     </div>
                 </div> 
                  <!-- button -->
                 <div class="row">
                     <div class="col s12 center-align">
-                        <button type="submit" class="btn waves-effect waves-light amber darken-2">
-                           EDIT RECIPE <i class="fas fa-folder-plus prefix right"></i>
-                        </button>
+                        <!-- cancel -->
+                        <a href="{{ url_for('profile', username=session['user']) }}" role="button" 
+                        class="btn waves-effect waves-light amber darken-2 edit-button">
+                        EDIT RECIPE<i class="fas fa-edit right prefix right"></i> 
+                        </a>
+                        
                         <a href="{{ url_for('profile', username=session['user']) }}" role="button" 
                         class="btn waves-effect waves-light grey darken-2">
-                        Return Back
+                       CANCEL <i class="fas fa-times-circle prefix right"></i>
                         </a>
                     </div>
                 </div>
