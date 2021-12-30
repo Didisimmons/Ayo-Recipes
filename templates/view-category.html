@@ -15,7 +15,7 @@
   <section>
     <div class="container">
       <div class="row recipe-list-container">
-        {% for recipe in allrecipe %}
+        {% for recipe in allrecipes %}
         <div class="col s12 m4">
             <div class="card small ">
                 <div class="card-image ">
@@ -32,16 +32,17 @@
             </div>
         </div>
         {% endfor %}
-    </div>
-     <!-- button -->
-     <div class="row">
-      <div class="col s12 center-align">    
-          <a href="{{url_for('home')}}" role="button" 
-          class="btn waves-effect waves-light amber darken-2">
-         BACK <i class="fas fa-angle-right prefix right"></i>
-          </a>
       </div>
-  </div>   
+     <!-- button -->
+      <div class="row">
+        <div class="col s12 center-align">    
+            <a href="{{url_for('home')}}" role="button" 
+            class="btn waves-effect waves-light amber darken-2">
+          BACK <i class="fas fa-angle-right prefix right"></i>
+            </a>
+        </div>
+      </div> 
+    </div>  
   </section>
 </div>   
   

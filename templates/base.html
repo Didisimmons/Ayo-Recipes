@@ -27,7 +27,7 @@
             
                <a href="{{url_for('home')}}" data-target="mobile-demo" class="sidenav-trigger left"><i class="fas fa-bars"></i></a>
                <ul class="right hide-on-med-and-down menu-items">
-                  <li><a href="{{url_for('home')}}">RECIPES</a></li>
+                  <li><a href="{{url_for('recipes')}}">RECIPES</a></li>
                     {% if session.user %}
                       <li><a href="{{ url_for('profile', username=session['user'])}}">PROFILE</a></li>  
                       <li><a href="">TIPS & TRICKS</a></li>
@@ -52,7 +52,7 @@
               </div>
             </div>
          </li>
-          <li><a href="{{url_for('home')}}">RECIPES</a></li>
+          <li><a href="{{url_for('recipes')}}">RECIPES</a></li>
           {% if session.user %}
             <li><a href="{{ url_for('profile', username=session['user'])}}">PROFILE</a></li>  
             <li><a href="">TIPS & TRICKS</a></li>

@@ -241,7 +241,7 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 }
 
 .content-header{
-    padding-top: 5px;
+    padding-top: 11px;
 }
 
 .recipe-list-container{
@@ -249,6 +249,9 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 }
 
 
+.categorysearch-container{
+    padding : 2rem 0;
+}
 /* add recipe */
 .recipe-header{
     padding:2rem 0 ;
@@ -488,7 +491,7 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
     font-size:2rem;
 }
 
-.festive-container p{
+.festive-text {
     text-align: center;
     line-height: 2rem;
 }

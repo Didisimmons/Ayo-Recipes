@@ -1,36 +1,65 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="row">
-    <div class="input-field col s12 m4 l3 offset-l4">
-        <input id="name" type="text" class="validate">
-        <label for="name" class="white-text">Busque número de pagina...</label>
-    </div>
-    <div class="input-field col s12 m4 l1">
-        <button class="btn-large waves-effect waves-light grey darken-4" type="submit"><i class="material-icons">search</i>
-        </button>
-    </div>
-</div>
 
-<div class="row">
-    <div class="col s12 m6">
-      <div class="card">
-        <div class="card-image">
-          <img src="images/sample-1.jpg">
-          <span class="card-title">Card Title</span>
-          <a class="btn-floating halfway-fab waves-effect waves-light red" href=""><i class="material-icons">add</i></a>
+  <div class="row ">
+    <div class="col s12 card-panel">
+
+      <form method="POST" action="">
+        <div class="row categorysearch-container">
+          <div class="input-field col s12 m4 l3 offset-l4">
+            <input id="name" type="text" class="validate">
+            <label for="name"> Search </label>
+          </div>
+          <div class="input-field col s12 m4 l1">
+            <button class="btn waves-effect waves-light amber darken-2" type="submit"><i class="fas fa-search  icon-color "></i>
+            </button>
+          </div>
+          <div class="col s12 center-align">    
+            <a href="{{url_for('home')}}" role="button" 
+            class="btn waves-effect waves-light amber darken-2">
+          BACK <i class="fas fa-angle-right prefix right"></i>
+            </a>
         </div>
-        <div class="card-content">
-          <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
         </div>
+      </form> 
       </div>
-    </div>
+    </div>    
   </div>
 
+  
+  
+    
+
+<div class="container">
+  <div class="row recipe-list-container">
+    {% for recipe in recipes %}
+    <div class="col s12 m4">
+        <div class="card small ">
+            <div class="card-image ">
+                <a href="{{url_for('single_recipe', recipe_id=recipe._id)}}">
+                    <img src="{{ recipe.image_url }}" class="responsive-image" alt="photo of {{ recipe.recipe_name }}">
+                </a>
+            </div>
+            
+            <div class="card-content recipe-list ">          
+                <p class="content-header">{{ recipe.recipe_name}}</p>             
+                         <p class="card-text">{{ categories.category_name }}</p>          
+                <p>{{recipe.recipe_time}} mins</p>
+            </div>     
+        </div>
+    </div>
+    {% endfor %}
+  </div>
+ <!-- button -->
+  <div class="row">
+    <div class="col s12 center-align">    
+        <a href="{{url_for('home')}}" role="button" 
+        class="btn waves-effect waves-light amber darken-2">
+      BACK <i class="fas fa-angle-right prefix right"></i>
+        </a>
+    </div>
+  </div> 
+</div>  
+
 {% endblock %}
-
-
-
-@app.route("/logout")
-def profile(username):
-    return render_template("profile.html", username=username)

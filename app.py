@@ -187,7 +187,6 @@ def edit_recipe(recipe_id):
                 "category_name": request.form.getlist("category_name"),
                 "is_vegetarian": is_vegetarian,
                 "image_url": request.form.get("image_url"),
-                "rate": request.form.get("rate"),
                 "created_by": session["user"]
             }
             
@@ -220,10 +219,21 @@ def view_category(category_id):
     categories = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
     allrecipe = list(mongo.db.recipes.find(
         {"category_name": categories["category_name"]}))
-    
+
     return render_template("view-category.html",
                             allrecipe=allrecipe, 
                             categories=categories)
+
+@app.route("/recipes")
+def recipes():
+    """
+    Allow user search all recipes
+    by categories added.
+    """
+    recipes = list(mongo.db.recipes.find().sort("recipe_name", 1))
+    categories = mongo.db.categories.find().sort(
+        "category_name", 1)
+    return render_template("recipes.html", recipes=recipes, categories=categories)
 
 
 if __name__ == "__main__":
