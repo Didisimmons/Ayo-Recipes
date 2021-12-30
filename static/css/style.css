@@ -233,7 +233,7 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 
 .card-text{
     color:#F28705;
-    padding:0.8rem;
+    padding:0.5rem;
 }
 
 .card.small .card-content{

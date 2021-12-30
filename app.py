@@ -20,7 +20,7 @@ mongo = PyMongo(app)
 @app.route("/home")
 def home():
     category_recipes = mongo.db.categories.find().sort(
-        "category_name", -1).limit(6)
+        "category_name", 1).limit(4)
     recipes = list(mongo.db.recipes.find())
     return render_template("index.html", recipes=recipes,
                            category_recipes=category_recipes)
@@ -217,13 +217,13 @@ def view_category(category_id):
     """
     View each recipe category individually.
     """
-    category = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
+    categories = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
     allrecipe = list(mongo.db.recipes.find(
-        {"category_name": category["category_name"]}))
-    categories = mongo.db.categories.find().sort("category_name", 1)
+        {"category_name": categories["category_name"]}))
+    
     return render_template("view-category.html",
                             allrecipe=allrecipe, 
-                            category=category)
+                            categories=categories)
 
 
 if __name__ == "__main__":
