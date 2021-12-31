@@ -16,6 +16,7 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+
 @app.route("/")
 @app.route("/home")
 def home():
@@ -77,8 +78,8 @@ def login():
                 session["user"] = request.form.get("username").lower()
                 flash("Hola! Welcome, {}".format(
                     request.form.get("username")))
-                return redirect(url_for(
-                            "profile", username=session["user"]))
+                return redirect(url_for("profile", username=session["user"]))
+
             else:
                 # invalid password match
                 flash("Sorry the details provided do not," +
@@ -128,6 +129,7 @@ def add_recipe():
     """
     user = mongo.db.users.find_one(
         {"username": session["user"]})
+
     if "user" in session:
         if request.method == "POST":
             is_vegetarian = "on" if request.form.get(

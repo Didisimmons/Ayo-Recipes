@@ -32,7 +32,7 @@
                       <li><a href="{{ url_for('profile', username=session['user'])}}">PROFILE</a></li>  
                       <li><a href="">TIPS & TRICKS</a></li>
                       {% if session.user|lower == "administrator"|lower %}
-                        <li><a href="">MANAGE CATEGORIES</a></li>
+                        <li><a href="{{url_for('manage_categories')}}">MANAGE CATEGORIES</a></li>
                       {% endif %}
                       <li><a href="{{url_for('logout')}}">LOGOUT</a></li>
                     {% else %}
@@ -59,7 +59,7 @@
             <li><a href="{{ url_for('profile', username=session['user'])}}">PROFILE</a></li>  
             <li><a href="">TIPS & TRICKS</a></li>
             {% if session.user|lower == "administrator"|lower %}
-                <li><a href="">MANAGE CATEGORIES</a></li>
+                <li><a href="{{url_for('manage_categories')}}">MANAGE CATEGORIES</a></li>
             {% endif %}
             <li><a href="{{url_for('logout')}}">LOGOUT</a></li>
           {% else %}

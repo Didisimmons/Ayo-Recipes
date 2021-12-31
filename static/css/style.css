@@ -258,6 +258,21 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
     border-top: 0;
 }
 
+.manage-container{
+    width:100%;
+    background: url(/static/images/background2.png) no-repeat center center / cover fixed; 
+}
+
+.manage-category{
+    padding: 2rem 0;
+}
+
+.manage-button:hover{
+    cursor:pointer;
+    box-shadow:0 0 1rem 0 #F28705;
+    color:white;
+}
+
 .card .card-title {
 font-size: 24px;
 font-weight: 500
