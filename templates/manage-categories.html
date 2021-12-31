@@ -4,31 +4,30 @@
     <div class="container-fluid manage-container">
         <h3 class="register-header center-align">Manage Categories</h3>
 
-    <div class="row manage-category">
-        {% for category in categories %}
-            <div class="col s12 m3">
-                <div class="card  center-align">
-                    <div class="card-content icon-color">
-                        <h4 class="card-title">{{ category.category_name }}</h4>
-                    </div>
-                    <div class="card-action">
-                        <a href="#" class="btn manage-button waves-effect amber darken-2">EDIT</a>
-                        <a href="#delete" class="btn manage-button grey darken-2">DELETE</a>
+        <div class="row manage-category">
+            {% for category in categories %}
+                <div class="col s12 m3">
+                    <div class="card  center-align">
+                        <div class="card-content icon-color">
+                            <h4 class="card-title">{{ category.category_name }}</h4>
+                        </div>
+                        <div class="card-action">
+                            <a href="#" class="btn manage-button waves-effect amber darken-2">EDIT</a>
+                            <a href="#delete" class="btn manage-button grey darken-2">DELETE</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        {% endfor %}
+            {% endfor %}
+        </div>
     </div>
     <div class="row">
         <div class="col s12 center-align">    
-            <a href="{{url_for('home')}}" role="button" 
+            <a href="{{url_for('add_category')}}" role="button" 
             class="btn waves-effect waves-light amber darken-2">
-          ADD CATEGORY <i class="fas fa-plus prefix right"></i>
+            ADD CATEGORY <i class="fas fa-plus-square prefix right"></i>
             </a>
         </div>
-      </div> 
     </div>
-    
 
 {% endblock %}
  <!--Modal to confirm if user wants to delete recipe -->
