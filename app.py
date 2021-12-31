@@ -273,8 +273,21 @@ def add_category():
 
 @app.route("/edit_category/<category_id>", methods=["GET", "POST"])
 def edit_category(category_id):
-    category =  mongo.db.categories.find_one({"_id": ObjectId(category_id)})
-    return render_template("edit-category.html", category=category)
+    user = mongo.db.users.find_one(
+                {"username": session["user"]})
+    if session['user'] == 'administrator':
+        if request.method == "POST":
+            submit = {
+                "category_name": request.form.get("category_name"),
+                "category_description": request.form.get("category_description")
+            }
+            mongo.db.categories.update_one({"_id": ObjectId(
+                    category_id)}, {"$set": submit})
+            flash("Category Sucessfully Updated")
+            return redirect(url_for("manage_categories"))
+
+        category = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
+        return render_template("edit-category.html", category=category)
 
 
 
