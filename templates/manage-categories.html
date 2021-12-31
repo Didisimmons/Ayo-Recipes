@@ -12,7 +12,7 @@
                             <h4 class="card-title">{{ category.category_name }}</h4>
                         </div>
                         <div class="card-action">
-                            <a href="#" class="btn manage-button waves-effect amber darken-2">EDIT</a>
+                            <a href="{{ url_for('edit_category',category_id=category._id) }}" class="btn manage-button waves-effect amber darken-2">EDIT</a>
                             <a href="#delete" class="btn manage-button grey darken-2">DELETE</a>
                         </div>
                     </div>
