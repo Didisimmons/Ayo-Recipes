@@ -292,9 +292,13 @@ def edit_category(category_id):
 
 @app.route("/delete_category/<category_id>")
 def delete_category(category_id):
-    mongo.db.categories.delete_one({"_id": ObjectId(category_id)})
-    flash("Category Deleted Successfully ")
-    
+    user = mongo.db.users.find_one(
+                {"username": session["user"]})
+    if session['user'] == 'administrator':
+        mongo.db.categories.delete_one({"_id": ObjectId(category_id)})
+        flash("Category Deleted Successfully ")
+
+    category = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
     return redirect(url_for("manage_categories"))
 
 
