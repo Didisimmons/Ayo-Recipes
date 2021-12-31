@@ -294,6 +294,7 @@ def edit_category(category_id):
 def delete_category(category_id):
     mongo.db.categories.delete_one({"_id": ObjectId(category_id)})
     flash("Category Deleted Successfully ")
+    
     return redirect(url_for("manage_categories"))
 
 
