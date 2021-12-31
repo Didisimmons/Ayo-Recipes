@@ -8,11 +8,11 @@
             <div class="col s12 m3">
                 <div class="card  center-align">
                     <div class="card-content icon-color">
-                        <span class="card-title">{{ category.category_name }}</span>
+                        <h4 class="card-title">{{ category.category_name }}</h4>
                     </div>
                     <div class="card-action">
-                        <a href="#" class="btn green accent-4">Edit</a>
-                        <a href="#" class="btn light-blue lighten-1">Delete</a>
+                        <a href="#" class="waves-effect waves-light amber darken-2">EDIT</a>
+                        <a href="#delete" class="btn light-blue lighten-1">DELETE</a>
                     </div>
                 </div>
             </div>
@@ -20,3 +20,17 @@
     </div>
 
 {% endblock %}
+ <!--Modal to confirm if user wants to delete recipe -->
+
+ <div id="delete" class="modal">
+    <div class="modal-content">
+      <h4 class="center-align icon-color recipe-header">Delete Recipe</h4>
+      <p class="modal-text">
+      Once this category is deleted,please be aware that this recipe cannot be retrieved once deleted <br>
+      </p>
+    </div>
+    <div class="modal-footer">
+      <a href="{{url_for('delete_recipe',recipe_id=recipe._id)}}" class="modal-close waves-effect amber darken-2 modal-button">DELETE</a>
+      <a href="{{url_for('single_recipe',recipe_id=recipe._id)}}" class="modal-close waves-effect grey darken-2 modal-button">CANCEL</a>
+    </div>
+  </div>

@@ -81,7 +81,7 @@ def login():
                             "profile", username=session["user"]))
             else:
                 # invalid password match
-                flash("Sorry the details provided do not" +
+                flash("Sorry the details provided do not," +
                       "match our system try again!")
                 return redirect(url_for("login"))
 
@@ -190,7 +190,8 @@ def edit_recipe(recipe_id):
                 "created_by": session["user"]
             }
             
-            mongo.db.recipes.update_one({"_id": ObjectId(recipe_id)}, {"$set": submit})
+            mongo.db.recipes.update_one({"_id": ObjectId(
+                    recipe_id)}, {"$set": submit})
             flash("Recipe sucessfully updated")
             return redirect(url_for("single_recipe",recipe_id=recipe_id))
     
@@ -239,6 +240,10 @@ def recipes():
 
 @app.route("/manage_categories")
 def manage_categories():
+    """
+    Only the admin user can edit,
+    delete and add a task
+    """
     categories = list(mongo.db.categories.find().sort("category_name", 1))
     return render_template("manage-categories.html", categories=categories)
 

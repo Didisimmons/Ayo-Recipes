@@ -252,6 +252,17 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 .categorysearch-container{
     padding : 2rem 0;
 }
+
+/* manage categories  */
+.card .card-action{
+    border-top: 0;
+}
+
+.card .card-title {
+font-size: 24px;
+font-weight: 500
+}
+
 /* add recipe */
 .recipe-header{
     padding:2rem 0 ;
