@@ -253,8 +253,22 @@ def manage_categories():
 @app.route("/add_category", methods=["GET", "POST"])
 def add_category():
     """Allow only admin user add category"""
-    categories = list(mongo.db.categories.find().sort("category_name", 1))
-    return render_template("add-category.html", categories=categories)
+    user = mongo.db.users.find_one(
+                {"username": session["user"]})
+    if session['user'] == 'administrator':
+        if request.method == "POST":
+            new_category = {
+                "category_name": request.form.get("category_name"),
+                "category_description": request.form.get("category_description")
+            }
+            mongo.db.categories.insert_one(new_category)
+            flash("New Recipe Category Added!")
+            return redirect(url_for("manage_categories"))
+    else:
+        flash("You're not authorized to view page, Login")
+        return redirect(url_for("recipes"))
+
+    return render_template("add-category.html")
 
 
 if __name__ == "__main__":

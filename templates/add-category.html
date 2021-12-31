@@ -4,7 +4,7 @@
   <section class="recipe-container">
     <div class="container">
         <h3 class="center-align recipe-header"> Add a new Category </h3>
-        <form class="row recipe-form" method="POST" action="{{url_for('add_category')}}">
+        <form class="row recipe-form" method="POST" action="{{ url_for('add_category') }}">
             <div class="col s12 m8 offset-m2">
                 <div class="card-panel">
                 <!-- category name -->
@@ -13,7 +13,7 @@
                         <i class="fas fa-tag prefix icon-color"></i>
                         <input id="category_name" name="category_name" minlength="3" maxlength="25"
                             type="text" class="validate" required>
-                        <label for="category_name">Recipe Name</label>
+                        <label for="category_name">Category Name</label>
                     </div>
                 </div>
                 <!-- recipe description -->
@@ -26,11 +26,10 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col s12 center-align">    
-                        <a href="{{url_for('add_category')}}" role="button" 
-                        class="btn waves-effect waves-light amber darken-2">
-                        ADD CATEGORY <i class="fas fa-plus prefix right"></i>
-                        </a>
+                    <div class="col s12 center-align">
+                        <button type="submit" class="btn waves-effect waves-light manage-button amber darken-2 edit-button">
+                            ADD CATEGORY <i class="fas fa-plus prefix right"></i>
+                        </button>
                     </div>
                 </div>
             </div>
