@@ -20,7 +20,7 @@ mongo = PyMongo(app)
 @app.route("/home")
 def home():
     category_recipes = mongo.db.categories.find().sort(
-        "category_name", 1)
+        "category_name", -1).limit(4)
     recipes = list(mongo.db.recipes.find().sort("rate", -1).limit(3))
     return render_template("index.html", recipes=recipes,
                            category_recipes=category_recipes)
@@ -122,8 +122,7 @@ def profile(username):
             return render_template(
                 "profile.html", user=user, recipes_user=recipes_user)
         else:
-            flash("Please try Login again")
-    
+            flash("Please try Login again") 
     return redirect(url_for("login"))
 
 
@@ -284,7 +283,7 @@ def add_category():
             return redirect(url_for("manage_categories"))
     else:
         flash("You're not authorized to view page, Login")
-        return redirect(url_for("recipes"))
+        return redirect(url_for("login"))
 
     return render_template("add-category.html")
 
@@ -325,7 +324,7 @@ def delete_category(category_id):
     if session['user'] == 'administrator':
         mongo.db.categories.delete_one({"_id": ObjectId(category_id)})
         flash("Category Deleted Successfully ")
-    return redirect(url_for("manage_categories"))
+        return redirect(url_for("manage_categories"))
 
 
 if __name__ == "__main__":

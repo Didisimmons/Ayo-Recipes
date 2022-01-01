@@ -77,26 +77,30 @@
 
   <section>
     <div class="container">
-      <div class="row recipe-list-container">
-        {% for recipe in recipes_user %}
-        <div class="col s12 m4">
-            <div class="card small ">
-                <div class="card-image ">
-                    <a href="{{url_for('single_recipe', recipe_id=recipe._id)}}">
-                        <img src="{{ recipe.image_url }}" class="responsive-image" alt="photo of {{ recipe.recipe_name }}">
-                    </a>
-                </div>
-                <div class="card-content recipe-list ">
-                    <p class="content-header">{{ recipe.recipe_name}}</p>
-                      {% for category in recipe.category_name %}
-                        <p class="card-text"> <strong>Category:</strong>{{category}}</p>
-                      {% endfor %}
-                    <p>{{recipe.recipe_time}} mins</p>
-                </div>
-            </div>
+      {% if recipes|length > 0 %}
+        <div class="row recipe-list-container">
+          {% for recipe in recipes_user %}
+          <div class="col s12 m4">
+              <div class="card small ">
+                  <div class="card-image ">
+                      <a href="{{url_for('single_recipe', recipe_id=recipe._id)}}">
+                          <img src="{{ recipe.image_url }}" class="responsive-image" alt="photo of {{ recipe.recipe_name }}">
+                      </a>
+                  </div>
+                  <div class="card-content recipe-list ">
+                      <p class="content-header">{{ recipe.recipe_name}}</p>
+                        {% for category in recipe.category_name %}
+                          <p class="card-text"> <strong>Category:</strong>{{category}}</p>
+                        {% endfor %}
+                      <p>{{recipe.recipe_time}} mins</p>
+                  </div>
+              </div>
+          </div>
+          {% endfor %}
         </div>
-        {% endfor %}
-    </div>   
+        {% else %}
+        <h5 class="center-align error-meesage">No recipes added </h5>
+        {% endif %}
   </section>
 </div>   
   

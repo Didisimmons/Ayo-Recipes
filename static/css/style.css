@@ -126,7 +126,8 @@ input[type=text]:not(.browser-default):focus:not([readonly]){
 
 .error-meesage{
     color:#F29F05;
-    padding: 1.5rem 0;
+    padding: 5rem 0;
+    letter-spacing:2px;
 }
 /* register */
 
@@ -253,6 +254,11 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
     padding-top: 1.5rem;
 }
 
+.view-text{
+    color:#F28705;
+    text-align: center;
+    line-height:2rem;
+}
 
 .categorysearch-container{
     padding : 2rem 0;

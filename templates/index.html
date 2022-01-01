@@ -52,32 +52,29 @@
             Don't forget to tag us on our social media handles. </p>
         
       
-         <div class="container list-container">
-            
-                <div class="row center-recipe center-align">
-                    {% for recipe in recipes %}
-                        <div class="col m4">
-                            <div class="card small">
-                                <div class="card-image ">
-                                    <a href="{{url_for('single_recipe', recipe_id=recipe._id)}}">
-                                        <img src="{{ recipe.image_url }}" class="responsive-image" alt="photo of {{ recipe.recipe_name }}">
-                                    </a>
-                                </div>
-                                <div class="card-content recipe-list ">
-                                    <p class="content-header">{{ recipe.recipe_name}}</p>
-                                    <p class="card-text"><strong>By:</strong>{{ recipe.created_by}}</p>
-                                    {% if recipe.is_vegetarian == "on" %}
-                                    <p class="vegan"> Vegan
-                                    <i class="fas fa-seedling tooltipped icon-color"data-position="middle" data-tooltip="Vegan friendly"></i>
-                                    </p>
-                                    {% endif %}
-                                </div>
+        <div class="container list-container">
+            <div class="row center-recipe center-align">
+                {% for recipe in recipes %}
+                    <div class="col m4">
+                        <div class="card small">
+                            <div class="card-image ">
+                                <a href="{{url_for('single_recipe', recipe_id=recipe._id)}}">
+                                    <img src="{{ recipe.image_url }}" class="responsive-image" alt="photo of {{ recipe.recipe_name }}">
+                                </a>
+                            </div>
+                            <div class="card-content recipe-list ">
+                                <p class="content-header">{{ recipe.recipe_name}}</p>
+                                <p class="card-text"><strong>By:</strong>{{ recipe.created_by}}</p>
+                                {% if recipe.is_vegetarian == "on" %}
+                                <p class="vegan"> Vegan
+                                <i class="fas fa-seedling tooltipped icon-color"data-position="middle" data-tooltip="Vegan friendly"></i>
+                                </p>
+                                {% endif %}
                             </div>
                         </div>
-                    {% endfor %}
-                </div>
-                
-                
+                    </div>
+                {% endfor %}
+            </div>  
         </div>
 
     <div class="variety-container">
@@ -112,7 +109,7 @@
                     {% endif %}
                 </div>
                 <div class="col s5 different-category">
-                    <h5>{{category.category_name}}</h5>
+                    <h6>{{category.category_name}}</h6>
                 </div>
             </div>
             {% endfor %}
