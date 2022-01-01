@@ -20,20 +20,26 @@ mongo = PyMongo(app)
 @app.route("/home")
 def home():
     category_recipes = mongo.db.categories.find().sort(
-        "category_name", 1).limit(5)
-    recipes = list(mongo.db.recipes.find())
+        "category_name", 1)
+    recipes = list(mongo.db.recipes.find().sort("rate", -1).limit(3))
     return render_template("index.html", recipes=recipes,
                            category_recipes=category_recipes)
+
 
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
+    """
+    Allow user search recipe
+    page for recipe names
+    and recipe categories
+    """
     query = request.form.get('query')
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
-    category_recipes = mongo.db.categories.find().sort(
-        "category_name", 1).limit(4)
-    return render_template("index.html", recipes=recipes,
-                           category_recipes=category_recipes)
+    categories = mongo.db.categories.find().sort(
+        "category_name", 1)
+    return render_template("recipes.html", recipes=recipes, 
+                categories=categories)
     
 
 @app.route("/register", methods=["GET", "POST"])
@@ -171,7 +177,7 @@ def add_recipe():
 @app.route("/single_recipe/<recipe_id>")
 def single_recipe(recipe_id):
     """
-    Display single recipe details.
+    Display each recipe details.
     """
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     return render_template("single-recipe.html", recipe=recipe)
@@ -226,7 +232,9 @@ def delete_recipe(recipe_id):
 @app.route("/view_category/<category_id>")
 def view_category(category_id):
     """
-    View each recipe category individually.
+    Allow users to view all
+    recipes in each category 
+    individually.
     """
     categories = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
     allrecipe = list(mongo.db.recipes.find(
