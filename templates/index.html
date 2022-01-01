@@ -87,7 +87,7 @@
             </div>
         </div>
         
-        <div class="row container">
+        <div class="row">
             {% for category in category_recipes %}
             <div class="col s6 categories">
                 <div class="col s7 categories-image">
@@ -108,14 +108,13 @@
                         <img src="{{url_for('static',filename='images/snackrecipe.jpeg')}}" alt="photo of {{ category.category_name }}">
                         </a>
                     {% else %}
-                         <p class = "single-recipe-text"> No category Found</p>
+                         <h5 class = "single-recipe-text"> No category Found</h5>
                     {% endif %}
                 </div>
                 <div class="col s5 different-category">
                     <h5>{{category.category_name}}</h5>
                 </div>
             </div>
-            
             {% endfor %}
         </div>
      </div>
