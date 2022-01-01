@@ -99,6 +99,10 @@ nav i{
     color:#730202;
 }
 
+.product-container{
+    padding:4rem 0;
+}
+
 
 /* search bar on home page */
 .search-button{
@@ -382,7 +386,6 @@ font-weight: 500
 
 .single-recipe-text{
     color:#730202;
-    padding:1rem 0;
 }
 
 .single-recipe-text strong{
@@ -411,6 +414,10 @@ font-weight: 500
 
 .recipe-image{
     padding:6rem 0 0 0;
+}
+
+.single-recipe-text {
+    font-size:1.1rem;
 }
 
 .recipe-image img{
@@ -518,13 +525,14 @@ font-weight: 500
 /* home page */
 .festive-container{
     color: #730202;
+    padding-bottom: 2rem;
 }
 
 .list-container {
     padding-top: 1.5rem;
 }
 
-.festive-container h3{
+.festive-header{
     font-size:2rem;
 }
 
@@ -540,7 +548,7 @@ font-weight: 500
 
 .variety-header{
     color: #730202;
-    font-size:2rem
+    font-size:1.6rem;
 }
 
 .container .categories {
@@ -557,8 +565,8 @@ font-weight: 500
     border-radius: 4rem;
 }
 
-.different-category h5{
-    padding-top: 2rem;
+.different-category p{
+    padding-top: 2.7rem;
 }
 
 .btn-floating.halfway-fab{
@@ -568,6 +576,34 @@ font-weight: 500
 
 .vegan{
     color:#F28705;
+}
+
+.product-image{
+    padding:3rem;
+    
+}
+
+.product-image img{
+    width:100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: cover
+}
+
+.product-text{
+   padding: 6rem;
+   color:#730202;
+}
+
+.product{
+    padding: 2rem;
+}
+
+.product-header{
+    padding: 3rem 1rem 1rem 1rem;
+    color:#F28705;
+    font-size: 2rem;
+    font-size: 2rem;
 }
 
 

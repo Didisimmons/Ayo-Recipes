@@ -46,7 +46,7 @@
 
 <section>
     <div class="festive-container container">
-        <h3 class="center-align">Explore our festive favorites </h3>
+        <h3 class="center-align festive-header">Explore our festive favorites </h3>
         <p class="festive-text">Check out some of our recommended festive recipes from our community this winter! 
             We got you covered this season with some nice, easy , tasty and aesthetically pleasing meals.
             Don't forget to tag us on our social media handles. </p>
@@ -74,49 +74,71 @@
                         </div>
                     </div>
                 {% endfor %}
-            </div>  
+            </div> 
         </div>
 
-    <div class="variety-container">
-        <div class="row">
-            <div class="col s12 center-align">
-                <h3 class="variety-header">Browse our Categories</h3>
+        <div class="variety-container">
+            <div class="row">
+                <div class="col s12 center-align">
+                    <h3 class="variety-header">Browse our Categories</h3>
+                </div>
             </div>
-        </div>
         
-        <div class="row">
-            {% for category in category_recipes %}
-            <div class="col s6 categories">
-                <div class="col s7 categories-image">
-                    {% if category.category_name == "Breakfast Recipes" %}
-                        <a href="{{url_for('view_category',category_id=category._id)}}">
-                        <img src="{{url_for('static',filename='images/breakfast.jpeg')}}" alt="photo of {{ category.category_name }}">
-                        </a>
-                    {% elif category.category_name == "Main-Course Recipes" %}
-                        <a href="{{url_for('view_category',category_id=category._id)}}">
-                        <img src="{{url_for('static',filename='images/main-course.jpeg')}}" alt="photo of {{ category.category_name }}">
-                        </a>
-                    {% elif category.category_name == "Soup Recipes" %}
-                        <a href="{{url_for('view_category',category_id=category._id)}}">
-                        <img src="{{url_for('static',filename='images/soup-recipe.jpeg')}}" alt="photo of {{ category.category_name }}">
-                        </a>
-                    {% elif category.category_name == "Snack Recipes" %}
-                        <a href="{{url_for('view_category',category_id=category._id)}}">
-                        <img src="{{url_for('static',filename='images/snackrecipe.jpeg')}}" alt="photo of {{ category.category_name }}">
-                        </a>
-                    {% else %}
-                         <h5 class = "single-recipe-text"> No category Found</h5>
-                    {% endif %}
+            <div class="center-align">
+                <div class="row">
+                    {% for category in category_recipes %}
+                <div class="col s6 categories">
+                    <div class="col s7 categories-image">
+                        {% if category.category_name == "Breakfast Recipes" %}
+                            <a href="{{url_for('view_category',category_id=category._id)}}">
+                            <img src="{{url_for('static',filename='images/breakfast.jpeg')}}" alt="photo of {{ category.category_name }}">
+                            </a>
+                        {% elif category.category_name == "Main-Course Recipes" %}
+                            <a href="{{url_for('view_category',category_id=category._id)}}">
+                            <img src="{{url_for('static',filename='images/main-course.jpeg')}}" alt="photo of {{ category.category_name }}">
+                            </a>
+                        {% elif category.category_name == "Soup Recipes" %}
+                            <a href="{{url_for('view_category',category_id=category._id)}}">
+                            <img src="{{url_for('static',filename='images/soup-recipe.jpeg')}}" alt="photo of {{ category.category_name }}">
+                            </a>
+                        {% elif category.category_name == "Snack Recipes" %}
+                            <a href="{{url_for('view_category',category_id=category._id)}}">
+                            <img src="{{url_for('static',filename='images/snackrecipe.jpeg')}}" alt="photo of {{ category.category_name }}">
+                            </a>
+                        {% else %}
+                            <h5 class = "single-recipe-text"> No category Found</h5>
+                        {% endif %}
+                    </div>
+                    <div class="col s5 different-category">
+                        <p>{{category.category_name}}</p>
+                    </div>
                 </div>
-                <div class="col s5 different-category">
-                    <h6>{{category.category_name}}</h6>
+                {% endfor %}
+            </div>
+            </div>   
+        </div>
+    </div>
+  </section>
+
+<div class="divider"></div>
+ <!---Product image-->
+    <section class="banner-container container-fluid">
+        <div class="row product-container">
+            <div class="col s12 m6 ">
+                <div class="product-text center-align">
+                    <h3 class="product-header icon-color">NOT SURE OF THE RIGHT KITCHEN TOOLS ? </h3>
+                    <p class="product"> <strong>Shop with our partners today and recieve a 15% discount code. </strong>  </p>
+                    <a href="{{url_for('add_category')}}" role="button" class="btn waves-effect waves-light amber darken-2">
+                      BUY NOW <i class="fas fa-shopping-cart prefix right"></i>
+                    </a>
                 </div>
             </div>
-            {% endfor %}
+            <div class="col s12 m6">
+                <div class="product-image">
+                    <img src="{{url_for('static',filename='images/kitchen_image.jpeg')}}" alt="photo of kitchen items">
+                </div>
+            </div>
         </div>
-     </div>
-</section>
-
-</section>
+  </section>
 
 {%endblock%}
