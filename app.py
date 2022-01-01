@@ -20,11 +20,21 @@ mongo = PyMongo(app)
 @app.route("/home")
 def home():
     category_recipes = mongo.db.categories.find().sort(
-        "category_name", 1).limit(4)
+        "category_name", 1).limit(5)
     recipes = list(mongo.db.recipes.find())
     return render_template("index.html", recipes=recipes,
                            category_recipes=category_recipes)
 
+
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get('query')
+    recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
+    category_recipes = mongo.db.categories.find().sort(
+        "category_name", 1).limit(4)
+    return render_template("index.html", recipes=recipes,
+                           category_recipes=category_recipes)
+    
 
 @app.route("/register", methods=["GET", "POST"])
 def register():

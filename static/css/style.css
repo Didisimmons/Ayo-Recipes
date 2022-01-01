@@ -124,6 +124,10 @@ input[type=text]:not(.browser-default):focus:not([readonly]){
     color:#F28705;
 }
 
+.error-meesage{
+    color:#F29F05;
+    padding: 1.5rem 0;
+}
 /* register */
 
 .register-header{

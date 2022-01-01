@@ -18,7 +18,7 @@
 
 <section class= "container">
     <div class="search-container">
-        <form action="" method="POST">
+        <form action="{{url_for('search')}}" method="POST" >
             <div class="row valign-wrapper">
                 <div class="input-field col s8 m8 offset-s2 offset-m2">
                     <input type="text" name="query" id="query" minlength="3" required>
@@ -30,7 +30,7 @@
                     <button type="submit" class="btn waves-effect waves-light manage-button amber darken-2 edit-button">
                         SEARCH <i class="fas fa-search prefix icon-color text-darken-4"></i>
                     </button>
-                    <a href="" class="btn manage-button waves-effect grey darken-2">REFRESH</a>   
+                    <a href="{{url_for('home')}}" class="btn manage-button waves-effect grey darken-2">REFRESH</a>   
                 </div>
             </div>  
                 
@@ -49,28 +49,33 @@
         
       
          <div class="container list-container">
-            <div class="row center-recipe center-align">
-              {% for recipe in recipes %}
-              <div class="col m4">
-                  <div class="card small">
-                      <div class="card-image ">
-                          <a href="{{url_for('single_recipe', recipe_id=recipe._id)}}">
-                              <img src="{{ recipe.image_url }}" class="responsive-image" alt="photo of {{ recipe.recipe_name }}">
-                          </a>
-                      </div>
-                      <div class="card-content recipe-list ">
-                          <p class="content-header">{{ recipe.recipe_name}}</p>
-                          <p class="card-text"><strong>By:</strong>{{ recipe.created_by}}</p>
-                          {% if recipe.is_vegetarian == "on" %}
-                          <p class="vegan"> Vegan
-                          <i class="fas fa-seedling tooltipped icon-color"data-position="middle" data-tooltip="Vegan friendly"></i>
-                          </p>
-                          {% endif %}
-                      </div>
-                  </div>
-              </div>
-              {% endfor %}
-          </div>
+             {%if recipes|length > 0 %}
+                <div class="row center-recipe center-align">
+                    {% for recipe in recipes %}
+                        <div class="col m4">
+                            <div class="card small">
+                                <div class="card-image ">
+                                    <a href="{{url_for('single_recipe', recipe_id=recipe._id)}}">
+                                        <img src="{{ recipe.image_url }}" class="responsive-image" alt="photo of {{ recipe.recipe_name }}">
+                                    </a>
+                                </div>
+                                <div class="card-content recipe-list ">
+                                    <p class="content-header">{{ recipe.recipe_name}}</p>
+                                    <p class="card-text"><strong>By:</strong>{{ recipe.created_by}}</p>
+                                    {% if recipe.is_vegetarian == "on" %}
+                                    <p class="vegan"> Vegan
+                                    <i class="fas fa-seedling tooltipped icon-color"data-position="middle" data-tooltip="Vegan friendly"></i>
+                                    </p>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                {% else %}
+                <h4 class="center-align error-meesage">No results Found</h4>
+                {% endif %}
+                
         </div>
 
     <div class="variety-container">
