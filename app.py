@@ -16,7 +16,6 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
-
 @app.route("/")
 @app.route("/home")
 def home():
@@ -207,7 +206,7 @@ def edit_recipe(recipe_id):
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
     """
-    Allow user delete recipe created
+    Allow user delete recipe created.
     """
     mongo.db.recipes.delete_one({"_id": ObjectId(recipe_id)})
     flash("Recipe sucessfully deleted")
@@ -226,6 +225,7 @@ def view_category(category_id):
     return render_template("view-category.html",
                             allrecipe=allrecipe, 
                             categories=categories)
+
 
 @app.route("/recipes")
 def recipes():
@@ -273,6 +273,11 @@ def add_category():
 
 @app.route("/edit_category/<category_id>", methods=["GET", "POST"])
 def edit_category(category_id):
+    """
+    If the administrator is logged in
+    allow them edit category
+    and return to manage categories.
+    """
     user = mongo.db.users.find_one(
                 {"username": session["user"]})
     if session['user'] == 'administrator':
@@ -292,6 +297,11 @@ def edit_category(category_id):
 
 @app.route("/delete_category/<category_id>")
 def delete_category(category_id):
+    """
+    If the administrator is logged in
+    allow them delete category
+    and return to manage categories.
+    """
     user = mongo.db.users.find_one(
                 {"username": session["user"]})
     if session['user'] == 'administrator':

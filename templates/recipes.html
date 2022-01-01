@@ -4,30 +4,29 @@
 
   <div class="row ">
     <div class="col s12 card-panel">
-      <h4 class="register-header center-align">Browse our Different Categories</h4>
-      <form method="POST" action="">
-        <div class="row categorysearch-container">
-          <div class="input-field col s12 m4 l3 offset-l4">
-            <input id="name" type="text" class="validate">
-            <label for="name"> Search </label>
+        <h4 class="register-header center-align">Browse our Different Categories</h4>
+        <form method="POST" action="">
+          <div class="row categorysearch-container">
+              <div class="input-field col s12 m4 l3 offset-l4">
+                <input id="name" type="text" class="validate">
+                <label for="name"> Search </label>
+              </div>
+              <div class="input-field col s12 m4 l1">
+                <button class="btn waves-effect waves-light amber darken-2" type="submit"><i class="fas fa-search  icon-color "></i>
+                </button>
+              </div>
+              <div class="col s12 center-align">    
+                <a href="{{url_for('manage_categories')}}" role="button" 
+                class="btn waves-effect waves-light amber darken-2">
+              CLEAR <i class="fas fa-close prefix right"></i>
+                </a>      
+             </div>
           </div>
-          <div class="input-field col s12 m4 l1">
-            <button class="btn waves-effect waves-light amber darken-2" type="submit"><i class="fas fa-search  icon-color "></i>
-            </button>
-          </div>
-          <div class="col s12 center-align">    
-            <a href="{{url_for('manage_categories')}}" role="button" 
-            class="btn waves-effect waves-light amber darken-2">
-          CLEAR <i class="fas fa-close prefix right"></i>
-            </a>      
-        </div>
-        </div>
-      </form> 
-      </div>
-    </div>    
+        </form> 
+      </div> 
   </div>
 
-  
+
 <div class="container">
   <div class="row recipe-list-container">
     {% for recipe in recipes %}

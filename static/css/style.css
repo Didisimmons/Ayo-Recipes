@@ -111,6 +111,7 @@ nav i{
 
 .search-container{
     padding: 2rem 0 0 0;
+    text-align:center;
 }
 
 input[type=text]:not(.browser-default):focus:not([readonly]){
