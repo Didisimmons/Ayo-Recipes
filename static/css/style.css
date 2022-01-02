@@ -299,6 +299,10 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
     padding-top: 5rem;
 }
 
+.category-container{
+    padding-top: 6rem;
+}
+
 /* manage categories  */
 .card .card-action{
     border-top: 0;
@@ -779,6 +783,11 @@ font-weight: 500
     padding: 15px; 
 }
 
+
+.btn:hover{
+    cursor:pointer;
+    box-shadow:0 0 1rem 0 #F28705; 
+}
 
 @media screen and ( max-width: 575px){
     .hero-image-text{

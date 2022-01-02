@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="container-fluid">
+<div class="container-fluid category-container">
 
     <section>
       <div class="row profile">
@@ -41,13 +41,13 @@
       {% endif %}
      <!-- to return back to home page -->
      <div class="row">
-      <div class="col s12 center-align">    
-          <a href="{{url_for('home')}}" role="button" 
-          class="btn waves-effect waves-light amber darken-2">
-        BACK <i class="fas fa-angle-right prefix right"></i>
-          </a>
+        <div class="col s12 center-align">    
+            <a href="{{url_for('home')}}" role="button" 
+            class="btn waves-effect waves-light amber darken-2">
+            <i class="fas fa-angle-left prefix left"></i> BACK 
+            </a>
+        </div>
       </div>
-    </div>
       
     </div>  
   </section>
