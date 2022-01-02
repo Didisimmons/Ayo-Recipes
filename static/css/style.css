@@ -234,6 +234,10 @@ button{
     background: url(/static/images/background2.png) no-repeat center center / cover fixed; 
 }
 
+.profile-container{
+    padding-top: 6rem;
+}
+
 .profile-content{
     padding:1rem 0
 }
