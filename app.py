@@ -16,14 +16,20 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+
+"""
+Pagination adapted from
+    https://github.com/James-VT/MS3_Halo_Pizza/blob/main/app.py
+"""
 @app.route("/")
 @app.route("/home")
 def home():
     category_recipes = mongo.db.categories.find().sort(
-        "category_name", -1).limit(4)
+        "category_name", 1).limit(4)
     recipes = list(mongo.db.recipes.find().sort("rate", -1).limit(3))
     return render_template("index.html", recipes=recipes,
                            category_recipes=category_recipes)
+
 
 
 

@@ -40,8 +40,8 @@
                     </div>
                     
                     <div class="card-content recipe-list ">          
-                        <p class="content-header">{{ recipe.recipe_name}}</p>             
-                                <p class="card-text">{{ categories.category_name }}</p>          
+                        <p class="recipe-head">{{ recipe.recipe_name}}</p>             
+                        <p class="card-text">{{ categories.category_name }}</p>          
                         <p>{{recipe.recipe_time}} mins</p>
                     </div>     
                 </div>
@@ -50,7 +50,7 @@
         </div>
         {% else %}
           <h4 class="center-align error-meesage">No results Found</h4>
-        {% endif %}
+      {% endif %}
         
     <!-- to return back to home page -->
       <div class="row">
@@ -60,7 +60,7 @@
           BACK <i class="fas fa-angle-right prefix right"></i>
             </a>
         </div>
-      </div> 
+      </div>
     </div>  
 
 {% endblock %}

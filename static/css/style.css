@@ -49,6 +49,26 @@ body{
     font-family: dancing script,sans-serif;
 }
 
+
+.ayo-logo img{
+    height: 55px;
+}
+
+nav.nav-extended .nav-wrapper {
+    min-height: 56px;
+    height: 5.5rem;
+}
+
+.nav-wrapper .right {
+    float: right !important;
+    padding-top: 0.5rem;
+}
+
+nav .brand-logo {
+    padding:4px;
+}
+
+
 .dropdown-content li>a{
     color:#730202;
 }
@@ -469,6 +489,10 @@ font-weight: 500
     margin-right: 10px;
 }
 
+.recipe-head{
+    padding: 11px;
+}
+
 .recipe-button:hover{
     cursor:pointer;
     box-shadow:0 0 1rem 0 #F28705;
@@ -834,6 +858,14 @@ font-weight: 500
     .btn-floating.halfway-fab{
         right:-3px;
         bottom: 68px;
+    }
+
+    .ayo-logo img{
+        height: 56px;
+    }
+
+    nav .brand-logo {
+        padding:3px;
     }
     
 }
