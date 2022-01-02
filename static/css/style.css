@@ -298,7 +298,8 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 
 .manage-container{
     width:100%;
-    background: url(/static/images/background2.png) no-repeat center center / cover fixed; 
+    background: url(/static/images/background2.png) no-repeat center center / cover fixed;
+    padding-top: 4rem;
 }
 
 .manage-category{
@@ -711,7 +712,7 @@ font-weight: 500
 /* tips */
 .tips-container{
     color: #730202;
-    padding: 2rem;
+    padding: 4rem 2rem 2rem 2rem;
 }
 
 .tips-header{
@@ -864,7 +865,7 @@ font-weight: 500
     }
 
     .ayo-logo img{
-        height: 56px;
+        height: 52px;
     }
 
     nav .brand-logo {
