@@ -295,6 +295,10 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
     padding : 2rem 0;
 }
 
+.recipes-container{
+    padding-top: 5rem;
+}
+
 /* manage categories  */
 .card .card-action{
     border-top: 0;
