@@ -584,7 +584,7 @@ font-weight: 500
 .product-image img{
     width:100%;
     height: auto;
-    max-height: 600px;
+    max-height: 461px;
     object-fit: cover
 }
 
@@ -597,10 +597,11 @@ font-weight: 500
     padding: 2rem;
 }
 
-.product-header{
-    padding: 3rem 1rem 1rem 1rem;
-    color:#F28705;
-    font-size: 2rem;
+.product-header {
+    padding: 2rem 1rem 1rem 1rem;
+    color: #F28705;
+    font-size: 1.7rem;
+    line-height: 3rem;
 }
 
 
@@ -821,6 +822,10 @@ font-weight: 500
 
     .product-text{
         padding:1rem 0;
+    }
+
+    .product-container{
+        padding:0.5rem 0;
     }
 
 }
