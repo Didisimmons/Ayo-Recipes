@@ -578,8 +578,7 @@ font-weight: 500
 }
 
 .product-image{
-    padding:3rem;
-    
+    padding:3rem;  
 }
 
 .product-image img{
@@ -601,7 +600,6 @@ font-weight: 500
 .product-header{
     padding: 3rem 1rem 1rem 1rem;
     color:#F28705;
-    font-size: 2rem;
     font-size: 2rem;
 }
 
@@ -690,6 +688,58 @@ font-weight: 500
 
 .tips-header{
     font-size:2rem;
+    padding:1.5rem;
+}
+
+.kitchen{
+    padding-top: 1rem;
+
+}
+
+.kitchen-header{
+    color:#F28705;
+    font-size:2rem;
+}
+
+.kitchen-header h3{
+    line-height: 3rem;
+}
+
+.kitchen-text{
+    padding:2rem 0;
+    line-height: 2rem;
+    color: #730202;
+}
+
+.kitchen-image img{
+    width: 100%;
+    height: auto;
+    max-height: 442px;
+    object-fit: cover;
+}
+
+.kitchen-container{
+    padding-top: 1rem;
+}
+
+.kitchen-image{
+    padding:3rem;  
+}
+
+.kitchen-content{
+    padding:3rem;
+}
+
+.tips-button{
+    border-radius: 10px;
+    color:white;
+    padding: 9px;
+}
+
+.tips-button:hover{
+    cursor:pointer;
+    box-shadow:0 0 1rem 0 #F28705;
+    padding: 15px; 
 }
 
 
@@ -726,8 +776,6 @@ font-weight: 500
     .profile-header h3{
         font-size:1.5rem;
     }
-
-
 
 }
 
@@ -770,7 +818,10 @@ font-weight: 500
     .btn-custom{
         font-size:0.8rem ;
     }
-    
+
+    .product-text{
+        padding:1rem 0;
+    }
 
 }
 
