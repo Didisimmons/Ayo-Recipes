@@ -49,7 +49,6 @@ body{
     font-family: dancing script,sans-serif;
 }
 
-
 .ayo-logo img{
     height: 55px;
 }
@@ -68,6 +67,10 @@ nav .brand-logo {
     padding:4px;
 }
 
+nav{
+    position: fixed;
+    z-index: 1;
+}
 
 .dropdown-content li>a{
     color:#730202;
