@@ -34,13 +34,30 @@
                       <label for="password">least one number and one uppercase and lowercase letter.</label>
                   </div>
                 </div>
-                <!-- password -->
+                <!-- confirm password -->
                 <div class="row">
                   <div class="input-field col s12">
                       <i class="fas fa-user-lock prefix icon-color"></i>
                       <input id="confirm-password" name="confirm-password" minlength="5"
                           maxlength="15" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" class="validate" required>
                       <label for="confirm-password"> Confirm password</label>
+                  </div>
+                </div>
+                <!-- phone number-->
+                <div class="row">
+                  <div class="input-field col s12">
+                      <i class="fas fas fa-phone-alt prefix icon-color"></i>
+                      <input id="phone-number" name="phone-number" minlength="3"
+                          maxlength="12" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="validate" required>
+                      <label for="phone-number"> <small>format: 000-456-789-000</small></label>
+                  </div>
+                </div>
+                <!-- email address -->
+                <div class="row">
+                  <div class="input-field col s12">
+                      <i class="fas fa-envelope-open-text prefix icon-color"></i>
+                      <input id="email" name="email" type="email" placeholder="diam@yahoo.com" class="validate" required>
+                      <label for="email"></label>
                   </div>
                 </div>
               <!-- About me -->
