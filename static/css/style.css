@@ -4,6 +4,11 @@ body{
 }
 
 /* flash message */
+
+.flashes{
+    padding-top: 5rem;
+}
+
 .flashes h4{
     padding:1.5rem 0 ;
     font-size: 1.5rem;
@@ -149,7 +154,11 @@ nav i{
 
 input[type=text]:not(.browser-default):focus:not([readonly]){
     border-bottom: 1px solid #F28705;
-    color:#F28705 ;
+    color:#F28705;
+}
+
+input{
+    color:#F28705;
 }
 
 
@@ -231,6 +240,31 @@ button{
 
 .registered a{
     color:#f44336;
+}
+
+/* code borrowed from https://tutorialdeep.com/knowhow/change-image-on-dropdown-select-option-jquery/.
+and modified  */
+.users{
+	display:none;
+    text-align:center;
+}  
+
+.users img{
+  margin: 0 auto;
+  height: 205px;
+}
+
+.users span{
+	text-align: center;
+    background: #ffdede;
+    padding: 6px 10px;
+    display: block;
+    width: 100px;
+    border: 1px solid #d47c7c;
+    margin: 8px auto;
+}
+#showOne,#showTwo,#showThree {
+    padding:10px;
 }
 
 
