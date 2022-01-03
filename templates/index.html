@@ -23,7 +23,7 @@
             We got you covered this season with some nice, easy , tasty and aesthetically pleasing meals.
             Don't forget to tag us on our social media handles. </p>
         
-      
+            <!---Display high rating recipes limit 3-->
         <div class="container list-container">
             <div class="row center-recipe center-align">
                 {% for recipe in recipes %}
@@ -56,41 +56,44 @@
                 </div>
             </div>
         
+            <!---Display recipe categories -->
             <div class="center-align">
                 <div class="row">
                     {% for category in category_recipes %}
-                <div class="col s6 categories">
-                    <div class="col s7 categories-image">
-                        {% if category.category_name == "Breakfast Recipes" %}
-                            <a href="{{url_for('view_category',category_id=category._id)}}">
-                            <img src="{{url_for('static',filename='images/breakfast.jpeg')}}" alt="photo of {{ category.category_name }}">
-                            </a>
-                        {% elif category.category_name == "Main-Course Recipes" %}
-                            <a href="{{url_for('view_category',category_id=category._id)}}">
-                            <img src="{{url_for('static',filename='images/main-course.jpeg')}}" alt="photo of {{ category.category_name }}">
-                            </a>
-                        {% elif category.category_name == "Soup Recipes" %}
-                            <a href="{{url_for('view_category',category_id=category._id)}}">
-                            <img src="{{url_for('static',filename='images/soup-recipe.jpeg')}}" alt="photo of {{ category.category_name }}">
-                            </a>
-                        {% elif category.category_name == "Snack Recipes" %}
-                            <a href="{{url_for('view_category',category_id=category._id)}}">
-                            <img src="{{url_for('static',filename='images/snackrecipe.jpeg')}}" alt="photo of {{ category.category_name }}">
-                            </a>
-                        {% else %}
-                            <h5 class = "single-recipe-text"> No category Found</h5>
-                        {% endif %}
+                        <div class="col s6 categories">
+                            <div class="col s7 categories-image">
+                                {% if category.category_name == "Breakfast Recipes" %}
+                                    <a href="{{url_for('view_category',category_id=category._id)}}">
+                                    <img src="{{url_for('static',filename='images/breakfast.jpeg')}}" alt="photo of {{ category.category_name }}">
+                                    </a>
+                                {% elif category.category_name == "Main-Course Recipes" %}
+                                    <a href="{{url_for('view_category',category_id=category._id)}}">
+                                    <img src="{{url_for('static',filename='images/main-course.jpeg')}}" alt="photo of {{ category.category_name }}">
+                                    </a>
+                                {% elif category.category_name == "Soup Recipes" %}
+                                    <a href="{{url_for('view_category',category_id=category._id)}}">
+                                    <img src="{{url_for('static',filename='images/soup-recipe.jpeg')}}" alt="photo of {{ category.category_name }}">
+                                    </a>
+                                {% elif category.category_name == "Snack Recipes" %}
+                                    <a href="{{url_for('view_category',category_id=category._id)}}">
+                                    <img src="{{url_for('static',filename='images/snackrecipe.jpeg')}}" alt="photo of {{ category.category_name }}">
+                                    </a>
+                                {% else %}
+                                    <a href="{{url_for('view_category',category_id=category._id)}}">
+                                    <img src="{{url_for('static',filename='images/default_image.jpeg')}}" alt="photo of {{ category.category_name }}">
+                                    </a>
+                                {% endif %}
+                            </div>
+                            <div class="col s5 different-category">
+                                <p>{{category.category_name}}</p>
+                            </div>
+                        </div>
+                        {% endfor %}
                     </div>
-                    <div class="col s5 different-category">
-                        <p>{{category.category_name}}</p>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-            </div>   
+                </div>   
+             </div>
         </div>
-    </div>
-  </section>
+</section>
 
 <div class="divider"></div>
  <!---Product image-->
