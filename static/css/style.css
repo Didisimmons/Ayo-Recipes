@@ -164,6 +164,10 @@ input[type=text]:not(.browser-default):focus:not([readonly]){
 }
 /* register */
 
+.login-container{
+    padding-top: 3rem;
+}
+
 .register-header{
     padding:2rem 0 ;
     font-family: dancing script,sans-serif;
