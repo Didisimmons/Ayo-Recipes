@@ -173,7 +173,8 @@ input[type=text]:not(.browser-default):focus:not([readonly]){
 
 .register-container{
     width:100%;
-    background: url(/static/images/background2.png) no-repeat center center / cover fixed; 
+    background: url(/static/images/background2.png) no-repeat center center / cover fixed;
+    padding-top:4rem;
 }
 
 textarea.materialize-textarea {
