@@ -10,7 +10,6 @@ body{
 }
 
 .flashes h4{
-    padding:1.5rem 0 ;
     font-size: 1.5rem;
     font-family: poppins,sans-serif;
     letter-spacing:2px;
@@ -296,7 +295,7 @@ and modified  */
 }
 
 .profile{
-    padding-top: 2rem;
+    padding-top: 1rem;
     text-align: center;
 }
 
