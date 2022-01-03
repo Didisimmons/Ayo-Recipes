@@ -194,11 +194,11 @@
                 <div class="row">
                     <div class="col s12 center-align">
                         <!-- cancel -->
-                        <button type="submit" class="btn waves-effect waves-light amber darken-2 edit-button">
+                        <button type="submit" class="btn waves-light amber darken-2 edit-button">
                             EDIT RECIPE <i class="fas fa-edit right prefix right"></i>
                         </button>    
-                        <a href="{{ url_for('profile', username=session['user']) }}" role="button" 
-                        class="btn waves-effect waves-light grey darken-2">
+                        <a href="{{url_for('single_recipe',recipe_id=recipe._id)}}" role="button" 
+                        class="btn edit-btn waves-light grey darken-2">
                        CANCEL <i class="fas fa-times-circle prefix right"></i>
                         </a>
                     </div>
