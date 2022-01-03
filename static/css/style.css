@@ -88,11 +88,18 @@ nav{
 }
 
 .brand-logo{
-    padding:2rem 0;
-    background-color:#F29F05 ;
+    padding:1rem 0;
     border-radius:22px;
 }
 
+.brand-logo h4{
+    font-size: 3rem;
+    color:#F29F05;
+    font-family: dancing script,sans-serif;;
+}
+.circle{
+    border-radius: 0%;
+}
 .brand-logo a{
     color:#f0e5de;
 }
