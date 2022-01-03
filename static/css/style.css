@@ -421,6 +421,9 @@ font-weight: 500
 }
 
   /* single page */
+.single-container{
+    padding-top: 5rem;
+}
 .single-header{
     color: #730202;
     padding-top: 3rem ;
@@ -455,7 +458,7 @@ font-weight: 500
 }
 
 .recipe-image{
-    padding:6rem 0 0 0;
+    padding:4rem 0 ;
 }
 
 .single-recipe-text {
@@ -829,6 +832,11 @@ font-weight: 500
         font-size:1.5rem;
     }
 
+    .recipe-image img {
+        max-height: 264px;
+        max-width: 264px;
+    }
+
 }
 
 @media only screen and (max-width:768px){
@@ -883,6 +891,11 @@ font-weight: 500
         text-align: center;
     }
 
+    .recipe-image img {
+        max-height: 286px;
+        max-width: 286px;
+    }
+
 }
 
 @media only screen and (max-width:875px){
@@ -899,6 +912,9 @@ font-weight: 500
         text-align: center;
     }
     
+    .recipe-image{
+        padding:1rem 0 ;
+    }
 }
 
 
