@@ -73,7 +73,7 @@ nav .brand-logo {
 
 nav{
     position: fixed;
-    z-index: 1;
+    z-index: 99;
 }
 
 .dropdown-content li>a{
