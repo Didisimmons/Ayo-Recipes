@@ -2,7 +2,12 @@
 {% block content %}
 
 <section>
-    
+    <div class="row container-fluid">
+        <div class="container photo-container">
+            <img class="header-photo" src="{{url_for('static',filename='images/main-course.jpeg')}}" alt=" photo of a library" height="320" width="1520">
+        </div>
+    </div>
+
     <div class="container-fluid">
         <div class="carousel carousel-slider" id="demo-carousel-content" data-indicators="true">
             <div class="carousel-fixed-item center"> 
