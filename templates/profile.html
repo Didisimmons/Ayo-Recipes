@@ -19,53 +19,41 @@
           <div class="personal-details">
             <p><strong>Name</strong></p>
             <i class="fas fa-user-plus prefix icon-color">:</i>
-            <div class="input-field">
-                <label for="full-name"> {{user.full_name}}</label>
-                <input id="full-name" name="full-name" type="text" class="validate" data-length="30">
-              </div>
+            <p class = "profile-name"><strong>{{user.full_name}}</strong></p>
           </div>
         </div>
 
          <!-- mobile number -->
         <div class="col s12 m6">
-          <div class="personal-details ">
+          <div class="personal-details">
             <p><strong>Number</strong></p>
             <i class="fas fa-phone-alt prefix icon-color">:</i>
-            <div class="input-field">
-                <label for="phone" > {{ user.phone_number }}</label>
-                <input id="phone" name="phone" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}-[0-9]{3}" class="validate" data-length="12">
-              </div>
+            <p class = "profile-name"><strong>{{ user.phone_number }}</strong></p>
           </div>
         </div>
       </div>
 
-      <div class="row">
+      <div class="row profile-details">
         <!-- About the user  -->
         <div class="col s12 m6">
-          <div class="personal-details ">
+          <div class="personal-details">
             <p><strong>About me</strong></p>
             <i class="fas fa-pen prefix icon-color">:</i>
-            <div class="input-field">
-              <label for="aboutme"> {{ user.about }}</label>
-              <input id="aboutme" name="aboutme" type="text" class="materialize-textarea validate" maxlength="140"></input>
-            </div>
+            <p class = "profile-name"><strong>{{ user.about }}</strong></p>
           </div>
         </div>
 
         <!-- Email the user   -->
         <div class="col s12 m6">
-          <div class="personal-details ">
+          <div class="personal-details">
             <p><strong>Email</strong></p>
             <i class="fas fa-envelope prefix icon-color">:</i>
-            <div class="input-field">
-                <label for="email">{{ user.email }}</label>
-                <input id="email" name="email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
-              </div>
+            <p class = "profile-name"><strong>{{ user.email }}</strong></p>
           </div>
         </div>
       </div>
       <div class="row ">
-        <div class="col s12 profile">
+        <div class="col s12 profile profile-button">
           <a href="{{url_for('add_recipe')}}" class="waves-effect amber recipe-button darken-2 ">CREATE RECIPE</a>
           <a href="{{url_for('edit_profile', user_id=user._id)}}" class="waves-effect recipe-button amber darken-2"> UPDATE PROFILE</a>
         </div> 

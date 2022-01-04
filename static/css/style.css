@@ -273,6 +273,11 @@ and modified  */
     letter-spacing: 3px  
 }
 
+.profile-name{
+    text-decoration: underline;
+    text-decoration-color: #F28705;
+    color:#F28705
+}
 .card-panel{
     width:100%;
     background: url(/static/images/background2.png) no-repeat center center / cover fixed; 
@@ -280,6 +285,10 @@ and modified  */
 
 .profile-container{
     padding-top: 5rem;
+}
+
+.profile-details{
+    padding: 2rem 0;
 }
 
 .profile-content{
@@ -894,6 +903,16 @@ font-weight: 500
         font-size: 12px;
     }
 
+    .profile-details{
+        padding: 0.1rem 0;
+    }
+
+    .profile-button{
+        padding:1rem 0 ;
+    }
+    .personal-details p{
+        line-height: 3rem;
+    }
     .personal-details p, .personal-details i {
         font-size:1rem;
     }
