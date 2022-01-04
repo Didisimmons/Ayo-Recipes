@@ -14,7 +14,8 @@
       </div>
 
   <section>
-    <div class="container"> 
+    <div class="container">
+      {% if allrecipes|length == 0 %}
       <div class="row recipe-list-container">
           {% for recipe in allrecipe %}
             <div class="col s12 m4">
@@ -35,8 +36,9 @@
             </div>
           {% endfor %}
       </div>
+      {% else %}
           <h5 class="center-align error-meesage">No category results Found</h5>
-    
+      {% endif %}
      <!-- to return back to home page -->
      <div class="row">
         <div class="col s12 center-align">    
