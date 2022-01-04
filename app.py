@@ -16,11 +16,6 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
-
-"""
-Pagination adapted from
-    https://github.com/James-VT/MS3_Halo_Pizza/blob/main/app.py
-"""
 @app.route("/")
 @app.route("/home")
 def home():
@@ -43,8 +38,8 @@ def search():
     categories = mongo.db.categories.find().sort(
         "category_name", 1)
     return render_template("recipes.html", recipes=recipes, 
-                categories=categories)
-    
+                          categories=categories)
+
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
@@ -137,14 +132,15 @@ def profile(username):
 def edit_profile(user_id):
     """
     allow user edit profile
-    page 
+    page, code adopted from
+    https://github.com/dissyulina/cookle-cookbook/blob/main/app.py
     """
     if "user" in session:
         user = mongo.db.users.find_one(
             {"_id": ObjectId(user_id)})
         username = user["username"]
-        
-        #check if user in session and update
+
+        # check if user in session and update
         if session["user"] == username:
             if request.method == "POST":
                 submit = {
@@ -153,16 +149,15 @@ def edit_profile(user_id):
                     "about": request.form.get("aboutme"),
                     "email": request.form.get("email")
                 }
-                mongo.db.users.update_one({"_id": ObjectId(user_id)},
-                                        {"$set": submit})
+                mongo.db.users.update_one({"_id": ObjectId(user_id)}, 
+                                    {"$set": submit})
                 flash("Profile Successfully Updated")
                 return redirect(url_for("profile", username=session["user"]))
             return render_template("edit-profile.html", user=user)
 
         user = mongo.db.users.find_one({"_id": ObjectId(user_id)})
         categories = mongo.db.categories.find().sort("category_name", 1)
-        return render_template("recipes.html",
-                                user=user, 
+        return render_template("recipes.html", user=user, 
                                 categories=categories)
 
 
@@ -245,16 +240,13 @@ def edit_recipe(recipe_id):
                 "image_url": request.form.get("image_url"),
                 "created_by": session["user"]
             }
-            
             mongo.db.recipes.update_one({"_id": ObjectId(
                     recipe_id)}, {"$set": submit})
             flash("Recipe sucessfully updated")
-            return redirect(url_for("single_recipe",recipe_id=recipe_id))
-    
+            return redirect(url_for("single_recipe", recipe_id=recipe_id))
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template("edit-recipe.html",
-                            recipe=recipe, 
+    return render_template("edit-recipe.html", recipe=recipe, 
                             categories=categories)
 
 
@@ -279,9 +271,8 @@ def view_category(category_id):
     allrecipe = list(mongo.db.recipes.find(
         {"category_name": categories["category_name"]}))
 
-    return render_template("view-category.html",
-                            allrecipe=allrecipe, 
-                            categories=categories)
+    return render_template("view-category.html", allrecipe=allrecipe,
+                          categories=categories)
 
 
 @app.route("/recipes")
@@ -294,7 +285,7 @@ def recipes():
     categories = mongo.db.categories.find().sort(
         "category_name", 1)
     return render_template("recipes.html", recipes=recipes, 
-                categories=categories)
+                            categories=categories)
 
 
 @app.route("/manage_categories")
@@ -341,7 +332,8 @@ def edit_category(category_id):
         if request.method == "POST":
             submit = {
                 "category_name": request.form.get("category_name"),
-                "category_description": request.form.get("category_description")
+                "category_description": request.form.get
+                    ("category_description")
             }
             mongo.db.categories.update_one({"_id": ObjectId(
                     category_id)}, {"$set": submit})
