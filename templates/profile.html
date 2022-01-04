@@ -12,7 +12,7 @@
         </div>    
       </div>
 
-    <form class="profile-content center-align" method="POST" action="">
+    <form class="profile-content center-align" method="POST" action="{{ url_for('edit_profile', user_id=user._id)}}">
       <div class="row">
         <!-- Full name -->
         <div class="col s12 m6">
@@ -67,7 +67,7 @@
       <div class="row ">
         <div class="col s12 profile">
           <a href="{{url_for('add_recipe')}}" class="waves-effect amber recipe-button darken-2 ">CREATE RECIPE</a>
-          <a href="" class="waves-effect recipe-button amber darken-2"> UPDATE PROFILE</a>
+          <a href="{{url_for('edit_profile', user_id=user._id)}}" class="waves-effect recipe-button amber darken-2"> UPDATE PROFILE</a>
         </div> 
       </div>
   </form>
@@ -75,7 +75,7 @@
 
   <section>
     <div class="container">
-      {% if recipes|length > 0 %}
+    
         <div class="row recipe-list-container">
           {% for recipe in recipes_user %}
           <div class="col s12 m4">
@@ -95,12 +95,7 @@
               </div>
           </div>
           {% endfor %}
-        </div>
-        {% else %}
-          <div class="error-meesage">
-            <h5 class="center-align">No recipes added </h5>
-          </div>    
-        {% endif %}
+       
   </section>
 </div>   
   

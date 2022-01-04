@@ -25,12 +25,10 @@ Pagination adapted from
 @app.route("/home")
 def home():
     category_recipes = mongo.db.categories.find().sort(
-        "category_name", -1).limit(4)
+        "category_name", 1).limit(4)
     recipes = list(mongo.db.recipes.find().sort("rate", -1).limit(3))
     return render_template("index.html", recipes=recipes,
                            category_recipes=category_recipes)
-
-
 
 
 @app.route("/search", methods=["GET", "POST"])
@@ -130,8 +128,43 @@ def profile(username):
             return render_template(
                 "profile.html", user=user, recipes_user=recipes_user)
         else:
-            flash("Please try Login again") 
+            flash("Please try Login again")
+
     return redirect(url_for("login"))
+
+
+@app.route("/edit_profile/<user_id>", methods=["GET", "POST"])
+def edit_profile(user_id):
+    """
+    allow user edit profile
+    page 
+    """
+    if "user" in session:
+        user = mongo.db.users.find_one(
+            {"_id": ObjectId(user_id)})
+        username = user["username"]
+
+        if session["user"] == username:
+            if request.method == "POST":
+                submit = {
+                    "full_name": request.form.get("full-name").lower(),
+                    "phone_number": request.form.get("phone"),
+                    "about": request.form.get("aboutme"),
+                    "email": request.form.get("email"),
+                    "phone_number": request.form.get("phone")
+                }
+                mongo.db.users.update({"_id": ObjectId(user_id)},
+                                        {"$set": submit})
+                session["user"] = request.form.get("username").lower()
+                flash("Profile Successfully Updated")
+                return redirect(url_for("profile", username=session["user"]))
+            return render_template("edit-profile.html", user=user)
+        
+        user = mongo.db.users.find_one({"_id": ObjectId(user_id)})
+        categories = mongo.db.categories.find().sort("category_name", 1)
+        return render_template("edit-recipe.html",
+                                user=user, 
+                                categories=categories)
 
 
 @app.route("/logout")
