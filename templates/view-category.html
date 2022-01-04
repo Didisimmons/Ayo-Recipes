@@ -15,7 +15,7 @@
 
   <section>
     <div class="container">
-      {% if allrecipes|length == 0 %}
+      {% if allrecipes|length > 0 %}
       <div class="row recipe-list-container">
           {% for recipe in allrecipe %}
             <div class="col s12 m4">
