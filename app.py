@@ -114,12 +114,12 @@ def profile(username):
     """
     retrieve user and recipe information from the dabase
     """
-    if "user" in session:
-        if session["user"] == username:
-            user = mongo.db.users.find_one(
+    user = mongo.db.users.find_one(
                 {"username": session["user"]})
-            recipes_user = mongo.db.recipes.find(
+    recipes_user = mongo.db.recipes.find(
                 {"created_by": session["user"]})
+    if "user" in session:
+        if session["user"] == username: 
             return render_template(
                 "profile.html", user=user, recipes_user=recipes_user)
         else:

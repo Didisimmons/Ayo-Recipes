@@ -13,13 +13,13 @@
                         </div>
                         <div class="card-action">
                             <a href="{{ url_for('edit_category',category_id=category._id) }}" class="btn manage-button waves-effect amber darken-2">EDIT</a>
-                            <a href="#deletecategory" class="btn manage-button modal-trigger grey darken-2">DELETE</a>
+                            <a href="#modal1{{category._id}}" class="btn manage-button modal-trigger grey darken-2">DELETE</a>
 
                         </div>
                     </div>
                 </div>
                 <!-- Modal confirmation for  deleting category-->
-            <div id="deletecategory" class="modal">
+            <div id="modal1{{category._id}}" class="modal">
                 <div class="modal-content">
                     <h4 class="center-align icon-color recipe-header">Delete Recipe</h4>
                     <p class="modal-text">
@@ -38,7 +38,7 @@
         <div class="row">
             <div class="col s12 center-align">    
                 <a href="{{url_for('add_category')}}" role="button" 
-                class="btn waves-effect waves-light amber darken-2">
+                class="btn edit-button waves-light amber darken-2">
                 ADD CATEGORY <i class="fas fa-plus-square prefix right"></i>
                 </a>
             </div>

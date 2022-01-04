@@ -9,7 +9,7 @@ $(document).ready(function(){
    $('.tooltipped').tooltip();
    $('select').formSelect();
    $('.modal').modal();
-   $('#deletecategory').modal();
+   $('#modal1{{category._id}}').modal();
   });
 
 
