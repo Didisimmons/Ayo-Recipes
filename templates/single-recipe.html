@@ -106,7 +106,7 @@
       <!--display recipe image-->
       <div class="col s12 m6">
         <div class="recipe-image">
-          <img src="{{url_for('static',filename='images/food_image.png')}}" alt="{{ recipe.recipe_name}}">
+          <img src="{{recipe.image_url)}}" alt="{{ recipe.recipe_name}}">
         </div>
       </div>
     </div>

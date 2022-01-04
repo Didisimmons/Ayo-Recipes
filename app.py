@@ -70,7 +70,7 @@ def register():
             "full_name": request.form.get("full-name").lower(),
             "username": request.form.get("username").lower(),
             "password": generate_password_hash(request.form.get("password")),
-            "phone_number": request.form.get("phone-number"),
+            "phone_number": request.form.get("phone"),
             "email": request.form.get("email"),
             "about": request.form.get("aboutme")
         }
@@ -143,26 +143,25 @@ def edit_profile(user_id):
         user = mongo.db.users.find_one(
             {"_id": ObjectId(user_id)})
         username = user["username"]
-
+        
+        #check if user in session and update
         if session["user"] == username:
             if request.method == "POST":
                 submit = {
                     "full_name": request.form.get("full-name").lower(),
                     "phone_number": request.form.get("phone"),
                     "about": request.form.get("aboutme"),
-                    "email": request.form.get("email"),
-                    "phone_number": request.form.get("phone")
+                    "email": request.form.get("email")
                 }
-                mongo.db.users.update({"_id": ObjectId(user_id)},
+                mongo.db.users.update_one({"_id": ObjectId(user_id)},
                                         {"$set": submit})
-                session["user"] = request.form.get("username").lower()
                 flash("Profile Successfully Updated")
                 return redirect(url_for("profile", username=session["user"]))
             return render_template("edit-profile.html", user=user)
-        
+
         user = mongo.db.users.find_one({"_id": ObjectId(user_id)})
         categories = mongo.db.categories.find().sort("category_name", 1)
-        return render_template("edit-recipe.html",
+        return render_template("recipes.html",
                                 user=user, 
                                 categories=categories)
 
