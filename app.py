@@ -37,8 +37,8 @@ def search():
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
     categories = mongo.db.categories.find().sort(
         "category_name", 1)
-    return render_template("recipes.html", recipes=recipes, 
-                          categories=categories)
+    return render_template("recipes.html", recipes=recipes,
+                           categories=categories)
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -149,15 +149,15 @@ def edit_profile(user_id):
                     "about": request.form.get("aboutme"),
                     "email": request.form.get("email")
                 }
-                mongo.db.users.update_one({"_id": ObjectId(user_id)}, 
-                                    {"$set": submit})
+                mongo.db.users.update_one({"_id": ObjectId(user_id)},
+                                            {"$set": submit})
                 flash("Profile Successfully Updated")
                 return redirect(url_for("profile", username=session["user"]))
             return render_template("edit-profile.html", user=user)
 
         user = mongo.db.users.find_one({"_id": ObjectId(user_id)})
         categories = mongo.db.categories.find().sort("category_name", 1)
-        return render_template("recipes.html", user=user, 
+        return render_template("recipes.html",user=user,
                                 categories=categories)
 
 
@@ -271,8 +271,9 @@ def view_category(category_id):
     allrecipe = list(mongo.db.recipes.find(
         {"category_name": categories["category_name"]}))
 
-    return render_template("view-category.html", allrecipe=allrecipe,
-                          categories=categories)
+    return render_template("view-category.html", 
+                        allrecipe=allrecipe,
+                        categories=categories)
 
 
 @app.route("/recipes")
@@ -284,8 +285,8 @@ def recipes():
     recipes = list(mongo.db.recipes.find().sort("recipe_name", 1))
     categories = mongo.db.categories.find().sort(
         "category_name", 1)
-    return render_template("recipes.html", recipes=recipes, 
-                            categories=categories)
+    return render_template("recipes.html",recipes=recipes,
+                           categories=categories)
 
 
 @app.route("/manage_categories")

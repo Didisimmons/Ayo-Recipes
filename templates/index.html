@@ -2,24 +2,14 @@
 {% block content %}
 
 <section>
-    <div class="row container-fluid">
-        <div class="container photo-container">
-            <img class="header-photo" src="{{url_for('static',filename='images/main-course.jpeg')}}" alt=" photo of a library" height="320" width="1520">
-        </div>
-    </div>
-
-    <div class="container-fluid">
-        <div class="carousel carousel-slider" id="demo-carousel-content" data-indicators="true">
-            <div class="carousel-fixed-item center"> 
-                <h2 class="white-text hero-image-text ">MERRY CHRISTMAS FROM AYO RECIPES</h2>
-                <p class="white-text header-text">Enjoy some fine cuisine dishes at the comfort of your homes </p>      
+    <div class="container-fluid  header-container">
+        <div class="row about-us">
+            <div class="col s12 header-image">
+                <h2 class="hero-image-text">HAPPY NEW YEAR !!! <br> FROM AYO RECIPES </h2>
+                <p class=" header-text">Some haute cuisine delicacies in the convenience of your own home.<br>
+                    We guarantee you'll be back for more recipes!
+                </p> 
             </div>
-            <a class="carousel-item" href="#one!"><img src="{{url_for('static',filename='images/header-image1.jpg')}}"></a>
-           
-                <a class="carousel-item" href="#two!"><img src="{{url_for('static',filename='images/header-image2.jpg')}}"> </a>
-                <a class="carousel-item" href="#two!"><img src="{{url_for('static',filename='images/header-image3.jpg')}}"></a>
-            </div>
-      </div>
 </section>
 
 <section>
