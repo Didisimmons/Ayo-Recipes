@@ -116,8 +116,8 @@ def profile(username):
     """
     user = mongo.db.users.find_one(
                 {"username": session["user"]})
-    recipes_user = mongo.db.recipes.find(
-                {"created_by": session["user"]})
+    recipes_user = list(mongo.db.recipes.find(
+                {"created_by": session["user"]}))
     if "user" in session:
         if session["user"] == username:
             return render_template(
@@ -126,6 +126,7 @@ def profile(username):
             flash("Please try Login again")
 
     return redirect(url_for("login"))
+
 
 
 @app.route("/edit_profile/<user_id>", methods=["GET", "POST"])
