@@ -36,8 +36,9 @@
                       {% endif %}
                       <li><a href="{{url_for('logout')}}">LOGOUT</a></li>
                     {% else %}
-                      <li><a href="{{url_for('login')}}">LOGIN</a></li>  
+                    <li><a href="{{url_for('login')}}">CREATE RECIPES</a></li> 
                       <li><a href="{{url_for('register')}}">REGISTER</a></li>
+                      <li><a href="{{url_for('login')}}">LOGIN</a></li> 
                     {% endif %}
                 </ul>
         </div>
