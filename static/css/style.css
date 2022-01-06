@@ -692,6 +692,7 @@ font-weight: 500
 
 .different-category p{
     padding-top: 2.7rem;
+    font-size: 1.5rem;
 }
 
 .btn-floating.halfway-fab{
@@ -924,6 +925,7 @@ font-weight: 500
 
     .different-category p {
         padding-top: 1px;
+        font-size: 1rem;
     }
 
     .edit-btn{
@@ -1017,6 +1019,10 @@ font-weight: 500
     .product-header {
         font-size: 1.5rem;
     } 
+
+    .different-category p{
+        padding-top: 0.4rem;
+    }
 
 }
 
