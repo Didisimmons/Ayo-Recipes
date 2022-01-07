@@ -118,9 +118,9 @@
           <a href="#confirm-delete" class="waves-effect waves-light modal-trigger recipe-button amber darken-2"> DELETE RECIPE</a>
         {% elif session.user|lower == session.user|lower %}
         <!--Inform user they need to log in to save recipe -->
-          <a href="{{url_for('recipes')}}" class="waves-effect recipe-button amber darken-2">BACK</a>
+          <a href="{{url_for('recipes')}}" class="waves-effect recipe-button amber darken-2">ORDER NOW</a>
         {% else %}
-          <a href="{{url_for('login')}}" class="waves-effect recipe-button amber darken-2">SAVE RECIPE</a>
+          <a href="{{url_for('login')}}" class="waves-effect recipe-button amber darken-2">BACK</a>
         {% endif %}
       </div> 
     </div>
