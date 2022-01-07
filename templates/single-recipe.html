@@ -116,10 +116,11 @@
         {% if session.user|lower == recipe.created_by|lower or session.user == "administrator" %}
           <a href="{{url_for('edit_recipe',recipe_id=recipe._id)}}" class="waves-effect recipe-button amber darken-2">EDIT RECIPE</a>
           <a href="#confirm-delete" class="waves-effect waves-light modal-trigger recipe-button amber darken-2"> DELETE RECIPE</a>
-        {% elif session.user|lower == session.user|lower %}
-        <!--Inform user they need to log in to save recipe -->
-          <a href="{{url_for('recipes')}}" class="waves-effect recipe-button amber darken-2">ORDER NOW</a>
+        {% elif session.user%}
+        <!--Registered user viewing a recipe not created by them -->
+          <a href="https://www.bbcgoodfood.com/recipes" target="_blank" class="waves-effect recipe-button amber darken-2">ORDER NOW</a>
         {% else %}
+        <!--appear for guest user they need to log in  -->
           <a href="{{url_for('login')}}" class="waves-effect recipe-button amber darken-2">BACK</a>
         {% endif %}
       </div> 
