@@ -70,7 +70,11 @@
                 <div class="card small ">
                     <div class="card-image ">
                         <a href="{{url_for('single_recipe', recipe_id=recipe._id)}}">
-                            <img src="{{ recipe.image_url }}" class="responsive-image" alt="photo of {{ recipe.recipe_name }}">
+                          {%if recipe.image_url %}
+                            <img src="{{recipe.image_url}}" alt="{{ recipe.recipe_name}}" class="responsive-image">
+                          {% else %}
+                             <img  src="../static/images/food_image.png" alt=" egg burgers" class="responsive-image"> 
+                          {% endif %}
                         </a>
                     </div>
                     <div class="card-content recipe-list ">
