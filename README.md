@@ -541,6 +541,17 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 
    - Default category image – Photo from Toa Heftiba from [unsplash](https://unsplash.com/photos/tE9Ovti1gRI).
 
+* Some pages, such as the register page, profile header, and add recipe container, now have a background photo that was created in Photoshop
+
+* The following people provided photos for the tips and tricks page:
+   - Pantry Essentials – Photo by Jason Leung from [unsplash](https://unsplash.com/photos/jWU9FpLW7fI)
+
+   - Essential Kitchen Gadgets – Photo by Kevin McCutcheon from [unsplash](https://unsplash.com/photos/APDMfLHZiRA).
+
+   - Cleaning Pots & Pans – Photo by  Precious Plastic Melbourne from [unsplash](https://unsplash.com/photos/n5qirFAe6rQ).
+
+*	The images for the recipes were sourced from [yummly](https://www.yummly.co.uk/recipe/Eggs-Benedict-2635676) and [bbcgoodfood](http://goodfood.com/recipes/blackened-roast-salmon-avocado-mango-salsa). 
+
 <br/>  
 
 # **Acknowledgements**   
