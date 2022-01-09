@@ -128,7 +128,6 @@ def profile(username):
     return redirect(url_for("login"))
 
 
-
 @app.route("/edit_profile/<user_id>", methods=["GET", "POST"])
 def edit_profile(user_id):
     """

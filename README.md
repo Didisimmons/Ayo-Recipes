@@ -131,13 +131,22 @@ The photographs depict modern cuisine dishes that can be prepared in the comfort
 ### **Wireframes**
 The entire site's wireframe can be found below. This depicts the site on a desktop and a mobile device, with some tablet view wireframes indicating when the screen view differs.
 
-* [Wireframes for Home Page](static/images/readme/wireframes/homepage-wireframe.png)   
-* [Wireframes for Explore Recipes Page](static/images/readme/wireframes/explore-recipes-wireframe.png)   
-* [Wireframes for Individual Recipe Page](static/images/readme/wireframes/individual-recipe-wireframe.png)   
-* [Wireframes for Sign Up Page](static/images/readme/wireframes/sign-up-wireframe.png)   
-* [Wireframes for Create and Edit Recipe Page](static/images/readme/wireframes/create-edit-recipe-wireframe.png)   
-* [Wireframes for My Cookbook Page](static/images/readme/wireframes/my-cookbook-wireframe.png)   
-* [Wireframes for View Profile Page](static/images/readme/wireframes/view-profile-wireframe.png)
+* [Wireframe for Home Page](static/images/readme/homepage-wireframe.png)   
+* [Wireframe for Recipes Page](static/images/readme/wireframe-recipes-page.png)   
+* [Wireframe for Individual Single Recipe Page](static/images/readme/single-view-recipe.png)
+* [Wireframe for Register Page](static/images/readme/register-wireframe.png)   
+* [Wireframe for Profile with recipes](static/images/readme/profile-with-recipe-wireframe.png)
+* [Wireframe for Profile without recipes](static/images/readme/profile-no-recipe-wireframe.png) 
+* [Wireframe for Edit Profile](static/images/readme/edit-profile-wireframe.png)  
+* [Wireframe for Add Recipe](static/images/readme/add-recipe-wireframe.png)   
+* [Wireframe for Edit Recipe ](static/images/readme/edit-recipe-wireframe.png)
+* [Wireframe for Manage Categories](static/images/readme/wireframe-for-managecategories.png)
+* [Wireframe for Edit Category](static/images/readme/edit-category-wireframe.png)
+* [Wireframe for Side Nav](static/images/readme/tablet-view.png)
+* [Wireframe for View Each Category](static/images/readme/view-category-wireframe.png)
+* [Wireframe for Delete Category](static/images/readme/delete-category-wireframe.png)
+* [Wireframe for Tips & Tricks](static/images/readme/wireframe-for-tips-page.png)
+* [Wireframe for Login](static/images/readme/login-page.png)
 
 
 ### **Database Structure** 
@@ -560,5 +569,3 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
    * Code institutes the Slack community as a valuable resource where students can interact and help one another, as well as Stack Overflow for guidance and constant support.
 
 <br/> 
-
-<br /> 
