@@ -78,16 +78,14 @@ As a new/ unregistered user, I want to:
 2.	View all the recipes available with directions on how to prepare and cook the recipe. 
 3.	Easily search for recipes and be able to view the full details of the recipe interested in.
 4.	Easily locate the call to action buttons on the site to allow the user either register or Sign up .
-5.	View the creators for each meal and view their profile
 
 #### **REGISTERED USER OR RETURNING USERS**
 As a returning/ registered user, I want to:
 1.	Easily Log In into my profile dashboard to explore recipes made by me.
 2.	Easily search for recipes either by recipe name or the food category.
 3.	Be able to create my own recipe and share on the site. Edit it’s content and delete if the case need be. 
-4.	Easily navigate through the other pages on the site and be able to save recipes to my collection. 
-5.	Easily edit my personal profile in case changes are needed. 
-6.	Be able to remove saved recipes from our collection when signed into your profile dashboard 
+4.	Easily edit my personal profile in case changes are needed. 
+5.	Be able to remove saved recipes from our collection when signed into your profile dashboard 
 
 #### **ADMIN USER**
 As an Admin User want to:
