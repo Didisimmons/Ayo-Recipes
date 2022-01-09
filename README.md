@@ -387,7 +387,7 @@ MongoDB was chosen as the database for this project due to the flexibility it of
 
    * [Werkzeug](https://werkzeug.palletsprojects.com/en/2.0.x/utils/#module-werkzeug.security) : Werkzeug was used for password hashing and authentication. 
 
-   * [Favicon.io](https://favicon.io/favicon-converter/):This is a Favicon generator that was used to create our Ayo Recipes favicon.  
+   * [Favicon.io](https://favicon.io/favicon-converter/) : This is a Favicon generator that was used to create our Ayo Recipes favicon.  
 
    * [JSHint](https://jshint.com/) : This was used to analyse the JavaScript code and ensure that all errors were reduced to a minimum. 
 
@@ -527,13 +527,13 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 
 11. The external links relating to kitchenware discounts included in the tips & tricks page were obtained [Countryliving](https://www.countryliving.com/food-drinks/g32869067/chef-pantry-staples/?slide=1), [Delish](https://www.delish.com/food/a52476/kitchen-pantry-organization-ideas/) , [Buzzfeed](https://www.buzzfeed.com/michelleno/cooking-tips-for-beginners) and [Bbcgoodfood](http://www.bbcgoodfood.com/). 
 
-12. Majority of the recipes added to the AYO Recipes database come from recipe sharing websites like as [yummly](https://www.yummly.co.uk/), [bbcgoodfood](https://www.bbcgoodfood.com/) as do the recipe images.
+12. Majority of the recipes added to the AYO Recipes database come from recipe sharing websites like [yummly](https://www.yummly.co.uk/), [delicious](delicious.com.au), [bbcgoodfood](https://www.bbcgoodfood.com/) as do the recipe images.
 
 13. This readme was based on research on several readme documents, including the Code Institute's readme [sample](https://github.com/Code-Institute-Solutions/SampleREADME), the dark side's readme [sample](https://github.com/mosull20/dark-side-ms3#deployment),  Cookle's readMe's [sample](https://github.com/dissyulina/cookle-cookbook#deployment-to-heroku), and LILELI's readME's [file](https://github.com/Didisimmons/LILELI-QUIZ-GAME/blob/main/readME.md).
 
  
 ### **MEDIA**   
-* The majority of the images on the website were obtained from image free providers such as [unsplash](https://unsplash.com/), with the exception of the food recipe images, which were obtained from [Bbcgoodfood](http://www.bbcgoodfood.com/).
+* The majority of the images on the website were obtained from image free providers such as [unsplash](https://unsplash.com/), with the exception of the food recipe images, which were obtained from [Bbcgoodfood](http://www.bbcgoodfood.com/) and [delicious](delicious.com.au).
 
 * The homepage's hero image is a photo by Brooke Lark from [unsplash](https://unsplash.com/photos/of0pMsWApZE).
 
@@ -559,7 +559,7 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 
    - Cleaning Pots & Pans – Photo by  Precious Plastic Melbourne from [unsplash](https://unsplash.com/photos/n5qirFAe6rQ).
 
-*	The images for the recipes were sourced from [yummly](https://www.yummly.co.uk/recipe/Eggs-Benedict-2635676) and [bbcgoodfood](http://goodfood.com/recipes/blackened-roast-salmon-avocado-mango-salsa). 
+*	The images for the recipes were sourced from [yummly](https://www.yummly.co.uk/recipe/Eggs-Benedict-2635676) ,[delicious](delicious.com.au) and [bbcgoodfood](http://goodfood.com/recipes/blackened-roast-salmon-avocado-mango-salsa). 
 
 <br/>  
 
