@@ -22,7 +22,7 @@
                     <div class="input-field col s12">
                         <i class="fas fa-comment prefix icon-color"></i>
                         <textarea id="recipe_description" name="recipe_description" minlength="5"
-                            maxlength="200" class="materialize-textarea validate" rows="4"required></textarea>
+                            maxlength="200" class="materialize-textarea validate" rows="4" required></textarea>
                         <label for="recipe_description" >Brief description of recipe(500 characters max)</label>
                     </div>
                 </div>
@@ -127,19 +127,19 @@
                 </div> 
         
 
-                 <!-- button -->
-                <div class="row">
-                    <div class="col s12 center-align">
-                        <button type="submit" class="btn edit-btn waves-light amber darken-2">
-                            Submit <i class="fas fa-folder-plus prefix right"></i>
-                        </button>
-                        <a href="{{ url_for('profile', username=session['user']) }}" role="button" 
-                        class="btn edit-btn waves-light grey darken-2">
-                         CANCEL<i class="fas fa-close prefix right"></i>
-                        </a>
+                    <!-- button -->
+                    <div class="row">
+                        <div class="col s12 center-align">
+                            <button type="submit" class="btn edit-btn waves-light amber darken-2">
+                                Submit <i class="fas fa-folder-plus prefix right"></i>
+                            </button>
+                            <a href="{{ url_for('profile', username=session['user']) }}" role="button" 
+                            class="btn edit-btn waves-light grey darken-2">
+                            CANCEL<i class="fas fa-close prefix right"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                
             </div>
         </form>
     </div>

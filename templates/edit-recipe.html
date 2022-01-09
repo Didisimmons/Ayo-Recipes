@@ -22,7 +22,7 @@
                     <div class="input-field col s12">
                         <i class="fas fa-comment prefix icon-color"></i>
                         <textarea id="recipe_description" name="recipe_description" minlength="5"
-                            maxlength="200" class="materialize-textarea validat" rows="4"required>
+                            maxlength="200" class="materialize-textarea validat" rows="4" required>
                             {{- recipe.recipe_description -}}
                         </textarea>
                         <label for="recipe_description" >Brief description of recipe(500 characters max)</label>
@@ -82,7 +82,7 @@
                 <div class="row">
                     <div class="col s12 m3 input-field">
                         <i class="fas fa-clock prefix icon-color"></i>
-                        <input type="text" id="recipe_time" name="recipe_time" value="{{ recipe.recipe_time }}"required>
+                        <input type="text" id="recipe_time" name="recipe_time" value="{{ recipe.recipe_time }}" required>
                         <label for="recipe_time">minutes</label>
                     </div>
 
@@ -203,8 +203,8 @@
                         </a>
                     </div>
                 </div>
-                
-            </div>
+            </div> 
+          </div>
         </form>
     </div>
   </section>
