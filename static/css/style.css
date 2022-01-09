@@ -176,6 +176,10 @@ nav i{
     justify-content: center;
 }
 
+.icon{
+    color:#4caf50;
+}
+
 .icon-color{
     color:#730202;
 }
