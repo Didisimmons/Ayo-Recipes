@@ -85,7 +85,7 @@ As a returning/ registered user, I want to:
 2.	Easily search for recipes either by recipe name or the food category.
 3.	Be able to create my own recipe and share on the site. Edit it’s content and delete if the case need be. 
 4.	Easily edit my personal profile in case changes are needed. 
-5.	Be able to remove saved recipes from our collection when signed into your profile dashboard 
+5.	Be able to order recipes online.
 
 #### **ADMIN USER**
 As an Admin User want to:
