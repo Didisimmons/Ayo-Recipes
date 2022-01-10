@@ -35,10 +35,13 @@
                 <div class="card small ">
                     <div class="card-image">
                         <a href="{{url_for('single_recipe', recipe_id=recipe._id)}}">
+                          {%if recipe.image_url %}
                             <img src="{{ recipe.image_url }}" class="responsive-image" alt="photo of {{ recipe.recipe_name }}">
+                          {% else %}
+                          <img  src="../static/images/food_image.png" alt=" egg burgers"> 
+                          {% endif %}
                         </a>
-                    </div>
-                    
+                    </div> 
                     <div class="card-content recipe-list ">          
                         <p class="recipe-head">{{ recipe.recipe_name}}</p>             
                         <p class="card-text">{{ categories.category_name }}</p>          
