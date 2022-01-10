@@ -1039,3 +1039,10 @@ font-weight: 500
 
 }
 
+@media screen and (min-width: 1024px) {
+    .rate:not(:checked) > label {
+        font-size: 25px;
+    }
+
+}
+
