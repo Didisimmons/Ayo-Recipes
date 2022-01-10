@@ -950,7 +950,7 @@ font-weight: 500
 
 @media only screen and (max-width:768px){
     .flashes h4{
-        padding:1rem 0 ;
+        padding:1rem 1rem ;
         line-height: 1.5;
     }
 
