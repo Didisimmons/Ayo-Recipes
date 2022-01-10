@@ -82,7 +82,7 @@ As a new/ unregistered user, I want to:
 #### **REGISTERED USER OR RETURNING USERS**
 As a returning/ registered user, I want to:
 1.	Easily Log In into my profile dashboard to explore recipes made by me.
-2.	Easily search for recipes either by recipe name or the food category.
+2.	Easily search for recipes either by recipe name or the recipe category.
 3.	Be able to create my own recipe and share on the site. Edit it’s content and delete if the case need be. 
 4.	Easily edit my personal profile in case changes are needed. 
 5.	Be able to order recipes online.
@@ -527,7 +527,7 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 
 12. Majority of the recipes added to the AYO Recipes database come from recipe sharing websites like [yummly](https://www.yummly.co.uk/), [delicious](delicious.com.au), [bbcgoodfood](https://www.bbcgoodfood.com/) as do the recipe images.
 
-13. This readme was based on research on several readme documents, including the Code Institute's readme [sample](https://github.com/Code-Institute-Solutions/SampleREADME), the dark side's readme [sample](https://github.com/mosull20/dark-side-ms3#deployment),  Cookle's readMe's [sample](https://github.com/dissyulina/cookle-cookbook#deployment-to-heroku), and LILELI's readME's [file](https://github.com/Didisimmons/LILELI-QUIZ-GAME/blob/main/readME.md).
+13. This readme was based on research on several readme documents, including the Code Institute's readme [sample](https://github.com/Code-Institute-Solutions/SampleREADME), the dark side's readme [sample](https://github.com/mosull20/dark-side-ms3#deployment),  Cookle's readMe's [sample](https://github.com/dissyulina/cookle-cookbook#deployment-to-heroku), FLYBOY's readMe [file](https://github.com/Didisimmons/LILELI-QUIZ-GAME/blob/main/test.md) and LILELI's readME's [file](https://github.com/Didisimmons/LILELI-QUIZ-GAME/blob/main/readME.md).
 
  
 ### **MEDIA**   

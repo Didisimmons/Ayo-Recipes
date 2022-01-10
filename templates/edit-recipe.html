@@ -92,7 +92,8 @@
                         <select id="category_name" name="category_name" class="validate" required>
                             <option value="" disabled> Pick one</option>
                             {% for category in categories %}
-                                {% if category.category_name == recipe.category_name %}
+                             <!--"in" is used to allow the user pick from the array.If the category is found in recipes select the category  -->
+                                {% if category.category_name in recipe.category_name %}
                                     <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
                                 {% else %}
                                     <option value="{{ category.category_name }}">{{ category.category_name }}</option>
