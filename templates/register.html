@@ -47,7 +47,7 @@
                 <div class="row">
                   <div class="input-field col s12">
                       <i class="fas fa-phone-alt prefix icon-color"></i>
-                      <input id="phone" name="phone" minlength="3"
+                      <input id="phone" name="phone" minlength="3" maxlength="13"
                           type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}-[0-9]{3}" class="validate no-arrow" required>
                       <label for="phone"> <small>format:(123)-(885)-(345)-(645)</small></label>
                   </div>
@@ -64,7 +64,8 @@
                 <div class="row">
                   <div class="input-field col s12">
                       <i class="fas fa-pen prefix icon-color"></i>
-                      <textarea id="aboutme" name="aboutme" class="materialize-textarea" required></textarea>
+                      <textarea id="aboutme" name="aboutme" minlength="5"
+                      maxlength="200" class="materialize-textarea validate" rows="2" required></textarea>
                       <label for="aboutme">Tell us a bit about yourself?</label>
                   </div>
                 </div>
