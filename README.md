@@ -1,6 +1,6 @@
 # **Ayo Recipes**
 
-![overview of AYO RECIPES on all devices](static/images/readme/....)
+![overview of AYO RECIPES on all devices](static/images/readme/general-overview.png)
 
 Ayo Recipes is a modern recipe sharing website that caters to people of all ages. Its mission is to provide users with luxury cuisine food recipes in the comfort of their own home, eliminating the stress associated with pre-cooking.  At Ayo Recipes, we understand the hassle of cooking as well as the thought process involved in deciding on a specific meal to prepare .
 
