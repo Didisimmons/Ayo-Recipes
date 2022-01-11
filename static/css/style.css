@@ -122,6 +122,7 @@ nav i{
 .hero-image-text{
     letter-spacing: 10px;
     line-height:4rem;
+    font-weight: bold;
     text-align: center;
     padding: 2rem 0;
     font-family: poppins,sans-serif;
