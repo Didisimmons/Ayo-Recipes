@@ -15,9 +15,9 @@
    - [PYTHON](#python)
 
 2. [User Stories Testing](#user-stories-testing)  
-   - [Unregistered User Goals](#unregistered-user-goals)   
-   - [Registered User Goals](#registered-user-goals)  
-   - [Admin User Goals](#admin-user-goals)  
+   - [UNREGISTERED USER GOALS](#unregistered-user-goals)   
+   - [REGISTERED USER GOALS](#registered-user-goals)  
+   - [ADMI USER GOALS](#admin-user-goals)  
     
 3. [Manual Testing](#manual-testing)   
    - [HOMEPAGE AS A GUEST](#homepage-as-a-guest-user)   
@@ -33,8 +33,8 @@
    - [ALL DELETE FORMS](#all-delete-forms)
 
 4. [Defensive Programming](#defensive-programming)
-5. [Lighthouse Testing](#lighthouse-testing)
-5. [Further Testing](further-testing)
+5. [Lighthouse Testing](#lighthouse-test)
+5. [Further Testing](#further-testing)
 6. [Solved Bugs](#solved-bugs)
 
    
@@ -42,11 +42,24 @@
 
 ### **VALIDATOR TESTING**
 #### **HTML**
-* [W3C Markup Validation](https://validator.w3.org/): This is also used to check the validity of the html code for all webpages created. Our code was found to have some errors due to the jinja template. 
+* [W3C Markup Validation](https://validator.w3.org/): This is also used to validate the HTML code for all newly created webpages. Our code was discovered to have some errors as a result of the jinja template used when you paste the direct html code. However, this was resolved by obtaining the source code by right-clicking on our page and selecting "View page source." The errors are removed when checked again. 
+* [Homepage (index.html)](static/images/readme/html/homepage.png) 
+* [Profile](static/images/readme/html/profile.png) 
+* [Recipes)](static/images/readme/html/recipes.png)  
+* [Tips & Trick](static/images/readme/html/tips&tricks.png)  
+* [Manage Categories](static/images/readme/html/manage-categories.png)  
+* [Add Category](static/images/readme/html/addcategory.png)  
+* [Edit Category](static/images/readme/html/edit-category.png) 
+* [Create Recipe Page (add-recipe.html)](static/images/readme/html/homepage.png)  
+* [Individual Recipe Page (single-recipe.html)](static/images/readme/html/homepage.png)  
+* [Edit Recipe Page (edit-recipe.html)](static/images/readme/html/homepage.png)  
+
+
+
 
 <br/>
 
-#### **HTML**
+#### **CSS**
 * [W3C CSS validation](https://jigsaw.w3.org/css-validator/): This is used to validate the CSS code used on all webpages created. Our code is found to be error-free by the validator.
 
 ![css_validation](static/images/readme/test/css-validation.png)
@@ -671,6 +684,11 @@ add-category.html | 94 | 96 | 87 | 90 | [see here](static/images/readme/lighthou
 1.	The site was tested on a desktop device (Mac OS and Windows), iPad, iPadPro, iPhone(6,7,8 and SE) and Pixel2 to ensure that it was error-free and responsive.
 
 2.	Friends and colleagues were asked to review the site to ensure the site was user friendly and intuitive. Their feedback was t
+        One of the comments stated that the register form would not accept their phone number format even if they followed the pattern shown. This was fixed by changing the pattern in the input field to one that accepted both the user's input and the placeholder, making it easier for the user to understand.
+
+3. The website [AM I Responsive](http://ami.responsivedesign.is/) was used to capture Ayo Recipes aesthetic look and responsiveness across all devices. Screenshot below.
+
+    ![overview of AYO RECIPES on all devices](static/images/readme/general-overview.png)
 
 <br/>
 
