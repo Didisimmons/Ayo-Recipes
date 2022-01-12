@@ -2,7 +2,7 @@
 
 [Back to main README file](README.md)
 
-[View the delopyed site](https://didisimmons.github.io/Flybody-gym/) 
+[View the delopyed site](http://ayo-recipes.herokuapp.com/)
 
 ## TESTING
 <br/>
@@ -15,17 +15,17 @@
    - [Unregistered User Goals](#unregistered-user-goals)   
    - [Registered User Goals](#registered-user-goals)  
    - [Admin User Goals](#admin-user-goals)  
-3. [Further Testing](https://github.com/dissyulina/cookle-cookbook/blob/main/TESTING.md#2-auto-prefixer-css)    
-2. [Manual Testing](https://github.com/dissyulina/cookle-cookbook/blob/main/TESTING.md#3-manual-testing-by-the-developer)   
-   - [Browsers Compatibility](https://github.com/dissyulina/cookle-cookbook/blob/main/TESTING.md#browsers-compatibility)   
-   - [Devices](https://github.com/dissyulina/cookle-cookbook/blob/main/TESTING.md#devices)   
-   - [Responsiveness](https://github.com/dissyulina/cookle-cookbook/blob/main/TESTING.md#responsiveness)   
-   - [Links](https://github.com/dissyulina/cookle-cookbook/blob/main/TESTING.md#links)  
-   - [Forms](https://github.com/dissyulina/cookle-cookbook/blob/main/TESTING.md#forms)   
-   - [Defensive Testing](https://github.com/dissyulina/cookle-cookbook/blob/main/TESTING.md#defensive-testing)  
+3. [Further Testing]()    
+2. [Manual Testing](#manual-testing)   
+   - [HOMEPAGE AS A GUEST](#home-page-as-a-guest-user)   
+   - [RECIPES PAGE](#recipes)   
+   - [Responsiveness]()   
+   - [Links]()  
+   - [Forms]()   
+   - [Defensive Testing]()  
   
 5. [JSHint Testing]()    
-6. [Pep8 Online Testing](https://github.com/dissyulina/cookle-cookbook/blob/main/TESTING.md#6-python-testing)
+6. [Pep8 Online Testing]()
 7. [Lighthouse Testing]()  
    
 <br/>
@@ -169,7 +169,7 @@ If the user is registered or has an account with Ayo Recipes, they can order rec
 If the user is viewing a page that they created, the buttons that appear on the single-recipe page are different, with the "edit" and "delete" buttons present due to some defensive back end programming.
 
 
-### ***Admin User Goals**
+### **Admin User Goals**
 As an Admin User, I want to:
 
 1.	Be able to do all the functionalities assigned to a registered user.
@@ -206,4 +206,53 @@ The category would be added to the manage-category page if the user clicked the 
 ![new category added displaying flash message ](static/images/readme/test/fig30.png "new category added displaying flash message")
 
 If the admin user wants to delete the newly added category, they must click the "DELETE" button, which will open a modal asking the admin user to confirm their action. 
+
 ![delete category ](static/images/readme/test/fig31.png "delete category")
+
+The new category would be removed once the admin user confirms their action and clicks the delete button.
+
+![ category deleted with feedback ](static/images/readme/test/fig32.png "category deleted with feedback")
+
+
+4. Be able to edit , delete and update any recipes listed on the site.
+
+When an admin user logs into their profile, they can see the same buttons that a registered user sees, which are "create recipe" and "edit profile." 
+The admin user has the ability to create new recipes as well as edit existing recipes on the website that were created by other users. The admin user has the ability to delete all of the recipes created by different users.
+
+![ single recipe page ](static/images/readme/test/fig33.png "single recipe page")
+
+
+## **MANUAL TESTING**
+### Testing All Features On Each Page
+
+#### HOMEPAGE AS A GUEST USER 
+
+ 1. Navigation bar 
+
+     1. Go to the Index page(Home) on a desktop . 
+
+     2. Change the desktop's screen size to that of a tablet device to ensure that the navigation bar is responsive and changes to a hamburger dropdown symbol when the medium break point is reached. The navigation bar should be positioned correctly, with the menu items in place.
+
+         There was no overflow of the navbar or undesirable modifications to the menu items when testing the responsiveness of the navbar. The navigation bar changed to a hamburger dropdown symbol with the dropdown menu items in place, as intended.
+
+    3. Hover over the alert dismissive message button and make sure it does not create any undesirable changes to the navigation bar when exited.
+
+          When tested on all devices, the alert dismissive button closes without impeding the navigation bar. The navigation bar is still present, as expected.
+
+    4. Hover your mouse over the navbar menu items and click on each link to ensure that it takes you to the relevant page.
+
+         When tested on all devices , the menu links function as intended. Linking to the appropriate sites.
+
+    5. Click on the FLYBODY logo to ensure that it takes you to the home page when you click on it. 
+
+         Testing this on all devices by adjusting the screen width it can be seen the brand logo “FLYBODY” links to the home page whenever clicked.
+
+    6. Change the screen size to that of a tablet or mobile device and check that the hamburger icon appears. Also, make sure that the dropdown menu links from the hamburger icon have a background overlay when hovered over and that they all lead to the relevant pages.
+
+         When the screen width of the navigation bar is changed to that of a tablet device, the navigation bar responds as expected, and the hamburger icon appears. When you click the hamburger icon, a dropdown menu emerges, displaying the menu links, which have a light grey background overlay when hovered and link to the proper pages when clicked. When the hamburger icon was pressed, the dropdown menu links were properly aligned. The menu items, however, have been centred to improve the appearance of the navigation bar on a tablet and mobile device.
+
+    7. Hover over the menu items on a desktop to ensure that a light grey background overlay appears when hovered.
+
+         When the effect was tested on a desktop device by hovering the mouse over the menu item in the navigation bar, the light grey backdrop appeared.
+
+2.
