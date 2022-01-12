@@ -88,8 +88,8 @@ As a returning/ registered user, I want to:
 5.	Be able to order recipes online.
 
 #### **ADMIN USER**
-As an Admin User want to:
-1.	Be able to do all the functionalities as a registered user can.
+As an Admin User, I want to:
+1.	Be able to do all the functionalities assigned to a registered user .
 2.	Restrict access for certain features that can only be accessed by the admin 
 3.	Add, Edit, or Delete the category of recipes present.
 4.	Be able to edit , delete and update any recipes listed on the site.
@@ -98,6 +98,7 @@ As an Admin User want to:
 - Those looking for festive recipes to make. 
 - People who appreciate the ease of ordering food via technology and social media. 
 - Individuals who are willing to post their own recipes on the internet.
+- Individuals who are interested in food and enjoy cooking. 
 
 ### **RESEARCH**   
 To get some UX inspiration for Ayo, I researched other recipe sharing websites like To get some UX inspiration for Ayo, I researched other recipe sharing websites like
@@ -177,7 +178,7 @@ MongoDB was chosen as the database for this project due to the flexibility it of
 
    - **Defensive back-end programming** - There has been some back-end defensive programming to prevent users from accessing pages/functions that they are not permitted to access. For example, when a user views a single recipe, they cannot see the " ORDER NOW " button but can see the "BACK" button; however, if the user registers/logs in, they can see the "ORDER NOW" button if they are viewing a recipe that was not created by them.  
 
-   - **Modal** - On some pages, a modal appears for the delete functionality. Before a user or administrator can delete a recipe or category, a modal appears asking them to confirm their decision.
+   - **Modal** - A modal appears on some pages for the user to perform the delete functionality.
 
 ### **FEATURES OF EACH PAGE**     
 
@@ -292,7 +293,7 @@ MongoDB was chosen as the database for this project due to the flexibility it of
    <br/> 
 
    - **Tips & Tricks Page**
-     This page provides the user with everyday kitchen hacks that can be used to make the cooking process as simple as possible. The tips has been divided into three sections, each with a brief summary of how the user can deal with the situation. Providing users with discount codes that can be used to purchase a variety of kitchenware hack items.  
+      Tips & Tricks Page This page provides the user with everyday kitchen hacks that can be used to make the cooking process as simple as possible. The tips aspect has been divided into three sections, each with a brief summary of how the user can deal with the situation. Providing users with discount codes that can be used to purchase a variety of kitchenware hack items.
     
 <br/>
 
