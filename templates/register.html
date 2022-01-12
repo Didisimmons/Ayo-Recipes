@@ -21,7 +21,7 @@
                   <div class="input-field col s12">
                     <i class="fas fa-user-plus prefix icon-color "></i>
                     <input id="username"  name="username" minlength="5"
-                        maxlength="15" type="text" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+                        maxlength="20" type="text" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
                     <label for="username">Username(letters & numbers only)</label>
                   </div>
                 </div>
@@ -48,8 +48,8 @@
                   <div class="input-field col s12">
                       <i class="fas fa-phone-alt prefix icon-color"></i>
                       <input id="phone" name="phone" minlength="5" 
-                          type="tel" pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}-[0-9]{2}" class="validate no-arrow" required>
-                      <label for="phone"> <small>format:353-89-885-86-76</small></label>
+                          type="tel" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}-[0-9]{2}-[0-9]{2}" class="validate no-arrow" data-length="13" required>
+                      <label for="phone"> format:353-89-885-86-76 </label>
                   </div>
                 </div>
                 <!-- email address -->
