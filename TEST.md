@@ -50,11 +50,9 @@
 * [Manage Categories](static/images/readme/html/manage-categories.png)  
 * [Add Category](static/images/readme/html/addcategory.png)  
 * [Edit Category](static/images/readme/html/edit-category.png) 
-* [Create Recipe Page (add-recipe.html)](static/images/readme/html/homepage.png)  
+* [Single -recipe](static/images/readme/html/single-recipe.png)  
 * [Individual Recipe Page (single-recipe.html)](static/images/readme/html/homepage.png)  
 * [Edit Recipe Page (edit-recipe.html)](static/images/readme/html/homepage.png)  
-
-
 
 
 <br/>

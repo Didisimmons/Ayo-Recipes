@@ -22,7 +22,7 @@
                     <div class="input-field col s12">
                         <i class="fas fa-comment prefix icon-color"></i>
                         <textarea id="recipe_description" name="recipe_description" minlength="5"
-                            maxlength="200" class="materialize-textarea validat" rows="4" required>
+                            maxlength="200" class="materialize-textarea validate" rows="4" required>
                             {{- recipe.recipe_description -}}
                         </textarea>
                         <label for="recipe_description" >Brief description of recipe(500 characters max)</label>
@@ -36,7 +36,7 @@
                             {% for ingredient in recipe.ingredients %}
                                 <input type="text" id="ingredients" name="ingredients" class="validate input-ingredients" placeholder="insert ingredients" minlength="5" value="{{ ingredient }}" required>
                                 <label for="ingredients"></label>
-                            <div id="ingredient"></div> 
+                            <div class="ingredient"></div> 
                             {% endfor %}
                             
                     </div>
@@ -59,7 +59,7 @@
                     <div class="input-field col s12" id="instruction-list">
                         <i class="fas fa-clipboard-list prefix icon-color"></i>
                         {% for instruction in recipe.recipe_instructions %}
-                        <textarea type="text" id="recipe_instructions" name="recipe_instructions" minlength="5" maxlength="500" class="materialize-textarea validate instructions" placeholder="provide directions for the recipe" required>
+                        <textarea id="recipe_instructions" name="recipe_instructions" minlength="5" maxlength="500" class="materialize-textarea validate instructions" placeholder="provide directions for the recipe" required>
                             {{-instruction-}}
                         </textarea>
                         {% endfor %}
