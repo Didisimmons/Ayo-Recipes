@@ -17,7 +17,7 @@
    - [Admin User Goals](#admin-user-goals)  
 3. [Further Testing]()    
 2. [Manual Testing](#manual-testing)   
-   - [HOMEPAGE AS A GUEST](#home-page-as-a-guest-user)   
+   - [HOMEPAGE AS A GUEST](#homepage-as-a-guest-user)   
    - [RECIPES PAGE](#recipes)   
    - [Responsiveness]()   
    - [Links]()  
@@ -30,7 +30,7 @@
    
 <br/>
 
-## **VALIDATOR TESTING**
+### **VALIDATOR TESTING**
 #### **HTML**
 * [W3C Markup Validation](https://validator.w3.org/): This is also used to check the validity of the html code for all webpages created. Our code was found to have some errors due to the jinja template. 
 
@@ -39,8 +39,8 @@
 
 ![css_validation](static/images/readme/test/css-validation.png)
 
-## **USER STORIES**
-### **Unregistered User Goals**   
+### **USER STORIES**
+#### **Unregistered User Goals**   
 As a new/ unregistered user, I want to:
 1. Easily understand the purpose of the site and how it works.
 
@@ -222,37 +222,155 @@ The admin user has the ability to create new recipes as well as edit existing re
 ![ single recipe page ](static/images/readme/test/fig33.png "single recipe page")
 
 
-## **MANUAL TESTING**
-### Testing All Features On Each Page
+### **MANUAL TESTING**
 
-#### HOMEPAGE AS A GUEST USER 
+#### TESTING ALL FEATURES ON EACH PAGE 
+
+#### **HOMEPAGE AS A GUEST USER** 
 
  1. Navigation bar 
 
-     1. Go to the Index page(Home) on a desktop . 
+     1. Navigate to the Index page (Home) on a desktop by clicking the Ayo Recipes brand logo in the upper left corner. 
 
-     2. Change the desktop's screen size to that of a tablet device to ensure that the navigation bar is responsive and changes to a hamburger dropdown symbol when the medium break point is reached. The navigation bar should be positioned correctly, with the menu items in place.
+     2. Change the desktop's screen size to that of a tablet device to ensure that the navigation bar is responsive and changes to a hamburger icon as the screen width decreases to that of a tablet or mobile device. The navigation bar should be fixed, and menu items should be hidden in the side navigation bar that appears on medium to small devices.
 
-         There was no overflow of the navbar or undesirable modifications to the menu items when testing the responsiveness of the navbar. The navigation bar changed to a hamburger dropdown symbol with the dropdown menu items in place, as intended.
+         When testing responsiveness across different devices, there was no overflow of the navbar. On a tablet and a mobile device, the navigation bar menu changed to a hamburger icon, and the menu items were displayed in the side navigation as expected. The menu items are in place, and the navigation bar is fixed, with the brand logo image in the centre.
 
-    3. Hover over the alert dismissive message button and make sure it does not create any undesirable changes to the navigation bar when exited.
+    3. Hover your mouse over the navbar menu items and click on each link to ensure that you are taken to the correct page.
 
-          When tested on all devices, the alert dismissive button closes without impeding the navigation bar. The navigation bar is still present, as expected.
+          When tested on all devices, the menu links work as expected. The user is directed to the appropriate sites, which are recipes, login and the registration page for a guest user.
 
-    4. Hover your mouse over the navbar menu items and click on each link to ensure that it takes you to the relevant page.
+    4. Hover over the menu items to ensure that a white background overlay appears with a box shadow on the white background when the mouse is hovered.
 
-         When tested on all devices , the menu links function as intended. Linking to the appropriate sites.
+         When testing the effect on a desktop device by hovering the mouse over the menu item in the navigation bar, the white backdrop appears with a box shadow when the mouse is hovered over the menu item.
 
-    5. Click on the FLYBODY logo to ensure that it takes you to the home page when you click on it. 
+    5. When you click on the Ayo Recipes logo, make sure it takes you to the home page. 
 
-         Testing this on all devices by adjusting the screen width it can be seen the brand logo “FLYBODY” links to the home page whenever clicked.
+         When tested on all devices by adjusting the screen width, the brand logo for Ayo Recipes actually takes the user to the home page when clicked.
 
-    6. Change the screen size to that of a tablet or mobile device and check that the hamburger icon appears. Also, make sure that the dropdown menu links from the hamburger icon have a background overlay when hovered over and that they all lead to the relevant pages.
+    6. On a tablet or mobile device, ensure that the Ayo Recipes Brand Logo is centred on the navigation bar.
 
-         When the screen width of the navigation bar is changed to that of a tablet device, the navigation bar responds as expected, and the hamburger icon appears. When you click the hamburger icon, a dropdown menu emerges, displaying the menu links, which have a light grey background overlay when hovered and link to the proper pages when clicked. When the hamburger icon was pressed, the dropdown menu links were properly aligned. The menu items, however, have been centred to improve the appearance of the navigation bar on a tablet and mobile device.
+         When the device's screen width is reduced to that of a tablet or mobile device, the Ayo Recipes Brand Logo is centred on the navigation bar, as expected.
 
-    7. Hover over the menu items on a desktop to ensure that a light grey background overlay appears when hovered.
+    7. Change the screen size to that of a tablet or mobile device and verify that the side navigation appears when the user clicks the hamburger icon. The menu items should be displayed in the side navigation. Additionally, ensure that the menu links from the hamburger icon have a background overlay when hovered over and that they all lead to the appropriate pages.
 
-         When the effect was tested on a desktop device by hovering the mouse over the menu item in the navigation bar, the light grey backdrop appeared.
+         When the width of the navigation bar is changed to that of a tablet device, the hamburger icon appears as expected. When you click the hamburger icon, a side navigation bar menu appears, displaying the menu links. When hovered, the menu links have a white background overlay and link to the appropriate pages when clicked. The menu items have been centred to improve the appearance of the navigation bar on a tablet and mobile device. When the image brand logo is also clicked, the user is taken to the homepage. 
 
-2.
+         ![ side navigation ](static/images/readme/test/fig34.png "side navigation")
+
+
+2. Hero image  
+
+    1.	Navigate to the Index page (Home) on a desktop by clicking the Ayo Recipes brand logo in the upper left corner. 
+
+    2. Check that the hero image is visible and occupies the entire width of the screen on all devices.
+
+         On a desktop, the hero image fills the entire screen width with no overflow issues. When the screen size is changed to a tablet or mobile device, the same effect occurs; the hero image takes up the entire screen width.
+
+    3. Confirm that when the home page (index page) loads on all devices, the hero image text header has an animation effect and that the tagline text is hidden on all small devices such as mobile.
+
+         The hero image text header has a stretch animation effect when tested on a desktop device. The same thing happens on a tablet and a mobile device. However, certain text in the hero image, such as the tagline text, is hidden on a mobile device to keep the mobile screen clean and visually appealing.
+
+         ![ mobile view of hero image ](static/images/readme/test/fig35.png "mobile view of hero image")
+
+3. Explore Festive section    
+
+    1. Navigate to the Home page, which is the Index page on a desktop.
+     
+    2. Confirm that the brief summary of Ayo Recipes and the three recipe cards below the summary adjust responsively as the screen width changes .From a medium breakpoint point upwards, the recipe cards should occupy three columns per row, whereas on a smaller device, such as a mobile, the recipe cards should only occupy one column per row. 
+
+         When tested on a desktop device, the festive container adjusts to fit the width of the screen. On a tablet device, the recipe cards appear as expected.
+         
+         ![ festive recipes with high ratings ](static/images/readme/test/fig36.png "festive recipes with high ratings")
+         
+         When viewing the recipe cards on a mobile device, they appear on top of each other, one card per row, as expected. The font size and images adjust as needed, and are responsive on all devices.
+
+         ![ festive recipes with high ratings on mobile view ](static/images/readme/test/fig37.png "festive recipes with high ratings on mobile view ")
+
+    3. Confirm that the recipe card container design includes a picture, a title, and some engaging text. When the screen width is changed, the recipe cards should change to fit the size of the screen, with the fonts also changing to fit the size of the screen. On a mobile device, each container should take up the entire width of the screen, yielding one recipe card per row.
+
+        When tested on a desktop device, the recipe card container contains an image, title, and engaging text that is responsive to the screen as it is changed in the dev tools. The font size is also screen-responsive. The same effect occurs on a tablet device, where the recipe cards adjust responsively to the screen width, fitting well on the screen. When viewed on a mobile device, the three recipe cards appear on top of each other, occupying the entire screen width, creating a clean and visually appealing appearance.
+
+
+    4. Hover your mouse over the image of the recipe cards and confirm if the alt text appears.
+
+         When the mouse is hovered over the images, the alt text appears as expected.
+
+    5.	Confirm that the recipe cards displayed on the index page in the “Explore festive section ” are sorted by recipes with high ratings.. 
+    
+        Clicking on each of the recipe cards demonstrates that the recipes displayed in the festive container have high ratings. The recipes with the highest ratings appear first.
+
+
+
+4. Browse our Categories Section 
+   
+    1. Navigate to the Home page, which is the Index page on a desktop.
+
+    2. Confirm that the categories have been divided into four distinct image pills, each with its own heading text. The image pills should adjust to the screen size so that they look good on all devices. 
+
+         When tested on a desktop device, the categories occupy two rows, with one row containing two images and two heading text of the category names. When the screen width is changed to a tablet device, the image pills retain their structure, but the images and font size adjust to fit the size of the screen, making it visually appealing to the user.
+
+         ![ category section  ](static/images/readme/test/fig38.png "category section ")
+
+         ![ category section mobile view](static/images/readme/test/fig39.png "category section  mobile view ")
+
+    3. Hover your mouse over the image pills in the category to see the alt text.
+
+         When tested, the alt text is visible when the mouse is hovered over the image.
+
+    4. Confirm that when the category image pill is clicked or the header text beside the image pill  is clicked the user is directed to the correct page. 
+
+         Confirm that the user is directed to the correct page when the category image pill or the header text beside the image pill is clicked.
+
+         ![ view category page tablet view](static/images/readme/test/fig40.png "view category page tablet view ") 
+    
+5. Kitchen Décor 
+
+    1. Go to the Home page (the Index page on a desktop) and scroll down to the page. 
+       
+    2. Ensure that the image is responsive on all devices and that the font size adjusts to fit the width of the screen.
+
+        When tested on a desktop device, the image is responsive. As the screen width is reduced, the image, as well as the font used on the text, shrinks. On a mobile device, the text appears above the image to fit the size of the screen and appear clean and organized and less clustered.
+
+         ![mobile view oof kitchen decor image](static/images/readme/test/fig41.png "mobile view oof kitchen decor image ")   
+
+
+    3. Confirm that the button under the kitchen décor text enlarges when hovered over and directs the user to the correct page when clicked.
+
+        When this is tested, it can be seen that when the button is hovered over, a light box shadow appears on the button. When the button is pressed, a new page appears, which directs the user to the third-party site as expected.
+
+        ![kitchen decor buy now button](static/images/readme/test/fig42.png "kitchen decor buy now button")
+
+6. Footer 
+
+    1. Navigate to the Home page, also known as the Index page on a desktop, and scroll down to the footer.
+
+    2. Adjust the screen width of the device to see if the footer content is responsive. Check that the image in the desktop footer is hidden on a mobile device.
+
+         When tested on a desktop device, the footer content is displayed in three columns, with the text in each column visible as expected. The second column contains the brand image logo, which, when clicked, takes the user to the website's homepage. As the width of the screen changes, the footer content adjusts to fit. The text and icons have been shrunk in size. However, on a mobile device, the second column with the brand logo is hidden, making the footer appear cleaner and less crowded.
+
+
+    3. Hover your mouse over the social media icons in the third column of the footer section to see if they have a background overlay. 
+
+        When testing this on all devices and hovering over the social network icons, each icon has a background overlay with a box shadow when hovered. This informs the user of which icon is currently selected. The outcome is as expected.
+
+        ![hover effect on social media icons](static/images/readme/test/fig43.png "hover effect on social media icons")
+
+    4.	Ensure that clicking on the social media icons takes you to the correct page.
+
+         When tested by clicking on the social media links in the footer, it is clear that all of the social media icons, as expected, lead to Ayo Recipes social accounts.
+
+    5.	Confirm that the links in the first column of the footer take the user to the correct page and that when hovered over, a box shadow appears. 
+
+         Hovering the mouse over the links on a desktop or tablet device reveals that the box shadow appears as expected. When the user clicks on any of the links, he or she is taken to the homepage, as expected.  
+
+         ![hover effect on footer links](static/images/readme/test/fig44.png "hover effect on footer links")
+
+ 
+    6. Confirm that the brand logo in the footer has an  alt text when hovered and links to the home page when clicked.
+
+         When tested on a desktop device, the alt text appears when the mouse is hovered over the image, and when the user clicks the brand image, they are directed to the homepage as expected.
+
+
+
+
