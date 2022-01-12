@@ -62,7 +62,7 @@ The goal of the site is for the user to be able to perform basic CRUD functional
 ## **PROJECT GOAL**
 Ayo Recipe's primary goal is to provide a visually appealing and highly intuitive recipe sharing site for users of all ages. The user should be able to see all recipes and recipes in each category, as well as perform basic CRUD (Create, Read, Update, and Delete) functions on the site. 
 
-The user would be able to interact with the site in order to create, edit, delete, and add recipes to their profile, with some restrictions in place only for the admin user. The admin user has the ability to create, edit, and delete recipe categories, as well as perform basic user functions
+The user would be able to interact with the site in order to create, edit, delete, and add recipes to their profile, with some restrictions in place only for the admin user. The admin user has the ability to create, edit, and delete recipe categories, as well as perform basic user functions.
 
 #### **Business Goals** 
 As the site owner I want to :
@@ -90,7 +90,7 @@ As a returning/ registered user, I want to:
 #### **ADMIN USER**
 As an Admin User, I want to:
 1.	Be able to do all the functionalities assigned to a registered user .
-2.	Restrict access for certain features that can only be accessed by the admin 
+2.	Restrict access for certain features that can only be accessed by the admin. 
 3.	Add, Edit, or Delete the category of recipes present.
 4.	Be able to edit , delete and update any recipes listed on the site.
 
@@ -120,8 +120,7 @@ The colours used in the design of Ayo Recipes were created using the [Adobe Colo
 
 <br/>
 
-### **Typography**  
-The fonts were sourced from .   
+### **Typography**    
 The [Google Fonts](https://fonts.google.com) Dancing Script and Poppins are used on the website to ensure consistency and to give the site a distinct and friendly look similar to other recipe sharing websites. The two fonts are appealing to our target audience, and a backup font has been included called sans-serif
 
 <br/>
@@ -155,6 +154,7 @@ The entire site's wireframe can be found below. This depicts the site on a deskt
 * [Wireframe for Tips & Tricks](static/images/readme/wireframe-for-tips-page.png)
 * [Wireframe for Login](static/images/readme/login-page.png)
 
+<br/>
 
 ### **Database Structure** 
 MongoDB was chosen as the database for this project due to the flexibility it offers for non-relational data. [Diagram.io](https://dbdiagram.io/home) was used to create the data schema for this project. Our schema had three collections: 

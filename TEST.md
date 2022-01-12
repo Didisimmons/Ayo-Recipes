@@ -55,6 +55,8 @@
 * [Edit profile](static/images/readme/html/edit-profile.png)
 * [View_category](static/images/readme/html/view_category.png)
 * [Register](static/images/readme/html/register.png)
+* [Add Recipe](static/images/readme/html/addrecipe.png)
+* [Edit Recipe](static/images/readme/html/edit-recipe.png)
 
 <br/>
 
