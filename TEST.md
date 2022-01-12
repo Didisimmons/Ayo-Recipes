@@ -18,7 +18,7 @@
 3. [Further Testing]()    
 2. [Manual Testing](#manual-testing)   
    - [HOMEPAGE AS A GUEST](#homepage-as-a-guest-user)   
-   - [RECIPES PAGE](#recipes)   
+   - [RECIPES PAGE](#recipes-page)   
    - [Responsiveness]()   
    - [Links]()  
    - [Forms]()   
@@ -88,7 +88,7 @@ The "Create Menu" option in the navbar also takes the user to the login page, be
 ![menu bar for get user](static/images/readme/test/fig9.png "menu bar foor guest user ")
 
 
-### **Registered User Goals** 
+#### **Registered User Goals** 
 As a returning/ registered user, I want to:
 1.	Easily Log  into my profile dashboard to explore recipes made by me.
 
@@ -169,7 +169,7 @@ If the user is registered or has an account with Ayo Recipes, they can order rec
 If the user is viewing a page that they created, the buttons that appear on the single-recipe page are different, with the "edit" and "delete" buttons present due to some defensive back end programming.
 
 
-### **Admin User Goals**
+#### **Admin User Goals**
 As an Admin User, I want to:
 
 1.	Be able to do all the functionalities assigned to a registered user.
@@ -371,6 +371,282 @@ The admin user has the ability to create new recipes as well as edit existing re
 
          When tested on a desktop device, the alt text appears when the mouse is hovered over the image, and when the user clicks the brand image, they are directed to the homepage as expected.
 
+<br/>
+
+#### **RECIPES PAGE** 
+1. Navigation bar 
+
+    1. Navigate to the Recipes page on a desktop computer.
+        
+    2. Confirm that the guest users menu item corresponds to the guest user's home page navigation bar.
+ 
+        When tested on all devices, the menu item for the recipe page is the same as the home page for the guest user.
+
+    3. Confirm that the menu item for the recipe page when the user is logged in differs from the menu item for the homepage when the user is a guest.
+
+        By logging into Ayo Recipes, it is possible to see that the navigation menu items are different. When logged in, the user has access to the following menu items (Recipes , Profile, Tips & Tricks & Logout).
+
+        ![menu bar for a logged in user ](static/images/readme/test/fig45.png "menu bar for a logged in user")
 
 
+2. Hero image
+    1. Navigate to the Recipes page on a desktop computer.
 
+    2.  Ensure that the hero image is visible and occupies the entire width of the screen on all devices, with a search bar in the centre of the image.
+
+         On a desktop, the hero image fills the entire screen width with no overflow issues. When the screen size is changed to a tablet or mobile device, the same effect occurs; the hero image takes up the entire screen width. As the screen width is changed, the search bar appears in the middle of the page. The search icon and the clear button are present as expected, adjusting to the size of the screen to accommodate all devices.
+
+    3. Confirm that when a user queries the search with a recipe or category name, the results are displayed and that if no results are found, a message informing the user is displayed.
+
+         When tested across all devices, the search bar does query the user's search after the user enters a recipe name/category name, displaying results. If no results are found, the user will receive a message.
+
+        ![no results found in recipe page ](static/images/readme/test/fig46.png "no results found in recipe page ")
+
+
+3. Recipe card containers
+
+    1. Go to the Recipes page on a desktop/ mobile device.
+
+    2. Confirm that the recipe cards present under the header image are divided into three equal columns with card container designs. The design of the recipe cards  should include a picture, a title  and the time for preparation. On a mobile device the recipe cards  should collapse and  each recipe card should occupy the full screen width . The user should also  be a able to click the image and be directed to the single -recipe page. 
+
+         Ascertain that the recipe cards displayed beneath the header image are divided into three equal columns with card container designs. The recipe cards should be designed with a picture, a title, and the time required for preparation. On a mobile device, the recipe cards should collapse and each recipe card should take up the entire width of the screen. The user should be able to click the image and be directed to the single-recipe page as well.
+
+         ![recipe cards in a tablet view](static/images/readme/test/fig47.png "recipe cards in a tablet view")
+
+        When viewed on a mobile device, the recipe cards collapse to one per row, as expected.
+
+        ![recipe cards in a mobile view](static/images/readme/test/fig48.png "recipe cards in a mobile view")
+
+    3. Confirm that when the "BACK" button under the recipe cards is clicked, it takes the user to the appropriate site and that the button expands when the mouse is hovered over the item.
+
+          During testing, when the mouse is hovered over the button, it expands and a box shadow appears. As expected, the button is placed at the bottom of the recipe cards, adjusting to the screen width as it is increased and decreased. When the user clicks, he or she is returned to the homepage.
+
+<br/>
+
+#### **LOGIN PAGE**
+
+1. On a desktop, navigate to the Login page. 
+
+2. Confirm that the card container containing the login form has a background image and that the card adjusts to the screen responsively.
+
+    When tested on a desktop device, the background image is visible, and the card container adjusts to fit the screen width.
+
+    ![login page](static/images/readme/test/fig49.png "login page")
+
+3. Confirm that the form validation on the login page works when the required attribute is present.
+ 
+    Testing this on all devices reveals that the user cannot "LOGIN" to their profile unless they provide the correct details in the correct format or fill out all of the fields.
+
+    ![login page with feedback](static/images/readme/test/fig50.png "login page with feedback")
+
+    When the user enters the correct information in the correct format and enters his or her username and password, they will be logged into their profile and will be able to create a recipe.
+
+4. Confirm that when the "Login" button is hovered, it expands with a box shadow and directs the user to the profile page.
+
+    Performing this test reveals that the Login button expands as expected, with a box shadow present to make it visually appealing. When the button is pressed, the user is taken to their profile page, where they are greeted with a flash message.
+
+    ![button on login page](static/images/readme/test/fig51.png "button on login page")
+
+    ![profile created](static/images/readme/test/fig52.png "profile created")
+
+5. Confirm that when a user enters the wrong password or username, a feedback message is displayed informing them that the details were incorrect.
+        
+    When this test is run on all devices, it can be seen that when a user enters a wrong username/password and clicks the "LOGIN" page, they are presented with feedback informing them that the details they have entered are incorrect. 
+    It does not specify which input field is incorrect in order to keep hackers from gaining access to the user's account.
+
+    ![provide wrong login details](static/images/readme/test/fig53.png "provide wrong login details")
+
+6.	Confirm that clicking the "REGISTER HERE" link below the form leads to the sign-up page.
+        
+    By clicking on the "REGISTER HERE" link at the bottom of the form, the user is directed to the registration page, as expected, to sign up for Ayo Recipes.
+
+<br/>
+
+#### **REGISTER PAGE**
+
+1. On a desktop, navigate to the Register page. 
+
+2. Confirm that the register page has a background image and that the register form is in a card container.
+
+    When tested on a tablet device, the background image is present on the site, and the register form is indeed in a card container with its contents evenly spaced.
+
+3. Confirm that the form validation for the register page is enabled in the card container. If the field is not filled correctly, the user should be prompted, and if it is filled correctly and the "SIGN UP" button is clicked, the user should be directed to the correct site.
+
+    Testing this on all devices reveals that the user cannot "LOGIN" to their profile unless they provide the correct details in the correct format or fill out all of the fields. The user will not be able to submit the registration form unless all fields are correctly filled out.
+
+    ![register page validation](static/images/readme/test/fig54.png "register page validation")
+
+    There are currently placeholders on the register page to help users with the information that is expected of them. This improves the user experience.
+
+    ![register page with placeholders](static/images/readme/test/fig55.png "register page with placeholders")
+
+    When the user correctly fills out all of the fields and clicks the "SIGN UP" button, he or she will be directed to their profile page.
+
+4. Confirm that clicking the "LOGIN" link takes the user to the Login page where they can sign up. 
+
+    By clicking on the "LOGIN" link located under the register form card container, the user is directed to the Login page, where they can login to their profile.
+
+
+#### **SIDE NAVIGATION**
+
+1. Navigate to the Home page on a desktop and reduce the screen width to that of a tablet/mobile device.
+
+2. Confirm that when the hamburger icon is clicked, the side navigation appears from the left side, and that the user can easily hide the side navigation by dragging/swiping the mouse to the left.
+
+    When tested on a tablet device, the hamburger icon appears when the screen width is reduced. When the hamburger icon is clicked, the side navigation appears; to hide it, the user simply swipes left or drags the pointer left as expected.
+
+    ![side navigation bar](static/images/readme/test/fig56.png "side navigation bar")
+
+3. Confirm that the menu items on the side navigation bar, when clicked, take the user to the correct page, and that a white background overlay appears when the mouse is hovered over the menu items.
+
+    When tested on all devices, the white background does appear on the menu items when the mouse is hovered over them.
+
+    ![hover effect on menu items in sidenav](static/images/readme/test/fig57.png "hover effect on menu items in sidenav")
+
+
+4. Confirm that when the page is opened, the brand image logo appears in the side navigation bar.
+
+    During testing, it was discovered that when the hamburger icon is clicked and the side navigation bar opens, the user can see the brand image logo at the top of the menu recipes. When the brand image logo is clicked, the user is returned to the home page.
+
+
+<br/>
+
+#### **TIPS & TRICKS**
+
+1. If you're a logged in user on a desktop, go to the Tips & Tricks page.  
+
+2. Confirm that the images and brief summary of each section are responsive as the screen width is changed.
+
+    As the screen width is adjusted to that of a tablet device, it is clear that the images and summary text, including the header text, of each section are responsive as expected.
+
+    ![tips & tricks on a tablet view](static/images/readme/test/fig58.png "tips & tricks on a tablet view")
+
+3. Confirm that when a button on the page is hovered over, it expands in size and that clicking the button takes the user to the appropriate site on a new page.
+
+    When the mouse is hovered over the buttons, the button expands with a box shadow present on all devices. When the user clicks the button, he or she is directed to the desired site on a new page, as expected.
+
+<br/>
+
+#### **PROFILE PAGE**
+1. When you login or register, you are taken to your profile page.
+
+2. Confirm that the user's personal information appears correctly when he or she signs in. On all devices, the user details and icons should be responsive.
+
+    Testing this on a desktop device it can be seen than the user details match that of the database. On a tablet device it can be seen that the user details as well as the icons adjust to fit the size of the screen without looking squashed. The details are evenly spaced, on a mobile device the same effect takes place . The details are evenly spaced and collapse to one input field per column. 
+
+     ![profile user details](static/images/readme/test/fig59.png "profile user details")
+
+3.	Confirm that when the mouse is hovered over the buttons, they expand and the user is directed to the correct page when the buttons are clicked.
+
+    When tested on a mobile device, the desired effect is seen when the mouse is hovered over the buttons: a box shadow appears on the button as it expands. 
+
+<br/>
+
+#### **ALL ADD FORMS**
+**( Create Recipe, Add Category)**
+
+1. Confirm that the user must fill out all mandatory fields before submitting any of the forms. If the fields are not properly filled out, the user should receive a validation message.
+
+    When the two forms are tested, it is clear that the user is unable to submit any of them without entering the correct information. When the user clicks the submit button, they are notified if any fields were left blank. If the user enters incorrect information or enters fewer characters than required, they are also prompted on the form with a validation message stating what is expected. 
+
+    However, the select category validation did not work on the create recipe form, allowing the user to submit the form without selecting a category. This was solved by incorporating the select validation function from the task manager project of Code Institute. This caused the select category option to function as expected, notifying the user when no options were selected.
+
+
+2.	Confirm that a flash message appears at the top of the screen providing feedback on the user's action.
+
+    When the user clicks the submit button, he or she is given feedback on the action that was just completed. 
+
+<br/>
+
+#### **ALL EDIT FORMS**
+**( Edit Recipe, Edit Profile, Edit Category)**
+
+1.	Confirm that all edit forms populate the correct information in all input fields. Before submitting, the user must complete all mandatory fields. 
+
+    When testing the three pages forms, the desired effect occurs: the pre-populated information is presented in the input fields, and the user is informed about mandatory fields that cannot be left blank if they want to submit the form without filling out all of the fields. 
+
+    However, on the edit profile page, the "required" attribute was not added to the input type "email," allowing the user to submit the form without filling out the mandatory field. 
+
+    This was fixed by adding the "required" attribute to the "email" input type on the edit page. 
+
+2.	Confirm that a flash message appears at the top of the screen in response to the user's action. 
+
+    When the user clicks the Update button, he or she receives feedback on the action that was just completed.
+
+<br/>
+
+#### **ALL DELETE FORMS**
+**( Delete Recipe, Delete Category)**
+
+1.	Confirm that when the "delete" button is clicked, a modal appears asking the user to confirm their action. If the user selects Delete, the appropriate recipe/category is removed.
+
+    When tested on a desktop device, the modal does appear when the user clicks the "delete" button. A dialogue box appears, asking the user to confirm that they want to perform the desired function. When you click the delete button, the recipe/category is removed from the website and database.
+
+2.	Confirm that a flash message appears at the top of the screen in response to the user's action.
+
+    When the user clicks the Update button, he or she receives feedback on the action that was just completed..
+
+3.	Confirm that the "Cancel" link, when clicked, returns the user to the appropriate page.
+
+    When tested on a mobile device, the cancel button directs the user back to the manage categories page, and the dialogue box disappears.
+ 
+
+4. Confirm that when you hover the mouse over the two buttons, they expand and a box shadow appears.
+
+    When tested on a mobile device, the desired effect can be seen when the mouse is hovered over the buttons. As the button expands, a box shadow appears on it, and when clicked, it performs the desired function.
+
+<br/>
+
+### **DEFENSIVE PROGRAMMING**
+Some defensive back end programming has been put in place to limit users' access to certain functions.
+
+1.	Only the admin user has the ability to add a category to the website. The admin user's menu includes a new menu item called "Manage Categories." Any category can be added, edited, or deleted by the admin user from this page. 
+
+2.	When a guest user views the single recipe page, they do not have the option to order the recipe; instead, they only see the "back" button. When the button is pressed, the user is taken to the login page, where he or she can register and either create or order a recipe.
+
+
+3.	When a user registers/logs in, they can view all recipes created by other users and, if desired, order the recipe via an external link. The user would only be able to edit or delete their own recipes, not those of other users. When viewing another user's recipe versus recipes created by them, the registered / logged in user will notice that the buttons on the single recipe page are different. 
+
+4.	If the user is unable to provide an image url for the recipe on the add-recipe page, a default image will appear in the recipe card when the recipe is added to the user's profile. If the user wants to learn more about the recipe, they can click on the recipe card to be taken to the single recipe page, which includes a recipe image even if the user did not enter an image url in the add recipe form.
+
+5.	 The admin user has the same functions as the registered user. When viewing each recipe individually, the admin user has the ability to edit and delete all recipes. On the website, he or she can also add, edit, or delete a recipe category.
+
+6.	Only the registered user and the admin user have access to the profile menu item and can create a recipe. To perform the basic CRUD functions, the guest user would need to register/login with Ayo Recipes.
+
+</br>
+
+### **SOLVED BUGS**
+
+1. To display the correct category name that the user selected on the edit recipe page, the if/else statement provided in the for loop had to be changed. Instead of ( % If category.category_name == recipe.category_name % ), this was changed to ( % If category.category name in recipe.category name % ) because the recipe category name is in an array and we need to use the "in" keyword to check for the value category name in order for the system to pick the correct item from the array. 
+
+2. On a tablet device, the flash message at the top of the website had no padding on the left and right sides, making the text look squashed. This was resolved by adding padding to the flash message's left and right sides.
+
+3. On the register page, it was discovered that the "about me" input field at the bottom of the page lacked a min-length or max-length attribute, allowing the user to enter any number of characters in the about me field. The text area element was fixed by adding the "min-length" and "max-length" attributes.
+
+
+4. The placeholder text for Phone number and password on the register page has been updated to a more concise text that can direct the user of the necessary pattern /input expected. The previous text was a little puzzling for the user.
+
+5. On the recipes page, an if/else statement is present for the recipe image incase the user does not input any link. If no link is added to the recipe image url , a default recipe image would appear on the recipes page in a recipe card. The image can also be seen on the single -recipe page and the users profile. 
+
+ 
+6. The star rating on a tablet device was overflowing to another row on the add – recipe page. This was corrected by decreasing the font size of the star icon from a breakpoint of 1024px below.
+
+    ![tablet view of add recipe page ](static/images/readme/test/fig59.png "tablet view of add recipe page ")
+
+7. To create the dynamic input fields, stack overflow and [Youtube](https://www.youtube.com/watch?v=MLBLsxcB3Dc) were consulted. However, when the javascript code for the dynamic input fields was linked to the overall script.js file for the website, errors appeared in the chrome dev tools console tab. Except for the recipe and edit recipe pages, this error appeared on all pages. This was rectified by separating the JavaScript code for the dynamic input fields into a separate file called (addscript.js). 
+
+    The new file (addscript.js) was added to the add recipe and edit recipe pages to validate the dynamic input fields, which worked and eliminated all errors on each page.
+
+8.	When a user clicks on the category image pills or category name headings, they are taken to the view category page, which displays all of the recipes created by users in that category. If there are no recipes, the user should see the message "no category results found." 
+
+    This was not the case during testing, as the "no category results found" message was not visible. To resolve the issue, the steps used to create the search function for Ayo Recipes were used to create the if /else statement for the view _category page, allowing the user to see the message "no category results found."
+
+    This was fixed by adding an if/else statement above the for loop that said  (%if allrecipe|length > 0 %). The recipes' for loop should be nested inside the if else statement. When the test is run again with this fix, the message "no category results found" now appears as expected.
+
+9. Some extra padding is added to the footer content to remove the bottom space on the webpage. The footer currently has only a top padding, but to address the issue, a bottom padding is added to the footer container, removing the space at the bottom of the footer. When the user views the webpage, he or she will notice that the space at the bottom of the page has been removed.
+
+     ![no padding at the bottom of home page ](static/images/readme/test/fig60.png "no padding at the home page")
+
+     ![ padding at the bottom of home page ](static/images/readme/test/fig61.png "padding at the home page")
+                    
+                    
