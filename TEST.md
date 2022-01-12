@@ -11,6 +11,7 @@
 1. [Validator Testing](#validator-testing)  
    - [HTML](#html)   
    - [CSS](#css)
+   - [javascript]
 2. [User Stories Testing](#user-stories-testing)  
    - [Unregistered User Goals](#unregistered-user-goals)   
    - [Registered User Goals](#registered-user-goals)  
@@ -615,6 +616,8 @@ Some defensive back end programming has been put in place to limit users' access
 
 </br>
 
+
+
 ### **SOLVED BUGS**
 
 1. To display the correct category name that the user selected on the edit recipe page, the if/else statement provided in the for loop had to be changed. Instead of ( % If category.category_name == recipe.category_name % ), this was changed to ( % If category.category name in recipe.category name % ) because the recipe category name is in an array and we need to use the "in" keyword to check for the value category name in order for the system to pick the correct item from the array. 
@@ -649,4 +652,11 @@ Some defensive back end programming has been put in place to limit users' access
 
      ![ padding at the bottom of home page ](static/images/readme/test/fig61.png "padding at the home page")
                     
-                    
+
+### **FURTHER TESTING** 
+
+1.	The site was tested on a desktop device (Mac OS and Windows), iPad, iPhone(6,7,8 and SE) and Pixel2 to ensure that it was error-free and responsive.
+
+2.	Friends and colleagues were asked to review the site to ensure the site was user friendly and intuitive. Their feedback was t
+
+
