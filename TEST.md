@@ -1,8 +1,8 @@
 # AYO RECIPES 
 
-[Back to main README file](README.md)
+[Back To Main README file](README.md)
 
-[View the delopyed site](http://ayo-recipes.herokuapp.com/)
+[View The Delopyed Site](http://ayo-recipes.herokuapp.com/)
 
 ## TESTING
 <br/>
@@ -43,17 +43,18 @@
 ### **VALIDATOR TESTING**
 #### **HTML**
 * [W3C Markup Validation](https://validator.w3.org/): This is also used to validate the HTML code for all newly created webpages. Our code was discovered to have some errors as a result of the jinja template used when you paste the direct html code. However, this was resolved by obtaining the source code by right-clicking on our page and selecting "View page source." The errors are removed when checked again. 
-* [Homepage (index.html)](static/images/readme/html/homepage.png) 
+* [Homepage](static/images/readme/html/homepage.png) 
 * [Profile](static/images/readme/html/profile.png) 
-* [Recipes)](static/images/readme/html/recipes.png)  
+* [Recipes](static/images/readme/html/recipes.png)  
 * [Tips & Trick](static/images/readme/html/tips&tricks.png)  
 * [Manage Categories](static/images/readme/html/manage-categories.png)  
 * [Add Category](static/images/readme/html/addcategory.png)  
 * [Edit Category](static/images/readme/html/edit-category.png) 
-* [Single -recipe](static/images/readme/html/single-recipe.png)  
-* [Individual Recipe Page (single-recipe.html)](static/images/readme/html/homepage.png)  
-* [Edit Recipe Page (edit-recipe.html)](static/images/readme/html/homepage.png)  
-
+* [Single-recipe](static/images/readme/html/single-recipe.png)  
+* [Login page](static/images/readme/html/login.png)
+* [Edit profile](static/images/readme/html/edit-profile.png)
+* [View_category](static/images/readme/html/view_category.png)
+* [Register](static/images/readme/html/register.png)
 
 <br/>
 
