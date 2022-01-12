@@ -11,11 +11,11 @@
 1. [Validator Testing](#validator-testing)  
    - [HTML](#html)   
    - [CSS](#css)
-1. [User Stories Testing](#user-stories-testing)  
+2. [User Stories Testing](#user-stories-testing)  
    - [Unregistered User Goals](#unregistered-user-goals)   
    - [Registered User Goals](#registered-user-goals)  
    - [Admin User Goals](#admin-user-goals)  
-2. [Autoprefixer CSS](https://github.com/dissyulina/cookle-cookbook/blob/main/TESTING.md#2-auto-prefixer-css)    
+3. [Further Testing](https://github.com/dissyulina/cookle-cookbook/blob/main/TESTING.md#2-auto-prefixer-css)    
 2. [Manual Testing](https://github.com/dissyulina/cookle-cookbook/blob/main/TESTING.md#3-manual-testing-by-the-developer)   
    - [Browsers Compatibility](https://github.com/dissyulina/cookle-cookbook/blob/main/TESTING.md#browsers-compatibility)   
    - [Devices](https://github.com/dissyulina/cookle-cookbook/blob/main/TESTING.md#devices)   
@@ -24,9 +24,9 @@
    - [Forms](https://github.com/dissyulina/cookle-cookbook/blob/main/TESTING.md#forms)   
    - [Defensive Testing](https://github.com/dissyulina/cookle-cookbook/blob/main/TESTING.md#defensive-testing)  
   
-5. [JSHint Testing](https://github.com/dissyulina/cookle-cookbook/blob/main/TESTING.md#5-javascript-testing)    
+5. [JSHint Testing]()    
 6. [Pep8 Online Testing](https://github.com/dissyulina/cookle-cookbook/blob/main/TESTING.md#6-python-testing)
-7. [Lighthouse Testing](https://github.com/dissyulina/cookle-cookbook/blob/main/TESTING.md#7-lighthouse-testing)  
+7. [Lighthouse Testing]()  
    
 <br/>
 
@@ -86,3 +86,124 @@ When a user visits the homepage, the register and Login buttons appear on the na
 The "Create Menu" option in the navbar also takes the user to the login page, because in order to create a new recipe, the user must first register with Ayo Recipes.
 
 ![menu bar for get user](static/images/readme/test/fig9.png "menu bar foor guest user ")
+
+
+### **Registered User Goals** 
+As a returning/ registered user, I want to:
+1.	Easily Log  into my profile dashboard to explore recipes made by me.
+
+When a user arrives at the home page, he or she can either register to create a profile or log in by clicking on any of the menu options shown in the image above. When a user logs in, they are taken to their profile, where they are greeted, as shown below. When the user is a guest, the menu bar looks different.
+
+![proifle greeting user](static/images/readme/test/fig10.png "proifle greeting user ")
+
+If the user hasn't created any recipes yet, the text "No recipes added Yet" will appear under the user's personal information, as shown in the image above. If the user clicks the "Create Recipe" button, they will be taken to the add recipe page, where they can add a new recipe. Once this has been added, the user can view the recipes that have been added by them on their profile in the form of a card. See the list below.
+
+![add recipe in profile](static/images/readme/test/fig11.png "recipe in profile page ")
+
+2.	Easily search for recipes either by recipe name or the recipe category.
+
+When a user is logged in, they can view all of the recipes at Ayo Recipes by going to the homepage or the recipes page. 
+If the user wants to search for recipes by category names, they can easily do so by clicking on the images or category names on the index.html page.
+
+![browse categories](static/images/readme/test/fig12.png "browse categories in profile ")
+
+This takes the user to the "view category.html" page, where they can see all of the recipes in that category.
+
+![view categories page](static/images/readme/test/fig13.png "view categories page ")
+
+The user can also view all of the recipes on the website by selecting the "recipes" menu option. The present search bar can be used to query the user's searches. The user can conduct a search using either the recipe name or the category name. The user is notified if no results are found. See the following:
+
+![No results found in the search engine](static/images/readme/test/fig14.png "No results found in the search engine")
+
+
+3. Be able to create my own recipe and share on the site. Edit it’s content and delete if the case need be. 
+
+When the user logs into their profile, two buttons appear under their personal information. These two buttons allow the user to "Create Recipe" or "Update Profile." When a user clicks the "Create Recipe" button, they are taken to the add recipe page, where they can add a new recipe. If the user clicks the submit button, the recipe is saved to their profile; if the user clicks the "Cancel" button, they are returned to their profile page. 
+
+![add recipe](static/images/readme/test/fig15.png "add recipe")
+
+Once the recipe is added, the user's profile will be updated with all of their recipes, as shown in the images above.
+
+![add recipe to profile](static/images/readme/test/fig16.png "add recipe to profile")
+
+To learn more about the recipe, the user can click on the recipe card, which takes them to the single-recipe.html page.
+
+![view single recipe created by user](static/images/readme/test/fig17.png "view single recipe created by user ")
+
+When the user views the recipe they created, they will notice the "EDIT" and "DELETE" recipe buttons, allowing them to perform either function. When a user clicks the "EDIT" button, they are taken to the "edit-recipe.html" page, which displays a form field with prepopulated data containing the recipe details. When finished, the user can update the fields of their choice by clicking the "Update Recipe" button. If they want to cancel the update, they can do so by clicking the "CANCEL" button and then being diverted back to the single -recipe page.
+
+![edit recipe created by user](static/images/readme/test/fig18.png "edit recipe created by user ")
+
+If the user changes the fields and then clicks the "Update Recipe" button, a flash message appears and the user is redirected back to their profile page, with a feedback at the top.
+
+![flash message for update ](static/images/readme/test/fig19.png "flash message for update")
+
+If a user wants to delete a recipe, they can do so by clicking the "DELETE" button on the single-recipe page. When the button is clicked, a modal appears asking the user to confirm their action.
+
+![modal for delete ](static/images/readme/test/fig20.png "modal for delete")
+
+The user can confirm their decision to delete the recipe by clicking the "DELETE" button, or they can return to the single recipe page by clicking "CANCEL." If the delete button is pressed, the recipe is deleted, and the user is notified that their action was successful.
+
+![recipe deleted feedback ](static/images/readme/test/fig21.png "recipe deleted feedback ")
+
+
+4. Easily edit my personal profile in case changes are needed.
+
+The user can update their personal information in their profile by clicking on the "UPDATE PROFILE" button, which takes them to the edit-profile page. The edit-profile page contains the user's prepopulated data, allowing the user to easily make changes to any fields.
+
+![edit profile](static/images/readme/test/fig22.png "edit profile ")
+
+After updating the fields, the user can either click "UPDATE PROFILE" or "CANCEL." If the user clicks the "UPDATE PROFILE" button, they will receive confirmation that their action was successful.
+
+![profile updated ](static/images/readme/test/fig23.png "profile updated ")
+
+If the user does not want to update their profile information, they can click the "CANCEL" button and be taken back to their profile page, which displays all of the recipes they have created.
+
+
+5. Be able to order recipes online
+
+If the user is registered or has an account with Ayo Recipes, they can order recipes online. After logging into their profile and visiting the home page, the user can see the "ORDER NOW" button by clicking on any of the recipes created by other users. This takes the user to a third-party site where they can order the recipe takeaway directly. 
+
+![view single recipe created by other users](static/images/readme/test/fig24.png "view single recipe created by other users")
+
+If the user is viewing a page that they created, the buttons that appear on the single-recipe page are different, with the "edit" and "delete" buttons present due to some defensive back end programming.
+
+
+### ***Admin User Goals**
+As an Admin User, I want to:
+
+1.	Be able to do all the functionalities assigned to a registered user.
+
+When an administrator logs into Ayo recipes, they see the same menu navigation bar as a registered user. The admin user has access to all recipes and can search for them. Like a registered user, the admin user can create a recipe and edit their profile.
+
+![admin profile ](static/images/readme/test/fig25.png " admin profile")
+
+The buttons that appear for a user who created a recipe appear on the single -recipe page when the admin user wants to view each recipe card to see more information about each recipe. All recipes created by users can be edited and deleted by the admin user. The recipe below, for example, was created by a user named "Heidi," and the admin user has access to all functions as Heidi.
+
+![admin user viewing single recipe page ](static/images/readme/test/fig26.png " admin user viewing single recipe page")
+
+2. Restrict access for certain features that can only be accessed by the admin. 
+
+When the admin user logs in to Ayo Recipes, they can see all of the menu items that the registered user can see, but there is an additional menu item "MANAGE CATEGORIES" that is only available to the admin user. 
+
+![menu bar for admin user ](static/images/readme/test/fig27.png " menu bar for admin user")
+
+The admin user also has access to all recipes created by users, allowing the admin user to edit or delete each recipe's information.
+
+
+3. Add, Edit, or Delete the category of recipes present.
+
+When an administrator logs into Ayo Recipes, the menu item "MANAGE CATEGORIES" allows the administrator to add a new category, edit existing categories, and delete any unwanted categories.
+
+![manage category page ](static/images/readme/test/fig28.png " manage category page")
+
+When the admin clicks the "ADD CATEGORY" button, the user is taken to the add-category page, where the admin can enter the category name and description.
+ 
+![add new category page ](static/images/readme/test/fig29.png " add new category page")
+
+The category would be added to the manage-category page if the user clicked the "ADD CATEGORY" button.
+
+![new category added displaying flash message ](static/images/readme/test/fig30.png "new category added displaying flash message")
+
+If the admin user wants to delete the newly added category, they must click the "DELETE" button, which will open a modal asking the admin user to confirm their action. 
+![delete category ](static/images/readme/test/fig31.png "delete category")
