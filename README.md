@@ -118,14 +118,22 @@ The colours used in the design of Ayo Recipes were created using the [Adobe Colo
 [Jen David](https://jenndavid.com/colors-that-influence-food-sales-infographic/) has provided us with a colour chart that can influence your gourmet industry business and has been used in the colour selection for Ayo Recipes. The colours reflect the Ayo Recipes brand in order to build trust with users and stimulate their taste buds by using bright colours (yellow and orange) to catch our users' attention and brown/white to give it a warm, welcoming, and clean look. <br/>
 ![The color scheme](static/images/readme/colorpalette.png "The color scheme")  
 
+<br/>
+
 ### **Typography**  
 The fonts were sourced from .   
 The [Google Fonts](https://fonts.google.com) Dancing Script and Poppins are used on the website to ensure consistency and to give the site a distinct and friendly look similar to other recipe sharing websites. The two fonts are appealing to our target audience, and a backup font has been included called sans-serif
 
+<br/>
+
 ### **Imagery**  
-The photos on the site were obtained from a free image provider [Unsplash](https://unsplash.com/), and the recipe images were obtained from bbcgoodfood, Yummly, and epicurious. 
+The photos on the site were obtained from a free image provider [Unsplash](https://unsplash.com/), and the recipe images were obtained from bbcgoodfood, Yummly, and epicurious.
+
+Photoshop was used to create the brand logo and the background image that appears on some pages of the website.
 
 The photographs depict modern cuisine dishes that can be prepared in the comfort of one's own home. The images' purpose is to attract users' attention to the Ayo Recipe website, where they can login/register to create their own recipes.
+
+<br/>
 
 ### **Wireframes**
 The entire site's wireframe can be found below. This depicts the site on a desktop and a mobile device, with some tablet view wireframes indicating when the screen view differs.
