@@ -11,23 +11,32 @@
 1. [Validator Testing](#validator-testing)  
    - [HTML](#html)   
    - [CSS](#css)
-   - [javascript]
+   - [JAVASCRIPT](#javascript)
+   - [PYTHON](#python)
+
 2. [User Stories Testing](#user-stories-testing)  
    - [Unregistered User Goals](#unregistered-user-goals)   
    - [Registered User Goals](#registered-user-goals)  
    - [Admin User Goals](#admin-user-goals)  
-3. [Further Testing]()    
-2. [Manual Testing](#manual-testing)   
+    
+3. [Manual Testing](#manual-testing)   
    - [HOMEPAGE AS A GUEST](#homepage-as-a-guest-user)   
    - [RECIPES PAGE](#recipes-page)   
-   - [Responsiveness]()   
-   - [Links]()  
-   - [Forms]()   
-   - [Defensive Testing]()  
-  
-5. [JSHint Testing]()    
-6. [Pep8 Online Testing]()
-7. [Lighthouse Testing]()  
+   - [LOGIN](#login-page)   
+   - [REGISTER](#register-page)  
+   - [SIDE NAVIGATION BAR](#side-navigation-bar)
+   - [TIPS & TRICKS](#tip-tricks-page)  
+   - [REGISTER](#register-page)     
+   - [PROFILE](#profile-page)
+   - [ALL ADD FORMS](#all-add-forms)
+   - [ALL EDIT FORMS](#all-edit-forms)
+   - [ALL DELETE FORMS](#all-delete-forms)
+
+4. [Defensive Programming](#defensive-programming)
+5. [Lighthouse Testing](#lighthouse-testing)
+5. [Further Testing](further-testing)
+6. [Solved Bugs](#solved-bugs)
+
    
 <br/>
 
@@ -35,10 +44,29 @@
 #### **HTML**
 * [W3C Markup Validation](https://validator.w3.org/): This is also used to check the validity of the html code for all webpages created. Our code was found to have some errors due to the jinja template. 
 
+<br/>
+
 #### **HTML**
 * [W3C CSS validation](https://jigsaw.w3.org/css-validator/): This is used to validate the CSS code used on all webpages created. Our code is found to be error-free by the validator.
 
 ![css_validation](static/images/readme/test/css-validation.png)
+
+<br/>
+
+#### **JAVASCRIPT**
+* [JSHint validation ](https://jigsaw.w3.org/https://jshint.com/): This was used to validate the JavaScript and Jquery code used on Ayo Recipes to ensure that it was error-free. The script.js file was added to all pages, and the addscript.js file was added to the recipe add/edit page. It was discovered that some semi-colons were missing when this was first run. This was fixed by inserting the necessary semicolons.
+
+![JSHint validation for script.js](static/images/readme/test/jshint-validation.png "JSHint validation for script.js")
+![JSHint validation for addscript.js](static/images/readme/test/jshint-validation2.png "JSHint validation for addscript.js")
+
+<br/>
+
+#### **PYTHON**
+* [Pep8 Online validator](http://pep8online.com/): This was used to run our Python code in the app.py file to ensure that all errors were removed, such as whitespace, trailing whitespace, and so on. When this was run through the validator, it was discovered that there were some whitespaces that were removed. 
+
+![Pep8 Online validation](static/images/readme/test/pep8-validation.png "Pep8 Online validation")
+
+<br/>
 
 ### **USER STORIES**
 #### **Unregistered User Goals**   
@@ -599,6 +627,7 @@ The admin user has the ability to create new recipes as well as edit existing re
 <br/>
 
 ### **DEFENSIVE PROGRAMMING**
+
 Some defensive back end programming has been put in place to limit users' access to certain functions.
 
 1.	Only the admin user has the ability to add a category to the website. The admin user's menu includes a new menu item called "Manage Categories." Any category can be added, edited, or deleted by the admin user from this page. 
@@ -616,7 +645,34 @@ Some defensive back end programming has been put in place to limit users' access
 
 </br>
 
+### **LIGHTHOUSE TEST**
+The lighthouse test was used to evaluate our website's performance, accessibility, best web practises, and SEO. The lighthouse test results for Ayo Recipes are listed in the table below.
 
+Page Name | Performance | Accessbility | Best Practices | SEO | See link   
+--- | --- | --- | ---  | --- | ---    
+index.html |  96 | 94 | 80 | 90 | [see here](static/images/readme/lighthouse/index.png)   
+recipes.html | 78 | 88 | 87 | 90 | [see here](static/images/readme/lighthouse/recipes.png)   
+profile.html | 80 | 93 | 87 | 90 | [see here](static/images/readme/lighthouse/profile.png)   
+single-recipe.html | 99 | 95 | 80 | 90 | [see here](static/images/readme/lighthouse/single-recipe.png)  
+edit-recipe.html | 91 | 82| 100 | 90 | [see here](static/images/readme/lighthouse/edit-recipe.png)  
+edit-profile.html | 94 | 96 | 87 | 90 | [see here](static/images/readme/lighthouse/edit-profile.png)   
+view-category.html | 90 | 94 | 87 | 90 | [see here](static/images/readme/lighthouse/view-category.png)
+add-recipe.html | 90 | 89 | 87 | 90 | [see here](static/images/readme/lighthouse/addrecipe.png)
+tips&trick.html | 100 | 94 | 80 | 80 | [see here](static/images/readme/lighthouse/tips&tricks.png)
+login.html | 92 | 95 | 87 | 90 | [see here](static/images/readme/lighthouse/login.png)
+register.html | 92 | 95 | 87 | 90 | [see here](static/images/readme/lighthouse/register.png) 
+manage-category.html | 94 | 94 | 87 | 90 | [see here](static/images/readme/lighthouse/manage-categories.png) 
+add-category.html | 94 | 96 | 87 | 90 | [see here](static/images/readme/lighthouse/add-category.png) 
+
+<br/>
+
+### **FURTHER TESTING** 
+
+1.	The site was tested on a desktop device (Mac OS and Windows), iPad, iPadPro, iPhone(6,7,8 and SE) and Pixel2 to ensure that it was error-free and responsive.
+
+2.	Friends and colleagues were asked to review the site to ensure the site was user friendly and intuitive. Their feedback was t
+
+<br/>
 
 ### **SOLVED BUGS**
 
@@ -646,17 +702,17 @@ Some defensive back end programming has been put in place to limit users' access
 
     This was fixed by adding an if/else statement above the for loop that said  (%if allrecipe|length > 0 %). The recipes' for loop should be nested inside the if else statement. When the test is run again with this fix, the message "no category results found" now appears as expected.
 
-9. Some extra padding is added to the footer content to remove the bottom space on the webpage. The footer currently has only a top padding, but to address the issue, a bottom padding is added to the footer container, removing the space at the bottom of the footer. When the user views the webpage, he or she will notice that the space at the bottom of the page has been removed.
+
+9. The placeholder for the user to enter their phone number on the register page was still confusing to the user and did not accept the user's mobile phone number format. This was changed to a more clear understanding placeholder, with the font size increased to make it more visible. The pattern for the input field has been updated as well. This fix enabled the user to enter their phone number without issue.
+    pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}-[0-9]{2}-[0-9]{2}”
+
+10. Some extra padding is added to the footer content to remove the bottom space on the webpage. The footer currently has only a top padding, but to address the issue, a bottom padding is added to the footer container, removing the space at the bottom of the footer. When the user views the webpage, he or she will notice that the space at the bottom of the page has been removed.
 
      ![no padding at the bottom of home page ](static/images/readme/test/fig60.png "no padding at the home page")
 
      ![ padding at the bottom of home page ](static/images/readme/test/fig61.png "padding at the home page")
                     
 
-### **FURTHER TESTING** 
-
-1.	The site was tested on a desktop device (Mac OS and Windows), iPad, iPhone(6,7,8 and SE) and Pixel2 to ensure that it was error-free and responsive.
-
-2.	Friends and colleagues were asked to review the site to ensure the site was user friendly and intuitive. Their feedback was t
+<br/>
 
 

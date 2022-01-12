@@ -24,7 +24,7 @@
       <nav class="nav-extended">
           <div class="nav-wrapper lighten-4">
             <a href="{{url_for('home')}}" class="brand-logo ayo-logo">
-              <img src="{{ url_for('static', filename='images/brandlogo.png') }}" alt="">
+              <img src="{{ url_for('static', filename='images/brandlogo.png') }}" alt="brand logo for Ayo Recipes">
             </a> 
                <a href="{{url_for('home')}}" data-target="mobile-demo" class="sidenav-trigger left"><i class="fas fa-bars"></i></a>
                <ul class="right hide-on-med-and-down menu-items">
@@ -74,7 +74,7 @@
 
     </header>
 
-  <section>
+    <main class="page-container"> 
      <!-- Flash messages -->
      {% with messages = get_flashed_messages() %}
          {% if messages %}
@@ -85,10 +85,7 @@
              {% endfor %}
          {% endif %}
      {% endwith %}
-  </section>
-
-
-    <main class="page-container">            
+        
     {% block content %}
 
     {% endblock %}
