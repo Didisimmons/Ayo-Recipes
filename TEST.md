@@ -451,13 +451,13 @@ The admin user has the ability to create new recipes as well as edit existing re
 
     1. Go to the Recipes page on a desktop/ mobile device.
 
-    2. Confirm that the recipe cards present under the header image are divided into three equal columns with card container designs. The design of the recipe cards  should include a picture, a title  and the time for preparation. On a mobile device the recipe cards  should collapse and  each recipe card should occupy the full screen width . The user should also  be a able to click the image and be directed to the single -recipe page. 
+    2. Confirm that the recipe cards present under the header image are divided into three equal columns with card container designs. The design of the recipe cards  should include a picture, a title  and the time for preparation. On a mobile device the recipe cards  should collapse and  each recipe card should occupy the full screen width . The user should also  be  able to click the image and be directed to the single -recipe page. 
 
-         Ascertain that the recipe cards displayed beneath the header image are divided into three equal columns with card container designs. The recipe cards should be designed with a picture, a title, and the time required for preparation. On a mobile device, the recipe cards should collapse and each recipe card should take up the entire width of the screen. The user should be able to click the image and be directed to the single-recipe page as well.
+        On a tablet device the recipe cards show as expected with  a recipe picture, recipe name and cooking time
 
          ![recipe cards in a tablet view](static/images/readme/test/fig47.png "recipe cards in a tablet view")
 
-        When viewed on a mobile device, the recipe cards collapse to one per row, as expected.
+        While  on a mobile device, the recipe cards collapse to one per row, as expected. 
 
         ![recipe cards in a mobile view](static/images/readme/test/fig48.png "recipe cards in a mobile view")
 
@@ -631,7 +631,7 @@ The admin user has the ability to create new recipes as well as edit existing re
 
 2.	Confirm that a flash message appears at the top of the screen in response to the user's action.
 
-    When the user clicks the Update button, he or she receives feedback on the action that was just completed..
+    When the user clicks the Update button, he or she receives feedback on the action that was just completed.
 
 3.	Confirm that the "Cancel" link, when clicked, returns the user to the appropriate page.
 
