@@ -95,10 +95,12 @@ As an Admin User, I want to:
 4.	Be able to edit , delete and update any recipes listed on the site.
 
 #### **TARGET AUDIENCE**
-- Those looking for festive recipes to make. 
-- People who appreciate the ease of ordering food via technology and social media. 
+- Those looking for festive recipes to make.
 - Individuals who are willing to post their own recipes on the internet.
 - Individuals who are interested in food and enjoy cooking. 
+- Individuals who are want to learn how to cook. 
+- People who appreciate the ease of ordering food via technology and social media. 
+
 
 ### **RESEARCH**   
 To get some UX inspiration for Ayo, I researched other recipe sharing websites like To get some UX inspiration for Ayo, I researched other recipe sharing websites like

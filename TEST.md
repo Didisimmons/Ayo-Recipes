@@ -685,13 +685,11 @@ add-category.html | 94 | 96 | 87 | 90 | [see here](static/images/readme/lighthou
 
 ### **FURTHER TESTING** 
 
-1.	The site was tested on a desktop device (Mac OS and Windows), iPad, iPadPro, iPhone(6,7,8 and SE) and Pixel2 to ensure that it was error-free and responsive.
+1.	The site was tested on a desktop device (Mac OS and Windows), iPad, iPadPro, iPhone(6,7,8 and SE) and Pixel2 to ensure that it was error-free and responsive. Some feedbacks were provided. 
 
-2. Some feedbacks were provided. 
+    * One of the feedbacks was that the register form was not accepting their phone number format even if they followed the pattern shown. This was fixed by changing the pattern in the input field to one that accepted the users input as well as the placeholder in order for the user to understand easily.  
 
-* One of the feedbacks was that the register form was not accepting their phone number format even if they followed the pattern shown. This was fixed by changing the pattern in the input field to one that accepted the users input as well as the placeholder in order for the user to understand easily.  
-
-* Another issue was that they couldn't select a category from the drop down menu. If they wanted to select "Soup Recipe," for example, the form would select "Snack Recipe," which they found annoying and frustrating. This was fixed by adding the "multiple " attribute to the select element; for more information, see "SOLVED BUGS, no.13."
+    * Another issue was that they couldn't select a category from the drop down menu. If they wanted to select "Soup Recipe," for example, the form would select "Snack Recipe," which they found annoying and frustrating. This was fixed by adding the "multiple " attribute to the select element; for more information, see "SOLVED BUGS, no.13."
 
 
 3. The website [AM I Responsive](http://ami.responsivedesign.is/) was used to capture Ayo Recipes aesthetic look and responsiveness across all devices. Screenshot below.
@@ -757,7 +755,8 @@ add-category.html | 94 | 96 | 87 | 90 | [see here](static/images/readme/lighthou
 
 
 14. When testing the admin user goals, it was discovered that when the admin user adds a new category, the categories are arranged alphabetically and take up two rows and two columns. 
-        ![ old category section on home page](static/images/readme/test/oldcategory.png " old category section on home page")
+
+    ![ old category section on home page](static/images/readme/test/oldcategory.png " old category section on home page")
 
     However, for some newly added categories, the html structure is distorted; the first fix was to add breakpoints for different screen devices, but this did not resolve the issue.
 
