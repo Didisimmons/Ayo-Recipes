@@ -17,16 +17,15 @@
 2. [User Stories Testing](#user-stories-testing)  
    - [UNREGISTERED USER GOALS](#unregistered-user-goals)   
    - [REGISTERED USER GOALS](#registered-user-goals)  
-   - [ADMI USER GOALS](#admin-user-goals)  
+   - [ADMIN USER GOALS](#admin-user-goals)  
     
 3. [Manual Testing](#manual-testing)   
    - [HOMEPAGE AS A GUEST](#homepage-as-a-guest-user)   
    - [RECIPES PAGE](#recipes-page)   
    - [LOGIN](#login-page)   
-   - [REGISTER](#register-page)  
+   - [REGISTER PAGE](#register-page)  
    - [SIDE NAVIGATION BAR](#side-navigation-bar)
-   - [TIPS & TRICKS](#tip-tricks-page)  
-   - [REGISTER](#register-page)     
+   - [TIPS & TRICKS PAGE](#tip-tricks-page)      
    - [PROFILE](#profile-page)
    - [ALL ADD FORMS](#all-add-forms)
    - [ALL EDIT FORMS](#all-edit-forms)
@@ -560,7 +559,7 @@ The admin user has the ability to create new recipes as well as edit existing re
 
 <br/>
 
-#### **TIPS & TRICKS**
+#### **TIPS & TRICKS PAGE**
 
 1. If you're a logged in user on a desktop, go to the Tips & Tricks page.  
 
