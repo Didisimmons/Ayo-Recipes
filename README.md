@@ -46,7 +46,7 @@ The goal of the site is for the user to be able to perform basic CRUD functional
     * [TEST.md](#testing)   
 
 5. [Deployment](#deployment)  
-    * [Deployment Heroku](#deployment-heroku) 
+    * [Deployment Heroku](#deployment-to-heroku) 
     * [Steps To Use This Project](#steps-to-use-this-project)  
 
 6. [Credits](#credits)  
@@ -113,8 +113,9 @@ To gain a design understanding of what these sites have in common and how Ayo Re
 
 Ayo Recipes is a fun modern recipe sharing platform that considers the aforementioned issues. The site has been evenly spaced and kept clean in order for the user to easily navigate through the various pages without feeling overwhelmed. The admin manages the site's information, which is regularly updated to keep it up to date and to ensure that the UX is consistent across all pages and that all links work
 
-## **DESIGN**   
-### **Color Scheme**   
+## **DESIGN** 
+
+### **Colour Scheme**   
 The colours used in the design of Ayo Recipes were created using the [Adobe Color site](https://color.adobe.com/search?q=recipe&t=term). The colours were handpicked and researched to ensure that they communicated to our users subconsciously. 
 
 [Jen David](https://jenndavid.com/colors-that-influence-food-sales-infographic/) has provided us with a colour chart that can influence your gourmet industry business and has been used in the colour selection for Ayo Recipes. The colours reflect the Ayo Recipes brand in order to build trust with users and stimulate their taste buds by using bright colours (yellow and orange) to catch our users' attention and brown/white to give it a warm, welcoming, and clean look. <br/>
@@ -173,7 +174,7 @@ Users can create an unlimited number of recipes, but each recipe is associated w
 # **Features**  
 ## **Existing Features** 
 
-### **GENERAL FEATURES ON ALL PAGES :**  
+### **GENERAL FEATURES ON ALL PAGES**  
    - Each page is fully responsive on all pages and has been designed to be extremely user-friendly.
 
    - **Navigation Bar** - On all pages of Ayo Recipes, there is a fully responsive navigation bar. When the brand logo in the upper left corner is clicked, it takes the user to the homepage. The menu items on the left collapse to a hamburger icon when the width of the website is reduced to a smaller device, such as a mobile device. The user can easily click the icon to view Ayo Recipes' side nav bar and swipe left to hide it.
