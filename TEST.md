@@ -551,6 +551,9 @@ The admin user has the ability to create new recipes as well as edit existing re
 
     During testing, it was discovered that when the hamburger icon is clicked and the side navigation bar opens, the user can see the brand image logo at the top of the menu recipes. When the brand image logo is clicked, the user is returned to the home page.
 
+5. Confirm that when a user clicks the "Ayo Recipes" heading under the logo, they are directed to the homepage, just like the brand logo. 
+
+    When tested on a mobile device, it can be seen that when the hamburger icon is clicked, the sidenavigation bar opens and the user can click the heading for "Ayo Recipes," which directs them back to the homepage as the brand logo, as expected.
 
 <br/>
 
@@ -684,8 +687,12 @@ add-category.html | 94 | 96 | 87 | 90 | [see here](static/images/readme/lighthou
 
 1.	The site was tested on a desktop device (Mac OS and Windows), iPad, iPadPro, iPhone(6,7,8 and SE) and Pixel2 to ensure that it was error-free and responsive.
 
-2.	Friends and colleagues were asked to review the site to ensure the site was user friendly and intuitive. Their feedback was t
-        One of the comments stated that the register form would not accept their phone number format even if they followed the pattern shown. This was fixed by changing the pattern in the input field to one that accepted both the user's input and the placeholder, making it easier for the user to understand.
+2. Some feedbacks were provided. 
+
+* One of the feedbacks was that the register form was not accepting their phone number format even if they followed the pattern shown. This was fixed by changing the pattern in the input field to one that accepted the users input as well as the placeholder in order for the user to understand easily.  
+
+* Another issue was that they couldn't select a category from the drop down menu. If they wanted to select "Soup Recipe," for example, the form would select "Snack Recipe," which they found annoying and frustrating. This was fixed by adding the "multiple " attribute to the select element; for more information, see "SOLVED BUGS, no.13."
+
 
 3. The website [AM I Responsive](http://ami.responsivedesign.is/) was used to capture Ayo Recipes aesthetic look and responsiveness across all devices. Screenshot below.
 
@@ -737,6 +744,31 @@ add-category.html | 94 | 96 | 87 | 90 | [see here](static/images/readme/lighthou
     ![ top padding on single recipe page ](static/images/readme/test/fig64.png "top padding on single recipe page")
  
 12.	Initially, the delete modal did not work because the system read the same id for the various categories on Ayo Recipes. This was resolved by conducting research on [stackoverflow](https://stackoverflow.com/questions/44606429/modal-window-in-jinja2-template-flask), which suggested creating a dynamic modal that would target each category id, which worked. If an administrator wanted to delete a category, the correct category id is now targeted.
+
+13. During additional testing, one of my colleagues complained about having difficulty creating a recipe due to the select category. The select category was not working properly for her while she was using her phone and iPad to access the webpage, whereas it was working properly for me, the developer. I tested this on a desktop device with Chrome Dev Tools, adjusting the screen size, but the issue that affected her was not visible. 
+
+    When this test was performed on an iPad, it was discovered that the aforementioned problem exists. The user was unable to select a preferred category without the system changing it.
+
+    ![ Old category dropdown on addrecipe page and edit page](static/images/readme/test/olddropdown.png " Old category dropdown on addrecipe page and edit page")
+
+    This was escalated to tutor support, who suggested a workaround involving the multiple attribute. The user can now select multiple categories by adding the "multiple" attribute to the select element. However, for this project, the user is only permitted to select one of the categories listed on the placeholder. This new fix allows users to select a category of their choice and edit it to their liking.
+
+    ![ Old category dropdown on addrecipe page](static/images/readme/test/new-dropdown.png " new category dropdown on addrecipe page and edit page")
+
+
+14. When testing the admin user goals, it was discovered that when the admin user adds a new category, the categories are arranged alphabetically and take up two rows and two columns. 
+        ![ old category section on home page](static/images/readme/test/oldcategory.png " old category section on home page")
+
+    However, for some newly added categories, the html structure is distorted; the first fix was to add breakpoints for different screen devices, but this did not resolve the issue.
+
+    ![ distorted category section showing categories on home page](static/images/readme/test/distortedcategory.png " distorted category section showing categories on home page")
+
+    The design of the category section, as well as the html code, were changed to allow the admin to add new categories to the webpage without distorting the structure of the categories section. Instead of two rows of categories, one row with a category heading is occupied by one category. The images and fonts have been created to be mobile-friendly on all devices. As the user adjusts the screen width, the images and heading text shrink to fit the screen without looking squashed or tacky.
+
+     ![ desktop view of new category section on home page](static/images/readme/test/list-category.png " desktop view of new category section on home page")
+
+     ![ mobile view of new category section on home page](static/images/readme/test/mobile-view-category.png " mobile view of new category section on home page")
+
 
 
 <br/>
