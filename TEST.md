@@ -85,7 +85,7 @@
 
 <br/>
 
-### **USER STORIES**
+### **USER STORIES TESTING**
 #### **Unregistered User Goals**   
 As a new/ unregistered user, I want to:
 1. Easily understand the purpose of the site and how it works.
