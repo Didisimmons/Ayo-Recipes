@@ -418,7 +418,7 @@ Users can create an unlimited number of recipes, but each recipe is associated w
 
 
 # **Testing**  
-The testing documentation can be found [here](https://github.com/dissyulina/cookle-cookbook/blob/main/TESTING.md#cookle---testing). 
+The test document can be found [here](TEST.md). 
 
 <br/>   
   
