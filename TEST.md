@@ -732,7 +732,7 @@ add-category.html | 94 | 96 | 87 | 90 | [see here](static/images/readme/lighthou
      ![ padding at the bottom of home page ](static/images/readme/test/fig61.png "padding at the home page")
 
 11.	On the single recipe page, further testing on an iPad device revealed that there was almost no top padding for the recipe image, making the menu bar and recipe content look squashed. This was fixed by adding some top padding to the recipe-image class. This change improved the visual appeal of the recipes page.
-        ![no top padding on single recipe page ](static/images/readme/test/fig63.png "no top padding on single recipe page")
+    ![no top padding on single recipe page ](static/images/readme/test/fig63.png "no top padding on single recipe page")
 
     ![ top padding on single recipe page ](static/images/readme/test/fig64.png "top padding on single recipe page")
  

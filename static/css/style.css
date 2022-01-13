@@ -710,13 +710,13 @@ font-weight: 500
 }
 
 .categories-image img{
-    width:100%;
+    width:60%;
     border-radius: 4rem;
 }
 
-.different-category p{
+.different-category h4{
     padding-top: 2.7rem;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     color:#730202;
 }
 
@@ -948,9 +948,14 @@ font-weight: 500
         padding: 2rem 3rem;
     }
 
-    .different-category p {
-        padding-top: 1px;
-        font-size: 1rem;
+    .different-category h4 {
+        padding-top: 1rem;
+        font-size: 1.2rem;
+    }
+
+    .categories-image img {
+        width: 100%;
+        border-radius: 4rem;
     }
 
     .edit-btn{
