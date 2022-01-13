@@ -25,7 +25,7 @@
    - [LOGIN](#login-page)   
    - [REGISTER PAGE](#register-page)  
    - [SIDE NAVIGATION](#side-navigation)
-   - [TIPS & TRICKS PAGE](#tips-tricks-page)      
+   - [TIPS & TRICKS](#tips-tricks-page)      
    - [PROFILE](#profile-page)
    - [ALL ADD FORMS](#all-add-forms)
    - [ALL EDIT FORMS](#all-edit-forms)
