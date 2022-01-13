@@ -698,6 +698,7 @@ font-weight: 500
 .variety-header{
     color: #730202;
     font-size:1.6rem;
+    padding-bottom:1rem;
 }
 
 .container .categories {
