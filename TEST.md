@@ -124,7 +124,7 @@ The user can search for recipe or category names, which will return results if t
 
 The user can reset the search query by clicking the "CLEAR" button, or they can return to the home page by clicking the "BACK" button at the bottom of the page.
 
-4. Easily locate the call to action buttons on the site to allow the user either register or Sign up 
+4. Easily locate the call to action buttons on the site to allow the user either register or Sign up. 
 
 When a user visits the homepage, the register and Login buttons appear on the navigation bar and, when clicked, direct the user to either the register or Login page. 
 
@@ -141,7 +141,7 @@ When a user arrives at the home page, he or she can either register to create a 
 
 ![proifle greeting user](static/images/readme/test/fig10.png "proifle greeting user ")
 
-If the user hasn't created any recipes yet, the text "No recipes added Yet" will appear under the user's personal information, as shown in the image above. If the user clicks the "Create Recipe" button, they will be taken to the add recipe page, where they can add a new recipe. Once this has been added, the user can view the recipes that have been added by them on their profile in the form of a card. See the list below.
+If the user hasn't created any recipes yet, the text "No recipes added Yet" will appear under the user's personal information, as shown in the image above. If the user clicks the "Create Recipe" button, they will be taken to the add recipe page, where they can add a new recipe. Once this has been added, the user can view the recipes that have been added by them on their profile in the form of a card. See below.
 
 ![add recipe in profile](static/images/readme/test/fig11.png "recipe in profile page ")
 
@@ -156,7 +156,7 @@ This takes the user to the "view category.html" page, where they can see all of 
 
 ![view categories page](static/images/readme/test/fig13.png "view categories page ")
 
-The user can also view all of the recipes on the website by selecting the "recipes" menu option. The present search bar can be used to query the user's searches. The user can conduct a search using either the recipe name or the category name. The user is notified if no results are found. See the following:
+The user can also view all of the recipes on the website by selecting the "recipes" menu option. The search bar can be used to query the user's searches. The user can conduct a search using either the recipe name or the category name. The user is notified if no results are found. See the following:
 
 ![No results found in the search engine](static/images/readme/test/fig14.png "No results found in the search engine")
 
@@ -167,7 +167,7 @@ When the user logs into their profile, two buttons appear under their personal i
 
 ![add recipe](static/images/readme/test/fig15.png "add recipe")
 
-Once the recipe is added, the user's profile will be updated with all of their recipes, as shown in the images above.
+Once the recipe is added, the user's profile will be updated with all of their recipes, as shown in the image below.
 
 ![add recipe to profile](static/images/readme/test/fig16.png "add recipe to profile")
 
@@ -205,14 +205,13 @@ After updating the fields, the user can either click "UPDATE PROFILE" or "CANCEL
 If the user does not want to update their profile information, they can click the "CANCEL" button and be taken back to their profile page, which displays all of the recipes they have created.
 
 
-5. Be able to order recipes online
+5. Be able to order recipes online.
 
 If the user is registered or has an account with Ayo Recipes, they can order recipes online. After logging into their profile and visiting the home page, the user can see the "ORDER NOW" button by clicking on any of the recipes created by other users. This takes the user to a third-party site where they can order the recipe takeaway directly. 
 
 ![view single recipe created by other users](static/images/readme/test/fig24.png "view single recipe created by other users")
 
-If the user is viewing a page that they created, the buttons that appear on the single-recipe page are different, with the "edit" and "delete" buttons present due to some defensive back end programming.
-
+If the user is viewing a page that they created, the buttons that appear on the single-recipe page are different.
 
 #### **Admin User Goals**
 As an Admin User, I want to:
@@ -285,7 +284,7 @@ The admin user has the ability to create new recipes as well as edit existing re
 
           When tested on all devices, the menu links work as expected. The user is directed to the appropriate sites, which are recipes, login and the registration page for a guest user.
 
-    4. Hover over the menu items to ensure that a white background overlay appears with a box shadow on the white background when the mouse is hovered.
+    4. Hover over the menu items to ensure that a white background box appears with a box shadow on the menu when the mouse is hovered.
 
          When testing the effect on a desktop device by hovering the mouse over the menu item in the navigation bar, the white backdrop appears with a box shadow when the mouse is hovered over the menu item.
 
@@ -341,7 +340,7 @@ The admin user has the ability to create new recipes as well as edit existing re
 
          When the mouse is hovered over the images, the alt text appears as expected.
 
-    5.	Confirm that the recipe cards displayed on the index page in the “Explore festive section ” are sorted by recipes with high ratings.. 
+    5.	Confirm that the recipe cards displayed on the index page in the “Explore festive section ” are sorted by recipes with high ratings. 
     
         Clicking on each of the recipe cards demonstrates that the recipes displayed in the festive container have high ratings. The recipes with the highest ratings appear first.
 
@@ -365,7 +364,7 @@ The admin user has the ability to create new recipes as well as edit existing re
 
     4. Confirm that when the category image pill is clicked or the header text beside the image pill  is clicked the user is directed to the correct page. 
 
-         Confirm that the user is directed to the correct page when the category image pill or the header text beside the image pill is clicked.
+         When the category image is clicked on the dev emulator, the user is indeed directed to the view category page.
 
          ![ view category page tablet view](static/images/readme/test/fig40.png "view category page tablet view ") 
     
