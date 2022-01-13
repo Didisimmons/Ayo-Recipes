@@ -748,13 +748,13 @@ add-category.html | 94 | 96 | 87 | 90 | [see here](static/images/readme/lighthou
  
 12.	Initially, the delete modal did not work because the system read the same id for the various categories on Ayo Recipes. This was resolved by conducting research on [stackoverflow](https://stackoverflow.com/questions/44606429/modal-window-in-jinja2-template-flask), which suggested creating a dynamic modal that would target each category id, which worked. If an administrator wanted to delete a category, the correct category id is now targeted.
 
-13. During additional testing, one of my colleagues complained about having difficulty creating a recipe due to the select category. The select category was not working properly for her while she was using her phone and iPad to access the webpage, whereas it was working properly for me, the developer. I tested this on a desktop device with Chrome Dev Tools, adjusting the screen size, but the issue that affected her was not visible. 
+13. During additional testing, one of my colleagues complained about having difficulty creating a recipe due to the select category. The select category was not working properly for her while she was using her phone and iPad to access the webpage, whereas it was working properly for me, the developer. I tested this on a desktop device with dev tools emulator, adjusting the screen size, but the issue that affected her was not visible.The options were working perfectly. 
 
     When this test was performed on an iPad, it was discovered that the aforementioned problem exists. The user was unable to select a preferred category without the system changing it.
 
     ![ Old category dropdown on addrecipe page and edit page](static/images/readme/test/olddropdown.png " Old category dropdown on addrecipe page and edit page")
 
-    This was escalated to tutor support, who suggested a workaround involving the multiple attribute. The user can now select multiple categories by adding the "multiple" attribute to the select element. However, for this project, the user is only permitted to select one of the categories listed on the placeholder. This new fix allows users to select a category of their choice and edit it to their liking.
+    This was escalated to tutor support, who suggested a workaround involving the multiple attribute. The user can now select multiple categories by adding the "multiple" attribute to the select element. However, for this project, the user is only permitted to select one of the categories listed as stated on the placeholder. This new fix allows users to select a category of their choice and edit it to their liking.
 
     ![ Old category dropdown on addrecipe page](static/images/readme/test/new-dropdown.png " new category dropdown on addrecipe page and edit page")
 
@@ -767,7 +767,7 @@ add-category.html | 94 | 96 | 87 | 90 | [see here](static/images/readme/lighthou
 
     ![ distorted category section showing categories on home page](static/images/readme/test/distortedcategory.png " distorted category section showing categories on home page")
 
-    The design of the category section, as well as the html code, were changed to allow the admin to add new categories to the webpage without distorting the structure of the categories section. Instead of two rows of categories, one row with a category heading is occupied by one category. The images and fonts have been created to be mobile-friendly on all devices. As the user adjusts the screen width, the images and heading text shrink to fit the screen without looking squashed or tacky.
+    The design of the category section, as well as the html code, were changed to allow the admin to add new categories to the webpage without distorting the structure of the categories section. Instead of two rows of category images,the category images collapse an appear one category per row. The images and fonts have been created to be mobile-friendly on all devices. As the user adjusts the screen width, the images and heading text shrink to fit the screen without looking squashed or unpresentable.
 
      ![ desktop view of new category section on home page](static/images/readme/test/list-category.png " desktop view of new category section on home page")
 

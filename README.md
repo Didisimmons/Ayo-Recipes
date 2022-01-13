@@ -363,7 +363,11 @@ Users can create an unlimited number of recipes, but each recipe is associated w
 
 6. A public profile page where registered users can view information about other members as well as recipes they've created. Users should be able to leave reviews on each other's profile pages if any of the recipes they created have been attempted.
 
-7. An e-cart that allows users to order recipes directly from the page rather than through a third-party link. On their profile page, registered users can post recipes and sell food items.
+7. A direct third-party food delivery app linked to the webpage, allowing registered users to easily provide meals to other members.
+
+8. An e-cart that allows users to order recipes directly from the page rather than through a third-party link. On their profile page, registered users can post recipes and sell food items.
+
+
 
 <br/>   
   
