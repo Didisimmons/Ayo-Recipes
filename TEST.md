@@ -1,8 +1,8 @@
 # AYO RECIPES 
 
-[Back To Main README file](README.md)
+[Back To Main README File](README.md)
 
-[View The Delopyed Site](http://ayo-recipes.herokuapp.com/)
+[View The Deloyed Site](http://ayo-recipes.herokuapp.com/)
 
 ## TESTING
 <br/>
@@ -33,9 +33,12 @@
    - [ALL DELETE FORMS](#all-delete-forms)
 
 4. [Defensive Programming](#defensive-programming)
+
 5. [Lighthouse Testing](#lighthouse-test)
-5. [Further Testing](#further-testing)
-6. [Solved Bugs](#solved-bugs)
+
+6. [Further Testing](#further-testing)
+
+7. [Solved Bugs](#solved-bugs)
 
    
 <br/>

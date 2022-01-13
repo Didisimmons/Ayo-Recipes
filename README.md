@@ -49,11 +49,11 @@ The goal of the site is for the user to be able to perform basic CRUD functional
     * [Deployment Heroku](#deployment-heroku) 
     * [Steps To Use This Project](#steps-to-use-this-project)  
 
-7. [Credits](#credits)  
+6. [Credits](#credits)  
     * [Content](#content) 
     * [Media](#media)  
  
-8. [Acknowledgements](#acknowledgements)  
+7. [Acknowledgements](#acknowledgements)  
 
 <br/>   
 
@@ -575,7 +575,7 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
    * I'd like to thank my mentor, Sammy Dartnall, for her constant encouragement and constructive feedback on this project. 
 
    * The tutor support team for answering all of my questions and providing helpful problem-solving guidelines.  
-   
+
    * Code institutes the Slack community as a valuable resource where students can interact and help one another, as well as Stack Overflow for guidance and constant support.
 
 <br/> 
