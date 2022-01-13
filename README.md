@@ -379,7 +379,7 @@ Users can create an unlimited number of recipes, but each recipe is associated w
    * [JavaScript](https://en.wikipedia.org/wiki/JavaScript)   
    * [Python](https://en.wikipedia.org/wiki/Python_(programming_language))   
 
-### **FRAMEWORKS,LIBRARIES AND PROGRAM USED**   
+### **FRAMEWORKS, LIBRARIES AND PROGRAM USED**   
    * [Materialize CSS](https://materializecss.com/): This was used to aid in the structure, style, and responsiveness of the website across all devices.
 
    * [jQuery 3.6.0](https://jquery.com/) : This is a JavaScript library that is used to help us write less JavaScript code.
@@ -542,7 +542,7 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 
 12. Majority of the recipes added to the AYO Recipes database come from recipe sharing websites like [yummly](https://www.yummly.co.uk/), [delicious](delicious.com.au), [bbcgoodfood](https://www.bbcgoodfood.com/) as do the recipe images.
 
-13. This readme was based on research on several readme documents, including the Code Institute's readme [sample](https://github.com/Code-Institute-Solutions/SampleREADME), the dark side's readMe [file](https://github.com/mosull20/dark-side-ms3#deployment),  Cookle's readMe's [file](https://github.com/dissyulina/cookle-cookbook#deployment-to-heroku), FLYBOY's readMe [file](https://github.com/Didisimmons/LILELI-QUIZ-GAME/blob/main/test.md) and LILELI's readME's [file](https://github.com/Didisimmons/LILELI-QUIZ-GAME/blob/main/readME.md).
+13. This readme was based on research on several readme documents, including the Code Institute's readme [sample](https://github.com/Code-Institute-Solutions/SampleREADME), the dark side's readMe [file](https://github.com/mosull20/dark-side-ms3#deployment),  Cookle's readMe's [file](https://github.com/dissyulina/cookle-cookbook/blob/main/README.md), Halo_Pizza readMe's [file](https://github.com/James-VT/MS3_Halo_Pizza/blob/main/README.md), FLYBOY's readMe [file](https://github.com/Didisimmons/LILELI-QUIZ-GAME/blob/main/test.md) and LILELI's readME's [file](https://github.com/Didisimmons/LILELI-QUIZ-GAME/blob/main/readME.md).
 
  
 ### **MEDIA**   
