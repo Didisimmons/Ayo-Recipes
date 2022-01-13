@@ -730,7 +730,14 @@ add-category.html | 94 | 96 | 87 | 90 | [see here](static/images/readme/lighthou
      ![no padding at the bottom of home page ](static/images/readme/test/fig60.png "no padding at the home page")
 
      ![ padding at the bottom of home page ](static/images/readme/test/fig61.png "padding at the home page")
-                    
+
+11.	On the single recipe page, further testing on an iPad device revealed that there was almost no top padding for the recipe image, making the menu bar and recipe content look squashed. This was fixed by adding some top padding to the recipe-image class. This change improved the visual appeal of the recipes page.
+        ![no top padding on single recipe page ](static/images/readme/test/fig63.png "no top padding on single recipe page")
+
+    ![ top padding on single recipe page ](static/images/readme/test/fig64.png "top padding on single recipe page")
+ 
+12.	Initially, the delete modal did not work because the system read the same id for the various categories on Ayo Recipes. This was resolved by conducting research on [stackoverflow](https://stackoverflow.com/questions/44606429/modal-window-in-jinja2-template-flask), which suggested creating a dynamic modal that would target each category id, which worked. If an administrator wanted to delete a category, the correct category id is now targeted.
+
 
 <br/>
 

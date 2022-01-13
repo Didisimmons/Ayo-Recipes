@@ -430,13 +430,18 @@ font-weight: 500
     padding-top: 3rem;
 }
 
-.dropdown-content li>span{
-    color:#730202;
+[type="checkbox"]+span:not(.lever):before, [type="checkbox"]:not(.filled-in)+span:not(.lever):after {
+    border: 1px solid #730202;
 }
+
 
 .dropdown-content li>span:hover{
     background-color: white;
     color: #F28705;
+}
+
+.dropdown-content li>span>label {
+    color: #730202;
 }
 
 .switch label input[type=checkbox]:checked+.lever:after {
@@ -564,6 +569,11 @@ font-weight: 500
     max-width: 355px;
     margin: 0 auto;
     border-radius: 10px;
+}
+
+[type="checkbox"]+span:not(.lever):before, [type="checkbox"]:not(.filled-in)+span:not(.lever):after {
+
+    border: 2px solid #730202;
 }
 
 .vegetarian-text{
@@ -1028,7 +1038,7 @@ font-weight: 500
     }
     
     .recipe-image{
-        padding:1rem 0 ;
+        padding:3rem 0 ;
     }
 
     .product-header {

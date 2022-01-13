@@ -78,8 +78,8 @@
                     <!-- select recipe category  -->
                     <div class="col s12 m5 input-field">
                         <i class="fas fa-tag prefix icon-color"></i>
-                        <select id="category_name" name="category_name" class="validate" required>
-                            <option value="" disabled selected> Pick one</option>
+                        <select id="category_name" name="category_name" class="validate"  multiple required>
+                            <option value="" disabled> Pick one</option>
                             {% for category in categories %}
                                 <option value="{{ category.category_name }}">{{ category.category_name }}</option>
                             {% endfor %}

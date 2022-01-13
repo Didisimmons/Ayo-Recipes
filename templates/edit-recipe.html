@@ -89,7 +89,7 @@
                     <!-- select recipe category  -->
                     <div class="col s12 m5 input-field">
                         <i class="fas fa-tag prefix icon-color"></i>
-                        <select id="category_name" name="category_name" class="validate" required>
+                        <select id="category_name" name="category_name" class="validate" multiple required>
                             <option value="" disabled> Pick one</option>
                             {% for category in categories %}
                              <!--"in" is used to allow the user pick from the array.If the category is found in recipes select the category  -->
