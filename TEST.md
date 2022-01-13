@@ -38,6 +38,7 @@
 6. [Further Testing](#further-testing)
 
 7. [Solved Bugs](#solved-bugs)
+   - [Unresolved Bug](#unresolved-bug)   
 
    
 <br/>
@@ -773,8 +774,10 @@ add-category.html | 94 | 96 | 87 | 90 | [see here](static/images/readme/lighthou
 
      ![ mobile view of new category section on home page](static/images/readme/test/mobile-view-category.png " mobile view of new category section on home page")
 
-
-
 <br/>
 
+#### **Unresolved Bug** 
+* On the register and login pages, the error shown below appeared, requesting that the autocomplete attribute be added to the input field. However, when this was added in accordance with the examples provided [here](https://goo.gl/9p2vKq), the problem persisted.
+
+![ console error in login and register page ](static/images/readme/test/unresolved.png " console error in login and register page")
 
