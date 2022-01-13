@@ -103,7 +103,7 @@ As an Admin User, I want to:
 
 
 ### **RESEARCH**   
-To get some UX inspiration for Ayo, I researched other recipe sharing websites like To get some UX inspiration for Ayo, I researched other recipe sharing websites like
+To get some UX inspiration for Ayo, I researched other recipe sharing websites like
 1. [Yummly](https://www.yummly.co.uk/)
 2. [Bbcgoodfood](https://www.bbcgoodfood.com/)
 3. [Epicurious](https://www.epicurious.com/) 
