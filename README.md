@@ -123,7 +123,7 @@ The colours used in the design of Ayo Recipes were created using the [Adobe Colo
 <br/>
 
 ### **Typography**    
-The [Google Fonts](https://fonts.google.com) Dancing Script and Poppins are used on the website to ensure consistency and to give the site a distinct and friendly look similar to other recipe sharing websites. The two fonts are appealing to our target audience, and a backup font has been included called sans-serif
+The [Google Fonts](https://fonts.google.com) Dancing Script and Poppins are used on the website to ensure consistency and to give the site a distinct and friendly look similar to other recipe sharing websites. The two fonts are appealing to our target audience, and a backup font has been included called sans-serif.
 
 <br/>
 
@@ -165,7 +165,8 @@ MongoDB was chosen as the database for this project due to the flexibility it of
 * Recipes 
    
 ![Database structure](static/images/readme/database-schema.png "Database schema")   
- 
+
+Users can create an unlimited number of recipes, but each recipe is associated with a unique user id. The same holds true for the recipes table; each recipe is assigned to a single category name and description. 
     
 <br /> 
   
