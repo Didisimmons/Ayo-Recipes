@@ -692,6 +692,8 @@ add-category.html | 94 | 96 | 87 | 90 | [see here](static/images/readme/lighthou
 
     * Another issue was that they couldn't select a category from the drop down menu. If they wanted to select "Soup Recipe," for example, the form would select "Snack Recipe," which they found annoying and frustrating. This was fixed by adding the "multiple " attribute to the select element; for more information, see "SOLVED BUGS, no.13."
 
+    * Colleagues reran the test and reported that interacting with the add recipe page was now smoother and they could select any option of their choice.
+
 
 3. The website [AM I Responsive](http://ami.responsivedesign.is/) was used to capture Ayo Recipes aesthetic look and responsiveness across all devices. Screenshot below.
 
@@ -729,7 +731,8 @@ add-category.html | 94 | 96 | 87 | 90 | [see here](static/images/readme/lighthou
 
 
 9. The placeholder for the user to enter their phone number on the register page was still confusing to the user and did not accept the user's mobile phone number format. This was changed to a more clear understanding placeholder, with the font size increased to make it more visible. The pattern for the input field has been updated as well. This fix enabled the user to enter their phone number without issue.
-    pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}-[0-9]{2}-[0-9]{2}”
+
+    [pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}-[0-9]{2}-[0-9]{2}”]
 
 10. Some extra padding is added to the footer content to remove the bottom space on the webpage. The footer currently has only a top padding, but to address the issue, a bottom padding is added to the footer container, removing the space at the bottom of the footer. When the user views the webpage, he or she will notice that the space at the bottom of the page has been removed.
 
@@ -738,6 +741,7 @@ add-category.html | 94 | 96 | 87 | 90 | [see here](static/images/readme/lighthou
      ![ padding at the bottom of home page ](static/images/readme/test/fig61.png "padding at the home page")
 
 11.	On the single recipe page, further testing on an iPad device revealed that there was almost no top padding for the recipe image, making the menu bar and recipe content look squashed. This was fixed by adding some top padding to the recipe-image class. This change improved the visual appeal of the recipes page.
+
     ![no top padding on single recipe page ](static/images/readme/test/fig63.png "no top padding on single recipe page")
 
     ![ top padding on single recipe page ](static/images/readme/test/fig64.png "top padding on single recipe page")
