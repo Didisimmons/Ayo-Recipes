@@ -2,7 +2,7 @@
 
 [Back To Main README File](README.md)
 
-[View The Deloyed Site](http://ayo-recipes.herokuapp.com/)
+[View The Deployed Site](http://ayo-recipes.herokuapp.com/)
 
 ## TESTING
 <br/>
