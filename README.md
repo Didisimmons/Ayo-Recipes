@@ -137,7 +137,7 @@ The photographs depict modern cuisine dishes that can be prepared in the comfort
 <br/>
 
 ### **Wireframes**
-The entire site's wireframe can be found below. This depicts the site on a desktop and a mobile device, with some tablet view wireframes indicating when the screen view differs.
+The entire site's wireframe can be found below and [here](https://www.figma.com/file/MvhtXDwpx1nVZyyNM8dxRL/Untitled?node-id=0%3A1).This depicts the site on a desktop and a mobile device, with some tablet view wireframes indicating when the screen view differs.
 
 * [Wireframe for Home Page](static/images/readme/homepage-wireframe.png)   
 * [Wireframe for Recipes Page](static/images/readme/wireframe-recipes-page.png)   
@@ -183,11 +183,11 @@ Users can create an unlimited number of recipes, but each recipe is associated w
 
    - **Flash Messages** - When a user performs a basic CRUD function, flash messages appear on all pages to provide feedback on the action they performed. 
 
-   - **Recipe Card containers** - Throughout the site, recipe card containers have been used to display the recipe image, name, and description in an orderly and appealing manner. The user can view more information about the recipes by clicking on the images in the card
+   - **Recipe Card containers** - Throughout the site, recipe card containers have been used to display the recipe image, name, and description in an orderly and appealing manner. The user can view more information about the recipes by clicking on the image in the card
 
    - **Footer** - The footer section contains Ayo Recipes' social media handles, where users can learn more about them in order to build trust with the brand and confirm business legitimacy. It also includes some additional links to cooking-related information.
 
-   - **Defensive back-end programming** - There has been some back-end defensive programming to prevent users from accessing pages/functions that they are not permitted to access. For example, when a user views a single recipe, they cannot see the " ORDER NOW " button but can see the "BACK" button; however, if the user registers/logs in, they can see the "ORDER NOW" button if they are viewing a recipe that was not created by them.  
+   - **Defensive back-end programming** - There has been some back-end defensive programming to prevent users from accessing pages/functions that they are not permitted to access. For example, when a guest user views a single recipe, they cannot see the " ORDER NOW " button but can see the "BACK" button; however, if the user registers/logs in, they can see the "ORDER NOW" button if they are viewing a recipe that was not created by them.  
 
    - **Modal** - A modal appears on some pages for the user to perform the delete functionality.
 
@@ -199,14 +199,14 @@ Users can create an unlimited number of recipes, but each recipe is associated w
 
       Under the header is a festive container with a brief summary of Ayo Recipes and three recipe containers with the highest star-rated recipes.
 
-      The recipe containers allow the user to view the various categories of recipes available on the site. The user can view each recipe by clicking on any of the category names. 
+      The category images allow the user to view the various categories of recipes available on the site. The user can view each recipe by clicking on any of the category names. 
 
       Following the categories section, the user can scroll down to see where they can buy cheaper kitchen decors that make cooking much easier. 
       <br/>
 
    - **Recipes Page**   
      * **Search Bar** : There is a search bar in the centre of the hero image header. The search bar allows the user to look up any recipe name or category.   
-     * **Search Icon** : The search icon button allows the user to query their search, which leads to the results of the user's query 
+     * **Search Icon** : The search icon button allows the user to query their search, which leads to the results of the user's query. 
      * **Clear Button** : The clear button resets the search query, allowing the user to return to the database's list of recipes rather than a search.  
      * **Recipe Cards** : In alphabetical order, the recipe cards display all of the recipes created by our registered users. The user can view more information about any of the recipes by clicking on them.  
      * **Back Button** : A back button is present at the bottom of the recipes page. This is placed before the footer to allow the user to return to the home page if they want to interact with another page.   
@@ -229,7 +229,7 @@ Users can create an unlimited number of recipes, but each recipe is associated w
          - Confirm Password
          - Phone Number 
          - Email
-         - About yourself
+         - About me
       * **Sign Up Button** : All of the above fields must be filled out in order for the button to take the user to their profile once registered . 
       * **Log In Link** :If the user already has an account, there is a "LOGIN" link under the card container that takes them to the login page. 
 
@@ -241,7 +241,7 @@ Users can create an unlimited number of recipes, but each recipe is associated w
       * **Header Image** : A header image containing the user's username is present in a card container at the top of the page.
       A profile container with the user's personal information is located beneath the header image. The information displayed on the profile is the information provided by the user when they registered.
       * **Buttons** :To perform any of their desired functions, the user can click on any of the buttons under the profile details: "CREATE A RECIPE" or "UPDATE A PROFILE."
-      The user can view all of the recipes that have been created by clicking on the buttons. If no recipes are present, the user will see the message "No recipes added yet“.
+      The user can view all of the recipes that have been created by them on their profile. If no recipes are present, the user will see the message "No recipes added yet“.
 
    <br/>
  
@@ -256,7 +256,7 @@ Users can create an unlimited number of recipes, but each recipe is associated w
    <br/>
 
    - **Create A Recipe Page**  
-     * When the user clicks the "CREATE A RECIPE" button, the user is taken to an add recipe form, which the user must complete. The following fields must be completed: 
+     * When the user clicks the "CREATE A RECIPE" button, the user is taken to an add recipe form. The following fields must be completed: 
        - Recipe Name 
        - Recipe Description 
        - Insert Ingredients
@@ -264,7 +264,7 @@ Users can create an unlimited number of recipes, but each recipe is associated w
        - Recipe time
        - Recipe category 
        - Is vegetarian 
-       - Recipe image_url : If the user has a link to the recipe image, they can enter it in the provided space.
+       - Recipe image_url : If the user has a link to the recipe image, they can enter it in the provided space(optional)
        -	Recipe rating 
 
      * **Buttons** : The form includes two buttons under the input fields: "SUBMIT" and "CANCEL." When the submit button is pressed, the user's profile is updated with a new recipe, whereas when the cancel button is pressed, the user is redirected back to their profile page.  
@@ -289,7 +289,7 @@ Users can create an unlimited number of recipes, but each recipe is associated w
 
    - **Edit Recipe Page** 
 
-      * When a user clicks the "EDIT RECIPE" button, they are taken to the edit recipe page, which contains pre-populated input fields for the previously created recipes. Some of the pre-populated input fields, such as the following , can be edited.
+      * When a user clicks the "EDIT RECIPE" button, they are taken to the edit recipe page, which contains pre-populated input fields for the created recipes. Some of the pre-populated input fields, such as the following , can be edited.
          - Recipe Name 
          - Recipe Description 
          - Insert Ingredients
@@ -308,7 +308,7 @@ Users can create an unlimited number of recipes, but each recipe is associated w
     
 <br/>
 
-   - **View Category Page**(Admin)  
+   - **View Category Page**  
      When a guest or registered user visits Ayo Recipes and navigates to the 'Browse our categories' section, they can click on the images or category names to view all of the recipes in that category.
 
       When a user visits the page, a header image with the Category name and a brief description of the category appears.
@@ -322,7 +322,7 @@ Users can create an unlimited number of recipes, but each recipe is associated w
    - **Manage Categories** (only available to admin)  
      This page is only accessible to the site's Admin user. When an administrator logs in, they will notice the "MANAGE CATEGORY" option among the menu line items. 
 
-      When the user clicks, they can see all of the categories that are currently available in our recipe database, which is represented by a card container. The category name and two buttons are included in the card container. The admin user can either "EDIT" or "DELETE" the category using the buttons. 
+      When the admin clicks, they can see all of the categories that are currently available in our recipe database, which is represented by a card container. The category name and two buttons are included in the card container. The admin user can either "EDIT" or "DELETE" the category using the buttons. 
 
    <br/>
 
@@ -345,7 +345,7 @@ Users can create an unlimited number of recipes, but each recipe is associated w
    <br/>
 
    - **Delete Category Page** (only available to admin)  
-     To delete a category, the user can simply click the "DELETE" button on the manage category page. When the admin user clicks this button, a modal appears asking the user to confirm their action.  The user can delete the category name and description from the manage - category dashboard by clicking the delete button. If the answer is no, the user can cancel and return to the manage-category page.
+     To delete a category, the admin can simply click the "DELETE" button on the manage category page. When the admin user clicks this button, a modal appears asking the user to confirm their action.  The admin can delete the category name and description from the manage - category dashboard by clicking the delete button. If the answer is no, the user can cancel and return to the manage-category page.
 
    <br/>  
 
@@ -389,13 +389,11 @@ Users can create an unlimited number of recipes, but each recipe is associated w
 
    * [GIT](https://git-scm.com/) : This was the preferred version control method. We used the gitpod to commit and publish our project to GitHub.
 
-   * [GITHUB](https://github.com/) : This was where the project's code was store.
+   * [GITHUB](https://github.com/) : This was where the project's code was stored.
 
    * [Flask-PyMongo](https://pypi.org/project/Flask-PyMongo/) : This serves as a communication link between Flask and PyMongo.
 
-   * [Jinja](https://jinja.palletsprojects.com) : This is a Python templating language that is used to display backend data in the frontend.
-
-   * [Werkzeug](https://werkzeug.palletsprojects.com/en/2.0.x/utils/#module-werkzeug.security) : Werkzeug was used for password hashing and authentication. 
+   * [Jinja](https://jinja.palletsprojects.com) : This is a Python templating language that is used to display backend data in the frontend. 
 
    * [Favicon.io](https://favicon.io/favicon-converter/) : This is a Favicon generator that was used to create our Ayo Recipes favicon.  
 
@@ -409,7 +407,7 @@ Users can create an unlimited number of recipes, but each recipe is associated w
 
    * [MongoDB](https://www.mongodb.com/) : This is a document-based database where we keep our Recipe database.
 
-   * [Werkzeug](https://pypi.org/project/Werkzeug/) : This was used to hash passwords and authenticate users.
+   * [Werkzeug](https://werkzeug.palletsprojects.com/en/2.0.x/utils/#module-werkzeug.security) : This was used to hash passwords and authenticate users.
 
    * [TinyPNG](https://tinypng.com/) : This is an image compressor that is used to compress all images
 
@@ -447,7 +445,7 @@ The second method was applied to deploy this project.
    * Return to our Heroku Dashboard and choose "deploy" from the top options. 
    * Select "GitHub" from the deployment method from section.   
    * This gives you an input field where you can search for your GitHub repository by name. When the correct repository, in our case "Ayo Recipes," is found, click "Connect."   
-   * After that, we need to set up the necessary environment variables in our Heroku App's env.py file.
+   * After that, we need to set up the necessary environment variables in our Heroku App.
    * Click "Settings" on the Heroku Dashboard and then the "Reveal Config Vars" button.
    * The following key value pairs should be  added:   
       |Key|Value|
@@ -465,11 +463,11 @@ The second method was applied to deploy this project.
 
 
 ### **STEPS TO USE THIS PROJECT** 
-The MongoDb atlas was used to store the data in this project. The steps below were taken to create our database and connect it to our Heroku App.
+The MongoDB atlas was used to store the data in this project. The steps below were taken to create our database and connect it to our Heroku App.
 
 ### **1. Create database on MongoDB**  
 1. **Set Up MongoDB**   
-   * To begin visit the mongoDB website and creating an account/login.
+   * To begin visit the mongoDB website and create an account/login.
    * Create a cluster by selecting a shared cluster once you've logged in.
    * Choose a cloud provider. AWS was chosen for this project and is ideal for its requirements.
    * When that option is selected. Choose a "Cluster Tier" and the M0 Tier (Free forever tier).
@@ -517,11 +515,11 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 ### **CONTENT**  
 1. The site's design was inspired by extensive research conducted on recipe sharing websites such as [yummly](https://www.yummly.co.uk/), [bbcgoodfood](https://www.bbcgoodfood.com/) , [epicurious](https://www.epicurious.com/) and other MS3 peer's project(slack channel).  
 
-2. Photoshop was used to create the Ayo Recipes brand logo.
+2. Photoshop was used to create the Ayo Recipes brand logo and background-image.
       
 3.	The animation effect used on the hero image header text was obtained from the [CSS tricks](https://css-tricks.com/almanac/properties/a/animation/)  website. 
 
-4. Abdul Basit's [Youtube](https://www.youtube.com/watch?v=MLBLsxcB3Dc) assistance was used to create the dynamic form fields in the add-recipe page code.
+4. Abdul Basit's [Youtube](https://www.youtube.com/watch?v=MLBLsxcB3Dc) assistance was used to create the dynamic input form fields in the add-recipe and edit page.
 
 5. The code from Code Institute's mini project lesson on Task Manager Application was primarily used as a reference and guide for developing the basic CRUD (Create, Read, Update, and Delete) functionalities for this project. 
 
@@ -539,7 +537,7 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 
 12. Majority of the recipes added to the AYO Recipes database come from recipe sharing websites like [yummly](https://www.yummly.co.uk/), [delicious](delicious.com.au), [bbcgoodfood](https://www.bbcgoodfood.com/) as do the recipe images.
 
-13. This readme was based on research on several readme documents, including the Code Institute's readme [sample](https://github.com/Code-Institute-Solutions/SampleREADME), the dark side's readme [sample](https://github.com/mosull20/dark-side-ms3#deployment),  Cookle's readMe's [sample](https://github.com/dissyulina/cookle-cookbook#deployment-to-heroku), FLYBOY's readMe [file](https://github.com/Didisimmons/LILELI-QUIZ-GAME/blob/main/test.md) and LILELI's readME's [file](https://github.com/Didisimmons/LILELI-QUIZ-GAME/blob/main/readME.md).
+13. This readme was based on research on several readme documents, including the Code Institute's readme [sample](https://github.com/Code-Institute-Solutions/SampleREADME), the dark side's readMe [file](https://github.com/mosull20/dark-side-ms3#deployment),  Cookle's readMe's [file](https://github.com/dissyulina/cookle-cookbook#deployment-to-heroku), FLYBOY's readMe [file](https://github.com/Didisimmons/LILELI-QUIZ-GAME/blob/main/test.md) and LILELI's readME's [file](https://github.com/Didisimmons/LILELI-QUIZ-GAME/blob/main/readME.md).
 
  
 ### **MEDIA**   
@@ -560,7 +558,7 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 
    - Default category image – Photo from Toa Heftiba from [unsplash](https://unsplash.com/photos/tE9Ovti1gRI).
 
-* Some pages, such as the register page, profile header, and add recipe container, now have a background photo that was created in Photoshop
+* Some pages, such as the register page, profile header, and add recipe container have a background photo that was created in Photoshop.
 
 * The following people provided photos for the tips and tricks page:
    - Pantry Essentials – Photo by Jason Leung from [unsplash](https://unsplash.com/photos/jWU9FpLW7fI)
@@ -574,8 +572,10 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 <br/>  
 
 # **Acknowledgements**   
-   * I'd like to thank my mentor, Sammy Dartnall, for her constant encouragement and constructive feedback on this project.  
+   * I'd like to thank my mentor, Sammy Dartnall, for her constant encouragement and constructive feedback on this project. 
+
    * The tutor support team for answering all of my questions and providing helpful problem-solving guidelines.  
+   
    * Code institutes the Slack community as a valuable resource where students can interact and help one another, as well as Stack Overflow for guidance and constant support.
 
 <br/> 
