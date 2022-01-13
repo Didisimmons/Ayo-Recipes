@@ -755,7 +755,7 @@ add-category.html | 94 | 96 | 87 | 90 | [see here](static/images/readme/lighthou
 
     ![ Old category dropdown on addrecipe page and edit page](static/images/readme/test/olddropdown.png " Old category dropdown on addrecipe page and edit page")
 
-    This was escalated to tutor support, who suggested a workaround involving the multiple attribute. The user can now select multiple categories by adding the "multiple" attribute to the select element. However, for this project, the user is only permitted to select one of the categories listed as stated on the placeholder. This new fix allows users to select a category of their choice and edit it to their liking.
+    This was escalated to tutor support, who suggested a workaround involving the multiple attribute. The user can now select multiple categories by adding the "multiple" attribute to the select element. However, for this project, the user is only permitted to select one of the categories listed as stated on the placeholder. This new fix allows users to select a category of their choice and edit it to their liking on the mobile and tablet device.
 
     ![ Old category dropdown on addrecipe page](static/images/readme/test/new-dropdown.png " new category dropdown on addrecipe page and edit page")
 
