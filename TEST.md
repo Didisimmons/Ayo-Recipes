@@ -757,7 +757,9 @@ add-category.html | 94 | 96 | 87 | 90 | [see here](static/images/readme/lighthou
 
     This was escalated to tutor support, who suggested a workaround involving the multiple attribute. The user can now select multiple categories by adding the "multiple" attribute to the select element. However, for this project, the user is only permitted to select one of the categories listed as stated on the placeholder. This new fix allows users to select a category of their choice and edit it to their liking on the mobile and tablet device.
 
-    ![ Old category dropdown on addrecipe page](static/images/readme/test/new-dropdown.png " new category dropdown on addrecipe page and edit page")
+    ![ new category dropdown on addrecipe and edit page](static/images/readme/test/new-dropdown.png " new category dropdown on addrecipe page and edit page")
+
+    However, it should be noted that if the user selects all of the categories, the website will not break; rather, the recipe category will be updated with all fields, which is not what we want. We want the user to select only one category, which would have been implemented if we used the single select element, but in actual mobile and tablet devices, the single select element was not picking the user's option, so the workaround for this project was to use the select element with the "multiple" attribute.  
 
 
 14. When testing the admin user goals, it was discovered that when the admin user adds a new category, the categories are arranged alphabetically and take up two rows and two columns. 
