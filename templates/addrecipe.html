@@ -22,8 +22,8 @@
                     <div class="input-field col s12">
                         <i class="fas fa-comment prefix icon-color"></i>
                         <textarea id="recipe_description" name="recipe_description" minlength="5"
-                            maxlength="200" class="materialize-textarea validate" rows="4" required></textarea>
-                        <label for="recipe_description" >Brief description of recipe(500 characters max)</label>
+                            maxlength="200" class="materialize-textarea validate" placeholder="500 characters max"rows="4" required></textarea>
+                        <label for="recipe_description" >Brief description of recipe</label>
                     </div>
                 </div>
 
@@ -51,8 +51,8 @@
                 <div class="row">
                     <div class="input-field col s12" id="instruction-list">
                         <i class="fas fa-clipboard-list prefix icon-color"></i>
-                        <textarea type="text" id="recipe_instructions" name="recipe_instructions" minlength="5" maxlength="500" class="materialize-textarea validate instructions" placeholder="provide directions for the recipe" required></textarea>
-                        <label for="recipe_instructions"></label>
+                        <textarea id="recipe_instructions" name="recipe_instructions" minlength="5" maxlength="500" class="materialize-textarea validate instructions" placeholder="for the recipe" required></textarea>
+                        <label for="recipe_instructions">provide directions</label>
                         <div id="insert-directions"></div>   
                     </div>
                     <div>
@@ -78,8 +78,8 @@
                     <!-- select recipe category  -->
                     <div class="col s12 m5 input-field">
                         <i class="fas fa-tag prefix icon-color"></i>
-                        <select id="category_name" name="category_name" class="validate" required>
-                            <option value="" disabled selected> Pick one</option>
+                        <select id="category_name" name="category_name" class="validate"  multiple required>
+                            <option value="" disabled> Pick one</option>
                             {% for category in categories %}
                                 <option value="{{ category.category_name }}">{{ category.category_name }}</option>
                             {% endfor %}
@@ -102,8 +102,7 @@
                 <!-- upload image url if present -->
                 <div class="row">
                     <div class="col s12 m7 input-field">
-                        <input type="text"  id="image_url" name="image_url" class="validate" minlength="6" maxlength="150"
-                            validate>
+                        <input type="text"  id="image_url" name="image_url" class="validate" minlength="6" maxlength="150">
                         <label for="image_url">
                             <i class="fas fa-image"></i> Url of Recipe image(if any)
                         </label>   

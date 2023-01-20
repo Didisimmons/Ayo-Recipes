@@ -48,16 +48,17 @@
         <div class="variety-container">
             <div class="row">
                 <div class="col s12 center-align">
-                    <h3 class="variety-header">Browse our Categories</h3>
+                    <h3 class="variety-header">Browse Our Categories</h3>
                 </div>
             </div>
-        
+
+    
             <!---Display recipe categories -->
             <div class="center-align">
                 <div class="row">
                     {% for category in category_recipes %}
-                        <div class="col s6 categories">
-                            <div class="col s7 categories-image">
+                        <div class="col m12 categories">
+                            <div class="col s6 categories-image">
                                 {% if category.category_name == "Breakfast Recipes" %}
                                     <a href="{{url_for('view_category',category_id=category._id)}}">
                                     <img src="{{url_for('static',filename='images/breakfast.jpeg')}}" alt="photo of {{ category.category_name }}">
@@ -80,12 +81,13 @@
                                     </a>
                                 {% endif %}
                             </div>
-                            <div class="col s5 different-category">
+                            <div class="col s6 different-category">
                                 <a href="{{url_for('view_category',category_id=category._id)}}">
-                                    <p>{{category.category_name}}</p>
+                                    <h4>{{category.category_name}}</h4>
                                 </a>
                             </div>
                         </div>
+                    
                         {% endfor %}
                     </div>
                 </div>   

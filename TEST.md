@@ -1,8 +1,8 @@
 # AYO RECIPES 
 
-[Back to main README file](README.md)
+[Back To Main README File](README.md)
 
-[View the delopyed site](http://ayo-recipes.herokuapp.com/)
+[View The Deployed Site](http://ayo-recipes.herokuapp.com/)
 
 ## TESTING
 <br/>
@@ -17,25 +17,28 @@
 2. [User Stories Testing](#user-stories-testing)  
    - [UNREGISTERED USER GOALS](#unregistered-user-goals)   
    - [REGISTERED USER GOALS](#registered-user-goals)  
-   - [ADMI USER GOALS](#admin-user-goals)  
+   - [ADMIN USER GOALS](#admin-user-goals)  
     
 3. [Manual Testing](#manual-testing)   
    - [HOMEPAGE AS A GUEST](#homepage-as-a-guest-user)   
    - [RECIPES PAGE](#recipes-page)   
    - [LOGIN](#login-page)   
-   - [REGISTER](#register-page)  
-   - [SIDE NAVIGATION BAR](#side-navigation-bar)
-   - [TIPS & TRICKS](#tip-tricks-page)  
-   - [REGISTER](#register-page)     
+   - [REGISTER PAGE](#register-page)  
+   - [SIDE NAVIGATION](#side-navigation)
+   - [TIPS & TRICKS](#tips-tricks-page)      
    - [PROFILE](#profile-page)
    - [ALL ADD FORMS](#all-add-forms)
    - [ALL EDIT FORMS](#all-edit-forms)
    - [ALL DELETE FORMS](#all-delete-forms)
 
 4. [Defensive Programming](#defensive-programming)
+
 5. [Lighthouse Testing](#lighthouse-test)
-5. [Further Testing](#further-testing)
-6. [Solved Bugs](#solved-bugs)
+
+6. [Further Testing](#further-testing)
+
+7. [Solved Bugs](#solved-bugs)
+   - [Unresolved Bug](#unresolved-bug)   
 
    
 <br/>
@@ -43,17 +46,20 @@
 ### **VALIDATOR TESTING**
 #### **HTML**
 * [W3C Markup Validation](https://validator.w3.org/): This is also used to validate the HTML code for all newly created webpages. Our code was discovered to have some errors as a result of the jinja template used when you paste the direct html code. However, this was resolved by obtaining the source code by right-clicking on our page and selecting "View page source." The errors are removed when checked again. 
-* [Homepage (index.html)](static/images/readme/html/homepage.png) 
+* [Homepage](static/images/readme/html/homepage.png) 
 * [Profile](static/images/readme/html/profile.png) 
-* [Recipes)](static/images/readme/html/recipes.png)  
+* [Recipes](static/images/readme/html/recipes.png)  
 * [Tips & Trick](static/images/readme/html/tips&tricks.png)  
 * [Manage Categories](static/images/readme/html/manage-categories.png)  
 * [Add Category](static/images/readme/html/addcategory.png)  
 * [Edit Category](static/images/readme/html/edit-category.png) 
-* [Single -recipe](static/images/readme/html/single-recipe.png)  
-* [Individual Recipe Page (single-recipe.html)](static/images/readme/html/homepage.png)  
-* [Edit Recipe Page (edit-recipe.html)](static/images/readme/html/homepage.png)  
-
+* [Single-recipe](static/images/readme/html/single-recipe.png)  
+* [Login page](static/images/readme/html/login.png)
+* [Edit profile](static/images/readme/html/edit-profile.png)
+* [View_category](static/images/readme/html/view_category.png)
+* [Register](static/images/readme/html/register.png)
+* [Add Recipe](static/images/readme/html/addrecipe.png)
+* [Edit Recipe](static/images/readme/html/edit-recipe.png)
 
 <br/>
 
@@ -79,7 +85,7 @@
 
 <br/>
 
-### **USER STORIES**
+### **USER STORIES TESTING**
 #### **Unregistered User Goals**   
 As a new/ unregistered user, I want to:
 1. Easily understand the purpose of the site and how it works.
@@ -119,7 +125,7 @@ The user can search for recipe or category names, which will return results if t
 
 The user can reset the search query by clicking the "CLEAR" button, or they can return to the home page by clicking the "BACK" button at the bottom of the page.
 
-4. Easily locate the call to action buttons on the site to allow the user either register or Sign up 
+4. Easily locate the call to action buttons on the site to allow the user either register or Sign up. 
 
 When a user visits the homepage, the register and Login buttons appear on the navigation bar and, when clicked, direct the user to either the register or Login page. 
 
@@ -136,7 +142,7 @@ When a user arrives at the home page, he or she can either register to create a 
 
 ![proifle greeting user](static/images/readme/test/fig10.png "proifle greeting user ")
 
-If the user hasn't created any recipes yet, the text "No recipes added Yet" will appear under the user's personal information, as shown in the image above. If the user clicks the "Create Recipe" button, they will be taken to the add recipe page, where they can add a new recipe. Once this has been added, the user can view the recipes that have been added by them on their profile in the form of a card. See the list below.
+If the user hasn't created any recipes yet, the text "No recipes added Yet" will appear under the user's personal information, as shown in the image above. If the user clicks the "Create Recipe" button, they will be taken to the add recipe page, where they can add a new recipe. Once this has been added, the user can view the recipes that have been added by them on their profile in the form of a card. See below.
 
 ![add recipe in profile](static/images/readme/test/fig11.png "recipe in profile page ")
 
@@ -151,7 +157,7 @@ This takes the user to the "view category.html" page, where they can see all of 
 
 ![view categories page](static/images/readme/test/fig13.png "view categories page ")
 
-The user can also view all of the recipes on the website by selecting the "recipes" menu option. The present search bar can be used to query the user's searches. The user can conduct a search using either the recipe name or the category name. The user is notified if no results are found. See the following:
+The user can also view all of the recipes on the website by selecting the "recipes" menu option. The search bar can be used to query the user's searches. The user can conduct a search using either the recipe name or the category name. The user is notified if no results are found. See the following:
 
 ![No results found in the search engine](static/images/readme/test/fig14.png "No results found in the search engine")
 
@@ -162,7 +168,7 @@ When the user logs into their profile, two buttons appear under their personal i
 
 ![add recipe](static/images/readme/test/fig15.png "add recipe")
 
-Once the recipe is added, the user's profile will be updated with all of their recipes, as shown in the images above.
+Once the recipe is added, the user's profile will be updated with all of their recipes, as shown in the image below.
 
 ![add recipe to profile](static/images/readme/test/fig16.png "add recipe to profile")
 
@@ -200,14 +206,13 @@ After updating the fields, the user can either click "UPDATE PROFILE" or "CANCEL
 If the user does not want to update their profile information, they can click the "CANCEL" button and be taken back to their profile page, which displays all of the recipes they have created.
 
 
-5. Be able to order recipes online
+5. Be able to order recipes online.
 
 If the user is registered or has an account with Ayo Recipes, they can order recipes online. After logging into their profile and visiting the home page, the user can see the "ORDER NOW" button by clicking on any of the recipes created by other users. This takes the user to a third-party site where they can order the recipe takeaway directly. 
 
 ![view single recipe created by other users](static/images/readme/test/fig24.png "view single recipe created by other users")
 
-If the user is viewing a page that they created, the buttons that appear on the single-recipe page are different, with the "edit" and "delete" buttons present due to some defensive back end programming.
-
+If the user is viewing a page that they created, the buttons that appear on the single-recipe page are different.
 
 #### **Admin User Goals**
 As an Admin User, I want to:
@@ -280,7 +285,7 @@ The admin user has the ability to create new recipes as well as edit existing re
 
           When tested on all devices, the menu links work as expected. The user is directed to the appropriate sites, which are recipes, login and the registration page for a guest user.
 
-    4. Hover over the menu items to ensure that a white background overlay appears with a box shadow on the white background when the mouse is hovered.
+    4. Hover over the menu items to ensure that a white background box appears with a box shadow on the menu when the mouse is hovered.
 
          When testing the effect on a desktop device by hovering the mouse over the menu item in the navigation bar, the white backdrop appears with a box shadow when the mouse is hovered over the menu item.
 
@@ -336,7 +341,7 @@ The admin user has the ability to create new recipes as well as edit existing re
 
          When the mouse is hovered over the images, the alt text appears as expected.
 
-    5.	Confirm that the recipe cards displayed on the index page in the “Explore festive section ” are sorted by recipes with high ratings.. 
+    5.	Confirm that the recipe cards displayed on the index page in the “Explore festive section ” are sorted by recipes with high ratings. 
     
         Clicking on each of the recipe cards demonstrates that the recipes displayed in the festive container have high ratings. The recipes with the highest ratings appear first.
 
@@ -360,7 +365,7 @@ The admin user has the ability to create new recipes as well as edit existing re
 
     4. Confirm that when the category image pill is clicked or the header text beside the image pill  is clicked the user is directed to the correct page. 
 
-         Confirm that the user is directed to the correct page when the category image pill or the header text beside the image pill is clicked.
+         When the category image is clicked on the dev emulator, the user is indeed directed to the view category page.
 
          ![ view category page tablet view](static/images/readme/test/fig40.png "view category page tablet view ") 
     
@@ -447,13 +452,13 @@ The admin user has the ability to create new recipes as well as edit existing re
 
     1. Go to the Recipes page on a desktop/ mobile device.
 
-    2. Confirm that the recipe cards present under the header image are divided into three equal columns with card container designs. The design of the recipe cards  should include a picture, a title  and the time for preparation. On a mobile device the recipe cards  should collapse and  each recipe card should occupy the full screen width . The user should also  be a able to click the image and be directed to the single -recipe page. 
+    2. Confirm that the recipe cards present under the header image are divided into three equal columns with card container designs. The design of the recipe cards  should include a picture, a title  and the time for preparation. On a mobile device the recipe cards  should collapse and  each recipe card should occupy the full screen width . The user should also  be  able to click the image and be directed to the single -recipe page. 
 
-         Ascertain that the recipe cards displayed beneath the header image are divided into three equal columns with card container designs. The recipe cards should be designed with a picture, a title, and the time required for preparation. On a mobile device, the recipe cards should collapse and each recipe card should take up the entire width of the screen. The user should be able to click the image and be directed to the single-recipe page as well.
+        On a tablet device the recipe cards show as expected with  a recipe picture, recipe name and cooking time
 
          ![recipe cards in a tablet view](static/images/readme/test/fig47.png "recipe cards in a tablet view")
 
-        When viewed on a mobile device, the recipe cards collapse to one per row, as expected.
+        While  on a mobile device, the recipe cards collapse to one per row, as expected. 
 
         ![recipe cards in a mobile view](static/images/readme/test/fig48.png "recipe cards in a mobile view")
 
@@ -548,10 +553,13 @@ The admin user has the ability to create new recipes as well as edit existing re
 
     During testing, it was discovered that when the hamburger icon is clicked and the side navigation bar opens, the user can see the brand image logo at the top of the menu recipes. When the brand image logo is clicked, the user is returned to the home page.
 
+5. Confirm that when a user clicks the "Ayo Recipes" heading under the logo, they are directed to the homepage, just like the brand logo. 
+
+    When tested on a mobile device, it can be seen that when the hamburger icon is clicked, the sidenavigation bar opens and the user can click the heading for "Ayo Recipes," which directs them back to the homepage as the brand logo, as expected.
 
 <br/>
 
-#### **TIPS & TRICKS**
+#### **TIPS & TRICKS PAGE**
 
 1. If you're a logged in user on a desktop, go to the Tips & Tricks page.  
 
@@ -624,7 +632,7 @@ The admin user has the ability to create new recipes as well as edit existing re
 
 2.	Confirm that a flash message appears at the top of the screen in response to the user's action.
 
-    When the user clicks the Update button, he or she receives feedback on the action that was just completed..
+    When the user clicks the Update button, he or she receives feedback on the action that was just completed.
 
 3.	Confirm that the "Cancel" link, when clicked, returns the user to the appropriate page.
 
@@ -679,10 +687,14 @@ add-category.html | 94 | 96 | 87 | 90 | [see here](static/images/readme/lighthou
 
 ### **FURTHER TESTING** 
 
-1.	The site was tested on a desktop device (Mac OS and Windows), iPad, iPadPro, iPhone(6,7,8 and SE) and Pixel2 to ensure that it was error-free and responsive.
+1.	The site was tested on a desktop device (Mac OS and Windows), iPad, iPadPro, iPhone(6,7,8 and SE) and Pixel2 to ensure that it was error-free and responsive. Some feedbacks were provided. 
 
-2.	Friends and colleagues were asked to review the site to ensure the site was user friendly and intuitive. Their feedback was t
-        One of the comments stated that the register form would not accept their phone number format even if they followed the pattern shown. This was fixed by changing the pattern in the input field to one that accepted both the user's input and the placeholder, making it easier for the user to understand.
+    * One of the feedbacks was that the register form was not accepting their phone number format even if they followed the pattern shown. This was fixed by changing the pattern in the input field to one that accepted the users input as well as the placeholder in order for the user to understand easily.  
+
+    * Another issue was that they couldn't select a category from the drop down menu. If they wanted to select "Soup Recipe," for example, the form would select "Snack Recipe," which they found annoying and frustrating. This was fixed by adding the "multiple " attribute to the select element; for more information, see "SOLVED BUGS, no.13."
+
+    * Colleagues reran the test and reported that interacting with the add recipe page was now smoother and they could select any option of their choice.
+
 
 3. The website [AM I Responsive](http://ami.responsivedesign.is/) was used to capture Ayo Recipes aesthetic look and responsiveness across all devices. Screenshot below.
 
@@ -720,15 +732,54 @@ add-category.html | 94 | 96 | 87 | 90 | [see here](static/images/readme/lighthou
 
 
 9. The placeholder for the user to enter their phone number on the register page was still confusing to the user and did not accept the user's mobile phone number format. This was changed to a more clear understanding placeholder, with the font size increased to make it more visible. The pattern for the input field has been updated as well. This fix enabled the user to enter their phone number without issue.
-    pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}-[0-9]{2}-[0-9]{2}”
+
+    [pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}-[0-9]{2}-[0-9]{2}”]
 
 10. Some extra padding is added to the footer content to remove the bottom space on the webpage. The footer currently has only a top padding, but to address the issue, a bottom padding is added to the footer container, removing the space at the bottom of the footer. When the user views the webpage, he or she will notice that the space at the bottom of the page has been removed.
 
      ![no padding at the bottom of home page ](static/images/readme/test/fig60.png "no padding at the home page")
 
      ![ padding at the bottom of home page ](static/images/readme/test/fig61.png "padding at the home page")
-                    
+
+11.	On the single recipe page, further testing on an iPad device revealed that there was almost no top padding for the recipe image, making the menu bar and recipe content look squashed. This was fixed by adding some top padding to the recipe-image class. This change improved the visual appeal of the recipes page.
+
+    ![no top padding on single recipe page ](static/images/readme/test/fig63.png "no top padding on single recipe page")
+
+    ![ top padding on single recipe page ](static/images/readme/test/fig64.png "top padding on single recipe page")
+ 
+12.	Initially, the delete modal did not work because the system read the same id for the various categories on Ayo Recipes. This was resolved by conducting research on [stackoverflow](https://stackoverflow.com/questions/44606429/modal-window-in-jinja2-template-flask), which suggested creating a dynamic modal that would target each category id, which worked. If an administrator wanted to delete a category, the correct category id is now targeted.
+
+13. During additional testing, one of my colleagues complained about having difficulty creating a recipe due to the select category. The select category was not working properly for her while she was using her phone and iPad to access the webpage, whereas it was working properly for me, the developer. I tested this on a desktop device with dev tools emulator, adjusting the screen size, but the issue that affected her was not visible.The options were working perfectly. 
+
+    When this test was performed on an iPad, it was discovered that the aforementioned problem exists. The user was unable to select a preferred category without the system changing it.
+
+    ![ Old category dropdown on addrecipe page and edit page](static/images/readme/test/olddropdown.png " Old category dropdown on addrecipe page and edit page")
+
+    This was escalated to tutor support, who suggested a workaround involving the multiple attribute. The user can now select multiple categories by adding the "multiple" attribute to the select element. However, for this project, the user is only permitted to select one of the categories listed as stated on the placeholder. This new fix allows users to select a category of their choice and edit it to their liking on the mobile and tablet device.
+
+    ![ new category dropdown on addrecipe and edit page](static/images/readme/test/new-dropdown.png " new category dropdown on addrecipe page and edit page")
+
+    However, it should be noted that if the user selects all of the categories, the website will not break; rather, the recipe category will be updated with all fields, which is not what we want. We want the user to select only one category, which would have been implemented if we used the single select element, but in actual mobile and tablet devices, the single select element was not picking the user's option, so the workaround for this project was to use the select element with the "multiple" attribute.  
+
+
+14. When testing the admin user goals, it was discovered that when the admin user adds a new category, the categories are arranged alphabetically and take up two rows and two columns. 
+
+    ![ old category section on home page](static/images/readme/test/oldcategory.png " old category section on home page")
+
+    However, for some newly added categories, the html structure is distorted; the first fix was to add breakpoints for different screen devices, but this did not resolve the issue.
+
+    ![ distorted category section showing categories on home page](static/images/readme/test/distortedcategory.png " distorted category section showing categories on home page")
+
+    The design of the category section, as well as the html code, were changed to allow the admin to add new categories to the webpage without distorting the structure of the categories section. Instead of two rows of category images,the category images collapse an appear one category per row. The images and fonts have been created to be mobile-friendly on all devices. As the user adjusts the screen width, the images and heading text shrink to fit the screen without looking squashed or unpresentable.
+
+     ![ desktop view of new category section on home page](static/images/readme/test/list-category.png " desktop view of new category section on home page")
+
+     ![ mobile view of new category section on home page](static/images/readme/test/mobile-view-category.png " mobile view of new category section on home page")
 
 <br/>
 
+#### **Unresolved Bug** 
+* On the register and login pages, the error shown below appeared, requesting that the autocomplete attribute be added to the input field. However, when this was added in accordance with the examples provided [here](https://goo.gl/9p2vKq), the problem persisted.
+
+![ console error in login and register page ](static/images/readme/test/unresolved.png " console error in login and register page")
 

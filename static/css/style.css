@@ -430,13 +430,18 @@ font-weight: 500
     padding-top: 3rem;
 }
 
-.dropdown-content li>span{
-    color:#730202;
+[type="checkbox"]+span:not(.lever):before, [type="checkbox"]:not(.filled-in)+span:not(.lever):after {
+    border: 1px solid #730202;
 }
+
 
 .dropdown-content li>span:hover{
     background-color: white;
     color: #F28705;
+}
+
+.dropdown-content li>span>label {
+    color: #730202;
 }
 
 .switch label input[type=checkbox]:checked+.lever:after {
@@ -466,6 +471,8 @@ font-weight: 500
     margin: 0;
     padding: 0;
 }
+
+/* code from https://codepen.io/hesguru/pen/BaybqXv. */
 .rate {
     float: left;
     height: 46px;
@@ -475,6 +482,7 @@ font-weight: 500
     position:absolute;
     top:-9999px;
 }
+
 .rate:not(:checked) > label {
     float:right;
     width:1em;
@@ -484,16 +492,20 @@ font-weight: 500
     font-size:30px;
     color:#ccc;
 }
+
 .rate:not(:checked) > label:before {
     content: '★ ';
 }
+
 .rate > input:checked ~ label {
     color: #ffc700;    
 }
+
 .rate:not(:checked) > label:hover,
 .rate:not(:checked) > label:hover ~ label {
     color: #F28705;  
 }
+
 .rate > input:checked + label:hover,
 .rate > input:checked + label:hover ~ label,
 .rate > input:checked ~ label:hover,
@@ -501,6 +513,8 @@ font-weight: 500
 .rate > label:hover ~ input:checked ~ label {
     color: #c59b08;
 }
+
+/* end of code  */
 
   /* single page */
 .single-container{
@@ -555,6 +569,11 @@ font-weight: 500
     max-width: 355px;
     margin: 0 auto;
     border-radius: 10px;
+}
+
+[type="checkbox"]+span:not(.lever):before, [type="checkbox"]:not(.filled-in)+span:not(.lever):after {
+
+    border: 2px solid #730202;
 }
 
 .vegetarian-text{
@@ -679,6 +698,7 @@ font-weight: 500
 .variety-header{
     color: #730202;
     font-size:1.6rem;
+    padding-bottom:1rem;
 }
 
 .container .categories {
@@ -691,13 +711,13 @@ font-weight: 500
 }
 
 .categories-image img{
-    width:100%;
+    width:60%;
     border-radius: 4rem;
 }
 
-.different-category p{
+.different-category h4{
     padding-top: 2.7rem;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     color:#730202;
 }
 
@@ -929,9 +949,14 @@ font-weight: 500
         padding: 2rem 3rem;
     }
 
-    .different-category p {
-        padding-top: 1px;
-        font-size: 1rem;
+    .different-category h4 {
+        padding-top: 1rem;
+        font-size: 1.2rem;
+    }
+
+    .categories-image img {
+        width: 100%;
+        border-radius: 4rem;
     }
 
     .edit-btn{
@@ -1019,7 +1044,7 @@ font-weight: 500
     }
     
     .recipe-image{
-        padding:1rem 0 ;
+        padding:3rem 0 ;
     }
 
     .product-header {
@@ -1028,6 +1053,10 @@ font-weight: 500
 
     .different-category p{
         padding-top: 0.4rem;
+    }
+
+    .rate:not(:checked) > label {
+        font-size:23px;
     }
 
 }
