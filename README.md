@@ -8,7 +8,7 @@ Ayo Recipes provides users with simple recipes shared by our members, as well as
 
 The goal of the site is for the user to be able to perform basic CRUD functionality(Create, Read, Update, and Delete) on the site and interact with it intuitively, having  a positive experience.   
 
-[View deployed site](http://ayo-recipes.herokuapp.com/)
+[View deployed site](https://ayorecipes.onrender.com/)
 
 # **Table of Contents**   
 1. [UX Development](#ux-development)
